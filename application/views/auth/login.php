@@ -1,7 +1,6 @@
 
 <div class="row">
   <div class="col-xs-12 ">
-  123
   <br/><br/><br/>
   </div>
     
@@ -16,7 +15,7 @@
   </div>
   
   <div class="col-xs-2 col-md-2 text-center basetxt">
-  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif') ?>" alt="846766" width="100px"/>
+  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif') ?>?" alt="846766" width="100px"/>
   </div>
   <div class="col-xs-7 col-md-7 text-left">
   

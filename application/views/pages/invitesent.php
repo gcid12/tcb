@@ -28,7 +28,7 @@
   		  		
   			
   		  		
-  		  		<span class="txttitle" title="UX Designer">Done<?php echo $tcbuser->first_name;?>!!</span>
+  		  		<span class="txttitle" title="UX Designer">Done</span>
   				
   				
 		  		<p title="UX Designer" class="graytxt1">

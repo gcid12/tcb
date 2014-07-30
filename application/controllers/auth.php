@@ -405,8 +405,8 @@ class Auth extends CI_Controller {
 		}
 	}
 
-	//create a new user
-	function create_user()
+	//formerly create_user
+	function invite_user()
 	{
 		$this->data['title'] = "Create User";
 
@@ -649,6 +649,7 @@ $this->data['phone'] = array(
 		);
 
 		$this->_render_page('auth/edit_user', $this->data);
+		$this->load->view('include/footer');
 	}
 
 	// create a new group
@@ -759,6 +760,7 @@ $this->data['phone'] = array(
 		);
 
 		$this->_render_page('auth/edit_group', $this->data);
+		$this->load->view('include/footer');
 	}
 
 

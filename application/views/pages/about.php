@@ -4,11 +4,7 @@
 	</div>
 
   	<div class="col-xs-8">
-  
-1234-6789101122
-  
-  
-  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_infographic.jpg') ?>" alt="tcb infographic"/>
+  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_infographic.jpg') ?>?" alt="tcb infographic"/>
 	
 <br/><br/>
 

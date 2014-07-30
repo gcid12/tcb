@@ -16,7 +16,7 @@
   </div>
   
   <div class="col-xs-2 col-md-2 text-center basetxt">
-  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif') ?>" alt="846766" width="100px"/>
+  	<img class="img-responsive" src="<?php //echo base_url('assets/img/tcb/846766.gif') ?>?" alt="846766" width="100px"/>
   </div>
   <div class="col-xs-7 col-md-7 text-left">
   
@@ -38,7 +38,7 @@
 					<div id="infoMessage" class="inmessage"><?php echo $message;?></div>
 					
 					
-					<?php echo form_open("auth/create_user");?>
+					<?php echo form_open("auth/invite_user");?>
 					
 					      <p>
 					            <?php echo lang('create_user_fname_label', 'first_name');?> <br />

@@ -2,11 +2,11 @@
 <div class="row">
   <div class="col-xs-12 ">
   	<center>
-  	vader123
+ 
 	<br/><br/><br/>
-	<img src="<?php echo base_url('assets/img/tcb/846766.gif') ?>" alt="tcb" />
+	<img src="<?php echo base_url('assets/img/tcb/846766.gif') ?>?" alt="tcb" />
 	<br/><br/><br/>
-	TCB890
+	
 	</center>
   </div>
     

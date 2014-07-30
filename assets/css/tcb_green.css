@@ -1,0 +1,105 @@
+/**
+ * TCB style: Created by Cid
+ 
+menulink wtt menu1
+
+ green: 99CC00
+ */
+
+body {
+   background-color:#000;
+}
+
+.nametag{padding:15px; color:#666;}
+
+
+  .blackbg {
+  	background-color:#000;
+  }
+  .basetxt{
+  color:#99CC00;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;  
+  }
+      .contactme{
+  background-color:#99CC00;
+  font-size:1em;
+  color:black;
+  padding:5px 10px;
+  
+  }
+  
+  .menu1{
+  background-color:#99CC00;
+  font-size:0.7em;
+  color:black;
+  padding:5px 10px;
+  
+  }
+  
+  
+  .fhr{ display: block; height: 1px;
+    border: 0; border-top: 1px solid #99CC00;
+    margin: 1em 0; padding: 0; }
+    
+   .fhr2{ display: block; height: 1px;
+    border: 0; border-top: 1px solid #99CC00;
+    margin: 0.3em 0; padding: 0; }
+  
+  .inmessage{background-color:#669900;}
+  
+    .redtxt{
+  color:#99CC00; 
+  }
+  
+      .darkgreen{
+  color:#669900; 
+  }
+  
+      .bluetxt{
+  color:#60d9f1; 
+  }
+      .yellowtxt{
+  color:#e6dc6d; 
+  }
+      .purpletxt{
+  color:#af7dff; 
+  }
+      .grenntxt{
+  color:#a4e402; 
+  }
+  
+        .whitetxt{
+  color:#FFF; 
+  }
+  
+     .graytxt1{
+  color:#DDD; 
+  }
+  
+     .graytxt2{
+  color:#999; 
+  }
+  
+  
+
+.redlink:link {color:#99CC00; text-decoration: none !important;}      /* unvisited link */
+.redlink:visited {color:#CCC; text-decoration: none !important;}  /* visited link */
+.redlink:hover {color:#FFF; text-decoration: none !important;}  /* mouse over link */
+.redlink:active {color:#99CC00; text-decoration: none !important;}
+
+.menulink:link {color:#000; text-decoration: none !important;}      /* unvisited link */
+.menulink:visited {color:#000; text-decoration: none !important;}  /* visited link */
+.menulink:hover {color:#FFF; text-decoration: none !important;}  /* mouse over link */
+.menulink:active {color:#000; text-decoration: none !important;}
+
+
+.wtt + .tooltip > .tooltip-inner {background-color: #FFF; color:#669900;}
+
+.txtsmall {font-size: 1em;}
+.txtlook {font-size: 0.7em; font-style: italic;}
+.txttitle {font-size: 3em; line-height:0.8em;}
+
+
+
+

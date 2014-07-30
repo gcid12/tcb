@@ -6,6 +6,7 @@ body {
    background-color:#000;
 }
 
+.nametag{padding:15px; color:#666;}
 
 
   .blackbg {
@@ -33,9 +34,21 @@ body {
   }
   
   
+  .bubble{
+  background-color:#CE003C;
+  font-size:0.7em;
+  color:#000;
+  padding:10px;
+  }
+  
+  
   .fhr{ display: block; height: 1px;
     border: 0; border-top: 1px solid #CE003C;
     margin: 1em 0; padding: 0; }
+    
+   .fhr2{ display: block; height: 1px;
+    border: 0; border-top: 1px solid #CE003C;
+    margin: 0.3em 0; padding: 0; }
   
   
     .redtxt{
@@ -58,9 +71,18 @@ body {
   color:#FFF; 
   }
   
+     .graytxt1{
+  color:#DDD; 
+  }
+  
+     .graytxt2{
+  color:#999; 
+  }
+  
+  
 
 .redlink:link {color:#CE003C; text-decoration: none !important;}      /* unvisited link */
-.redlink:visited {color:pink; text-decoration: none !important;}  /* visited link */
+.redlink:visited {color:#CCC; text-decoration: none !important;}  /* visited link */
 .redlink:hover {color:#FFF; text-decoration: none !important;}  /* mouse over link */
 .redlink:active {color:#CE003C; text-decoration: none !important;}
 
@@ -72,7 +94,7 @@ body {
 
 .wtt + .tooltip > .tooltip-inner {background-color: #FFF; color:red;}
 
-.txtsmall {font-size: 0.9em;}
+.txtsmall {font-size: 1em;}
 .txtlook {font-size: 0.7em; font-style: italic;}
 .txttitle {font-size: 3em; line-height:0.8em;}
 

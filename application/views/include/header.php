@@ -7,13 +7,14 @@
    <meta name="keywords" content="TCB">
    <meta name="author" content="TCB">
 
-   <title>846766</title>
+   <title>&#84;&#67;&#66; !!!123</title>
    
    <link href='http://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
 
    <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/css/font-awesome.css') ?>" rel="stylesheet">
-   <link href="<?php echo base_url('assets/css/custom.css') ?>" rel="stylesheet">
+   <link href="<?php echo base_url('assets/css/tcb_green.css') ?>" rel="stylesheet">
+   <!-- <link href="<?php //echo base_url('assets/css/custom.css') ?>" rel="stylesheet"> -->
    
    <script src="<?php echo base_url('assets/js/bootstrap.js') ?>"></script>
    <script src="<?php echo base_url('assets/js/jquery-1.10.2.js') ?>"></script>
@@ -31,6 +32,7 @@
 </script>
 
 
+<meta name="google-site-verification" content="PU60gawe9qFnfY-YTlwsInho2ffDgGborY9ynSVBrlM" />
 
 </head>
 <body>

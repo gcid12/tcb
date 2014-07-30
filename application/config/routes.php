@@ -38,8 +38,20 @@
 |
 */
 
-$route['default_controller'] = "tcb";
-$route['404_override'] = '';
+
+$route['about'] = "tcb/about";
+$route['story'] = "tcb/story";
+$route['news'] = "tcb/news";
+$route['join'] = "tcb/jointcb";
+$route['home'] = "tcb/index";
+
+$route["profile/(:any)"] = "tcb/profile/$1";
+
+
+
+/* $route['default_controller'] = "tcb/about"; */
+$route['default_controller'] = "tcb/index";
+$route['404_override'] = 'index.php';
 
 
 /* End of file routes.php */

@@ -1,104 +1,69 @@
-<?php include("header.php"); ?>
-
-
-	
-	
 
 <div class="row">
-  <div class="col-xs-12 ">
+	<div class="col-xs-2" style="red">&nbsp;
+	</div>
+
+  	<div class="col-xs-8">
   
-  <br/><br/><br/>
-  </div>
-    
-
-</div>
-
-<!-- r2 -->
-
-<div class="row basetxt">
-
-  <div class="col-xs-1 col-md-1 text-center basetxt">
-  </div>
-  
-  <div class="col-xs-2 col-md-2 text-center basetxt">
-  	<img class="img-responsive" src="images/846766.gif" alt="846766"/>
-  </div>
-  <div class="col-xs-7 col-md-7 text-left">
+1234-6789101122
   
   
-  <!-- TCB -->
-  		<span class="txttitle" title="UX Designer">T.C.B 846766</span><br/>
-  		<br/>
-
-  		  		
-  		<div class="fhr"></div>		
-  		  		
-  		
-  		<p title="UX Designer" class="txtsmall">
-  		
-  		  		
-  
-  		
-  		  	The initials T.C.B. stand for Taking Care of Business, which is what Elvis Presley called his group of friends. He incorporated the letters into an emblem flanked by lightning bolts. This emblem was used in several pieces of Elvis' custom jewelry including his famous T.C.B. ring,  necklace and airplane.
-  		  	
-  		The "Memphis Mafia" was the nickname for a group of friends, associates, employees and "yes-men" whose main function was to be around Elvis Presley from 1954 until he died. Several filled practical roles in the singer's life. For instance, they were employed to work for him as bodyguards or on tour logistics and scheduling. According to Patrick Humphries, they "acted as Elvis' bodyguards, babysitters, drug procurers, girl-getters, mates and car buyers."
-  		</p> 
+  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_infographic.jpg') ?>" alt="tcb infographic"/>
 	
-		
-  <!-- 846766 -->
+<br/><br/>
+
   
-  		<br/><br/>
-  		
-  		<span class="txttitle text-right" title="UX Designer">The original T.C.B.</span><br/>
-  		<br/>
-
-  		  		
-  		<div class="fhr"></div>
-  		  		
-  		
-  		<p title="UX Designer" class="txtsmall">
-  		
-  		  		
-  		  	<div class="row">
-
-  			<div class=" col-sm-3 text-center basetxt">
-  		  		<img src="images/mm.jpeg" class="img-responsive" style=" margin:10px;"/>
-  		  		<img src="images/tcbjewel.jpeg" class="img-responsive" style=" margin:10px;"/>
-  		  		<img src="images/tcbair.jpg" class="img-responsive" style=" margin:10px;"/>
-  		  		
-  		  	</div>
-  		  	<div class=" col-sm-9 text-left basetxt">
-  		
-  		  	The initials T.C.B. stand for Taking Care of Business, which is what Elvis Presley called his group of friends. He incorporated the letters into an emblem flanked by lightning bolts. This emblem was used in several pieces of Elvis' custom jewelry including his famous T.C.B. ring,  necklace and airplane.
-  		  	
-  		The "Memphis Mafia" was the nickname for a group of friends, associates, employees and "yes-men" whose main function was to be around Elvis Presley from 1954 until he died. Several filled practical roles in the singer's life. For instance, they were employed to work for him as bodyguards or on tour logistics and scheduling. According to Patrick Humphries, they "acted as Elvis' bodyguards, babysitters, drug procurers, girl-getters, mates and car buyers."
-  		<br/><br/>
-  		</p> 
-
-  			</div>	
+  	</div>
+  
+ 	<div class="col-xs-2 ">&nbsp;
+	</div> 
 	
-		</div> <!-- close row -->
+	
+</div>	
 
 
- 
+<div class="row">
+	<div class="col-xs-2" style="red">&nbsp;
+	</div>
 
-  	
-  </div>
-   <div class="col-xs-1 col-md-1 text-center basetxt lead">
-  </div>
+  	<div class="col-xs-8">
+  
+
+  
+  
+  	BUSINESS MODEL
+
+We want to be as clear as possible about how we do money: 
+1. There’s a ZERO membership fee and there will never be. You can find and be found in TCB network without ever paying a single dollar. 
+
+2. There’s a flat $25 dollar per Posted Job (Members can see directly)
+3. There’s a 10% processing fee per Payment transaction (optional, check details)*
+4. $100 USD for your “Legit Badge”. We run a background check upon your own request (Never from the counterpart).
+
+ADDITIONAL SERVICES
+
+We do not offer the following services directly, but we can offer them with our partners:
+
+-Legal Work Contracts: Let’s do this as clean as possible
+-Medical Coverage and 401K, ... yes you really need to think about this now.
 
 
-</div>
+Notes:
+The payment through our system is totally optional, we know that you can contact or be contacted by the counterpart, but by doing it with us:
+-We guarantee payment (We withdraw payment before project start and we don’t release it until the project is done. In case of controversy it will be splitted 50-50 NQA.)
+-Other Perk is that we can (if you decide it do so), withheld your taxes so you don’t get into trouble by spending them beforehand. The best thing that can happen is to have a Xmas in April.
+
+	
+<br/><br/>
+
+  
+  	</div>
+  
+ 	<div class="col-xs-2 ">&nbsp;
+	</div> 
+	
+	
+</div>	
 
 
 
-
- 
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>

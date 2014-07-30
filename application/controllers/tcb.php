@@ -139,6 +139,20 @@ $this->load->model('tcbmodel');  //loading model
 		}
 
 	}
+
+				public function zone()
+	{
+	
+		if (!$this->ion_auth->logged_in())
+		{
+		redirect('tcb', 'refresh');
+		}else{
+      $this->load->view('pages/zone');
+      $this->load->view('include/footer');
+		}
+
+	}
+
 	
 	
 	

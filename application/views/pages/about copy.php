@@ -122,43 +122,33 @@ Or you can also buy them
 </div>
 
 			<!-- Modal -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-				    <div class="modal-contentx">
+				  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				    <div class="modal-dialog">
+				      <div class="modal-contentx">
 				      	<div class="modal-bodyx">
-				        <a type="button" class="closeX" data-dismiss="modal" aria-hidden="true">
-				
-							<div class="row">
-						
-								<div class="col-sm-6">
-				        		<img src="<?php echo base_url('assets/img/tcb/tcb-sticker.png') ?>" class="img-responsive" style=" margin:10px;"/>				
-				        		</div>
-				        		<div class="col-sm-6">
-				        		<img src="<?php echo base_url('assets/img/tcb/tcb-sticker2.png') ?>" class="img-responsive" style=" margin:10px;"/>
-				        		</div>
-				        
-				     			
-				     	
-				     			
-				     		</div> <!-- close tinyrow -->
-				     		<!--
-<div class="row">
-						
-								<div class="col-sm-12 text-right">
-								<br/><br/><br/>
-								<span class='text-muted'>
-								<small>Former TS? Send us an email and tell us where to send your stickers for free. Or get them </small></span>
-								<a href='https://raeditions.myshopify.com/collections/frontpage/products/tcb-sticker' class='redlink wtt'><small> here<i class="fa fa-arrow-right"></i> </small></a>
-								</div>
-							</div>
--->	
-				     		
-				     	</a>	
+    				      <a type="button" class="closeX" data-dismiss="modal" aria-hidden="true">
+      							<div class="row">
+      								<div class="col-sm-6">
+      				        		<img src="<?php echo base_url('assets/img/tcb/tcb-sticker.png') ?>" class="img-responsive" style=" margin:10px;"/>				
+      				        		</div>
+      				        		<div class="col-sm-6">
+      				        		<img src="<?php echo base_url('assets/img/tcb/tcb-sticker2.png') ?>" class="img-responsive" style=" margin:10px;"/>
+      				        </div>
+      				     	</div> <!-- close tinyrow -->
+  				     		
+        						<div class="row">
+      								<div class="col-sm-12 text-right">
+      								<br/><br/><br/>
+      								<span class='text-muted'>
+      								<small>Former TS? Send us an email and tell us where to send your stickers for free. Or get them </small></span>
+      								<a href='https://raeditions.myshopify.com/collections/frontpage/products/tcb-sticker' class='redlink wtt'><small> here<i class="fa fa-arrow-right"></i> </small></a>
+      								</div>
+      							</div>
+				     	    </a>	
+				        </div>
 				      </div>
-				
 				    </div>
 				  </div>
-				</div>
 				<!-- Close Modal -->
 				
 

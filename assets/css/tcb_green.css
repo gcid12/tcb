@@ -5,15 +5,17 @@ menulink wtt menu1
 
  green: 99CC00
 
- discrete: 616B72
+ discrete: 99CC00
  */
 
 body {
    background-color:#000;
 }
 
-.panel-tcb{background-color:#ccc; color:red;}
+.panel-tcb{background-color:#99CC00; color:black; padding:5px;}
 
+
+.tcb-accordion{background-color:#99CC00; color:#000;}
 
 .nametag{padding:15px; color:#666;}
 
@@ -22,12 +24,20 @@ body {
   	background-color:#000;
   }
   .basetxt{
-  color:#616B72;
+  color:#99CC00;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;  
   }
+
+   .basetxt2{
+  color:#000;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; 
+  padding:0 20px; 
+  }
+
       .contactme{
-  background-color:#616B72;
+  background-color:#99CC00;
   font-size:1em;
   color:black;
   padding:5px 10px;
@@ -35,7 +45,7 @@ body {
   }
   
   .menu1{
-  background-color:#666;
+  background-color:#99CC00;
   font-size:0.7em;
   color:black;
   padding:5px 10px;
@@ -44,17 +54,21 @@ body {
   
   
   .fhr{ display: block; height: 1px;
-    border: 0; border-top: 1px solid #616B72;
+    border: 0; border-top: 1px solid #99CC00;
     margin: 1em 0; padding: 0; }
     
    .fhr2{ display: block; height: 1px;
-    border: 0; border-top: 1px solid #616B72;
+    border: 0; border-top: 1px solid #99CC00;
     margin: 0.3em 0; padding: 0; }
   
   .inmessage{background-color:#669900;}
   
+ 
+    .blacktxt{
+  color:#000; 
+  }
     .redtxt{
-  color:#616B72; 
+  color:#99CC00; 
   }
   
       .darkgreen{
@@ -88,10 +102,10 @@ body {
   
   
 
-.redlink:link {color:#616B72; text-decoration: none !important;}      /* unvisited link */
+.redlink:link {color:#99CC00; text-decoration: none !important;}      /* unvisited link */
 .redlink:visited {color:#CCC; text-decoration: none !important;}  /* visited link */
 .redlink:hover {color:#FFF; text-decoration: none !important;}  /* mouse over link */
-.redlink:active {color:#616B72; text-decoration: none !important;}
+.redlink:active {color:#99CC00; text-decoration: none !important;}
 
 .menulink:link {color:#000; text-decoration: none !important;}      /* unvisited link */
 .menulink:visited {color:#000; text-decoration: none !important;}  /* visited link */

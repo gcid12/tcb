@@ -19,7 +19,7 @@
   </div>
   <div class="col-xs-7 col-md-7 text-left">
   
-		<span class="txttitle"><?php echo lang('login_heading');?>123456</span>
+		<span class="txttitle"><?php echo lang('login_heading');?></span>
 		
 		<br/>
 				

@@ -20,7 +20,7 @@
   </div>
   <div class="col-xs-9 col-md-9 text-left">
   
-		<span class="txttitle">Your info</span>
+		<span class="txttitle">Edit your info</span>
 		<br/>
 	  <div class="fhr"></div>		
 		
@@ -69,10 +69,7 @@
 			
 			          <?php endif ?>
             </div>    
-			        <?php echo form_hidden('id', $user->id);?>
-			        <?php echo form_hidden($csrf); ?>
-					    <br/>
-			        <p><?php echo form_submit('submit', lang('edit_user_submit_btn'));?></p>
+			        
 			        
       </div><!-- close s5 -->
 
@@ -85,11 +82,18 @@
         <div class="panel-group" id="accordion">
           <div class="panel panel-default">
             <div class="panel-tcb">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                  1. About you
-                </a>
-              </h4>
+              
+             <!-- panel1  -->
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                <h4 class="panel-title">
+                  <span class="basetxt2">1. About you </span>
+                  <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
+                     <i class="fa fa-circle fa-stack-2x"></i>
+                     <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </h4>  
+              </a>
+              
             </div>
             <div id="collapseOne" class="panel-collapse collapse"> <!-- in -->
               <div class="panel-body">
@@ -103,12 +107,17 @@
             </div>
           </div>
           <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                  2. skills
-                </a>
-              </h4>
+            <div class="panel-tcb">
+              <!-- panel2  -->
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                <h4 class="panel-title">
+                  <span class="basetxt2">2. Skills</span>
+                  <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
+                     <i class="fa fa-circle fa-stack-2x"></i>
+                     <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </h4>  
+              </a>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
               <div class="panel-body">
@@ -119,12 +128,17 @@
             </div>
           </div>
           <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                  3. Social
-                </a>
-              </h4>
+            <div class="panel-tcb">
+              <!-- panel1  -->
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <h4 class="panel-title">
+                  <span class="basetxt2">3. Social </span>
+                  <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
+                     <i class="fa fa-circle fa-stack-2x"></i>
+                     <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </h4>  
+              </a>
             </div>
             <div id="collapseThree" class="panel-collapse collapse">
               <div class="panel-body">
@@ -135,12 +149,17 @@
             </div>
           </div>
           <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                  4. Password
-                </a>
-              </h4>
+            <div class="panel-tcb">
+              <!-- panel1  -->
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                <h4 class="panel-title">
+                  <span class="basetxt2">4. Password </span>
+                  <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
+                     <i class="fa fa-circle fa-stack-2x"></i>
+                     <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </h4>  
+              </a>
             </div>
             <div id="collapseFour" class="panel-collapse collapse">
               <div class="panel-body">
@@ -155,8 +174,16 @@
             </div>
           </div>
         </div> <!--  CLOSE ACCORDION -->
-        <?php echo form_close();?>
+        
       </div> <!-- close 5 -->
+      <div class=" col-sm-7 text-left basetxt graytxt1">
+
+            <?php echo form_hidden('id', $user->id);?>
+              <?php echo form_hidden($csrf); ?>
+              <br/>
+              <p><?php echo form_submit('submit', lang('edit_user_submit_btn'));?></p>
+            <?php echo form_close();?>
+      </div>
 	  </div> <!-- close row -->
 
 	</div><!--  close xs9 -->

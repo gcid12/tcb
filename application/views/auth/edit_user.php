@@ -23,24 +23,238 @@
 		<span class="txttitle"><!-- Edit your info --></span>
 		<br/>
 	  <div class="fhr"></div>		
+
+    <?php $persona = $tcbuser->first_name; ?>
+    <span class="txttitle" title="UX Designer"><?php echo $persona; ?></span>
 		
   	<div class="row">
-  		<div class=" col-sm-5 text-left basetxt txtsmall graytxt1">
+  		<div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
 
             <span class=""><?php echo lang('edit_user_subheading');?></span><br/><br/>
 				
             <div id="infoMessage" class="inmessage"><?php echo $message;?></div>
 				
+            
+
 				      <?php echo form_open(uri_string());?>
 			      
-			      <div><?php echo lang('edit_user_fname_label', 'first_name');?></div> 
-			      <div><?php echo  form_input($first_name);?></div>
-			      
-			      <div><?php echo lang('edit_user_lname_label', 'last_name');?></div>
-			      <div><?php echo form_input($last_name);?></div>
-			      
-			      <div>Twitter<br /></div>
-			      <div><?php echo form_input($s01);?></div>
+
+            <!-- 1.About you -->
+                <div class="row">
+                  <div class="col-sm-12">
+                    You in 1 line<div><?php echo form_input($pitch);?></div>
+
+                  </div>
+                </div>
+                <div class="row">  
+                  <div class="col-sm-6">
+                  <br/>
+                  About you <div><?php echo form_textarea($about);?></div>
+                  </div>
+                  <div class="col-sm-6">
+                  <br/>
+                   What I'm looking for:<div><?php echo form_textarea($iwant);?></div>
+                  </div>
+                </div>
+                <div class="row">  
+                  <div class="col-sm-12">
+                    <br/>
+                    <!-- <ul id="myULTags"> -->
+                              <!-- Existing list items will be pre-added to the tags. -->
+                      <!--         <li>Amazing</li>
+                              <li>Creative</li>
+                      </ul>  -->
+
+                               <script type="text/javascript">
+window.onload=destroyswitch() {
+    $("#noswitch").bootstrapSwitch('destroy');
+  }
+                    </script>
+                               
+
+                    Skills
+                    <div class="well" style="background-color:black;">
+
+                      <?php function tcbcheck($name,$value,$label){ ?>
+                          <input 
+                          id="noswitch"
+                          type="checkbox" 
+                          name="<?php echo $name; ?>" 
+                          value="<?php echo $value; ?>" 
+                          data-size="mini"
+                          data-on-color="success" 
+                          data-on-text="<i class='fa fa-check'></i>"
+                          data-off-text="--"
+                          >
+                          <?php echo $label; ?><br/>
+                      <?php } ?> 
+
+
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#dev" role="tab" data-toggle="tab">Dev</a></li>
+                        <li><a href="#dat" role="tab" data-toggle="tab">Data</a></li>
+                        <li><a href="#des" role="tab" data-toggle="tab">Design</a></li>
+                        <li><a href="#pro" role="tab" data-toggle="tab">Product</a></li>
+                        <li><a href="#fin" role="tab" data-toggle="tab">Finance</a></li>
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="dev">
+                            
+                            <div class="lead">Programming Skills </div>
+                            <div class="row">
+                              <div class="col-xs-6">
+                            <?php
+                              tcbcheck("skillsdev","pyt","Python");
+                              tcbcheck("skillsdev","rub","Ruby");
+                              tcbcheck("skillsdev","php","Objective C");
+                              tcbcheck("skillsdev","jas","Android");
+                              tcbcheck("skillsdev","pyt","Go");
+                              tcbcheck("skillsdev","rub","Javascript");
+                              tcbcheck("skillsdev","php","C");
+                              tcbcheck("skillsdev","jas","C++");
+                              tcbcheck("skillsdev","pyt","Java");
+                              tcbcheck("skillsdev","rub","Perl");
+                              tcbcheck("skillsdev","rub","ASP");
+                              tcbcheck("skillsdev","rub",".Net");
+                             ?>
+                              </div>
+                              <div class="col-xs-6">
+                            <?php
+                              
+                              tcbcheck("skillsdev","php","Angular");
+                              tcbcheck("skillsdev","php","Node");
+                              tcbcheck("skillsdev","php","Jquery");
+                              tcbcheck("skillsdev","php","ActionScript");
+                              tcbcheck("skillsdev","php","D3.js");
+                              tcbcheck("skillsdev","jas","Relational DB");
+                              tcbcheck("skillsdev","pyt","NoSql DB");
+                              tcbcheck("skillsdev","rub","Shell");
+                              tcbcheck("skillsdev","php","Hardware");
+                              tcbcheck("skillsdev","php","APIs");
+                              tcbcheck("skillsdev","php","Technical Writing");
+
+                             
+                             ?>
+                              </div>
+                             </div>
+                        </div>
+                        <div class="tab-pane" id="des">
+                            <div class="lead">Design Skills </div>
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <?php
+                                tcbcheck("skillsdev","pyt","UX");
+                                tcbcheck("skillsdev","rub","UI");
+                                tcbcheck("skillsdev","php","Mockups");
+                                tcbcheck("skillsdev","jas","Prototypes");
+                                tcbcheck("skillsdev","pyt","HTML");
+                                tcbcheck("skillsdev","rub","CSS");
+                                tcbcheck("skillsdev","php","Photoshop");
+                                tcbcheck("skillsdev","jas","Illustrator");
+                                ?>
+                              </div>
+                              <div class="col-xs-6">
+                                <?php
+                                  
+                                  tcbcheck("skillsdev","rub","Branding");
+                                  tcbcheck("skillsdev","rub","logos / Icons");
+                                  tcbcheck("skillsdev","pyt","Decks");
+                                  tcbcheck("skillsdev","php","Animations");
+                                  tcbcheck("skillsdev","jas","Infographics");
+                                  tcbcheck("skillsdev","pyt","Photography");
+                                  
+                                 ?>
+                              </div>
+                             </div>
+                        </div>
+
+                        <div class="tab-pane" id="pro">
+                            <div class="lead">Product Skills</div>
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <?php
+                                tcbcheck("skillsdev","pyt","Client Acquisition");
+                                tcbcheck("skillsdev","pyt","Growth Hack");
+                                tcbcheck("skillsdev","php","Customer Experience");
+                                
+                                tcbcheck("skillsdev","rub","Contracts");
+                                
+                                ?>
+                              </div>
+                              <div class="col-xs-6">
+                                <?php
+                                  tcbcheck("skillsdev","jas","Trademarks");
+                                tcbcheck("skillsdev","pyt","Patents");
+                                  tcbcheck("skillsdev","rub","Media/Press");
+                                  tcbcheck("skillsdev","rub","PR ");
+                                  
+                                  
+                                 ?>
+                              </div>
+                             </div>
+                        </div>
+
+                        <div class="tab-pane" id="dat">
+                            <div class="lead">Data Skills </div>
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <?php
+                                tcbcheck("skillsdev","pyt","Data Science");
+                                tcbcheck("skillsdev","rub","Data Modeling");
+                                tcbcheck("skillsdev","php","Algorithms");
+                                tcbcheck("skillsdev","jas","Data Analysis");
+                                tcbcheck("skillsdev","pyt","Data Cleansing");
+                                
+                                ?>
+                              </div>
+                              <div class="col-xs-6">
+                                <?php
+                                  tcbcheck("skillsdev","rub","Data Capture");
+                                  tcbcheck("skillsdev","pyt","Data Scrapping");
+                                  tcbcheck("skillsdev","pyt","Analog Data");
+                                  tcbcheck("skillsdev","pyt","Hardware + Data");
+                                  
+
+
+                                 ?>
+                              </div>
+                             </div>
+                        </div>
+                        <div class="tab-pane" id="fin">
+                            <div class="lead">Finance Skills </div>
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <?php
+                                tcbcheck("skillsdev","pyt","Financial Projection");
+                                tcbcheck("skillsdev","rub","Term Sheets");
+                                tcbcheck("skillsdev","php","Valuations");
+                                tcbcheck("skillsdev","php","Fundraising");
+                                
+
+
+                                
+                                ?>
+                              </div>
+                              <div class="col-xs-6">
+                                <?php
+                                  tcbcheck("skillsdev","php","Seed Funding");
+                                  tcbcheck("skillsdev","php","Series A");
+                                  tcbcheck("skillsdev","php","Series B");
+                                  tcbcheck("skillsdev","php","Series C");
+                                 ?>
+                              </div>
+                             </div>
+                        </div>
+                      </div>
+                    </div> <!-- close well -->
+
+                  </div>
+                </div>          
+                 
+
 
 			      
 			      <div><?php if ($this->ion_auth->is_admin()): ?>
@@ -71,46 +285,19 @@
 
       <!-- SECOND COLUMN -->
 
-      <div class=" col-sm-7 text-left basetxt txtsmall graytxt1">
+      <div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
           
           <br/><br/><br/>
                 <!-- ACCORDION -->
         <div class="panel-group" id="accordion">
-          <div class="panel panel-default">
-            <div class="panel-tcb">
-              
-             <!-- panel1  -->
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                <h4 class="panel-title">
-                  <span class="basetxt2">1. About you </span>
-                  <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
-                     <i class="fa fa-circle fa-stack-2x"></i>
-                     <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-                  </span>
-                </h4>  
-              </a>
-              
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in"> <!-- in -->
-              <div class="panel-body">
-                
-                <!-- 1.About you -->
-                1 line Pitch <div><?php echo form_input($pitch);?></div>
-                About you:<div><?php echo form_input($about);?></div>
-                I want:<div><?php echo form_input($iwant);?></div>
-                City<div><?php echo form_input($city);?></div>
-                Country<div><?php echo form_input($country);?></div>
 
-                <?php //print_r($tcbuser); ?>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
+
+           <div class="panel panel-default">
             <div class="panel-tcb">
-              <!-- panel2  -->
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              <!-- panel1  -->
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
                 <h4 class="panel-title">
-                  <span class="basetxt2">2. Skills</span>
+                  <span class="basetxt2">A. Personal Info </span>
                   <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
                      <i class="fa fa-circle fa-stack-2x"></i>
                      <i class="fa fa-check fa-stack-1x fa-inverse"></i>
@@ -118,24 +305,74 @@
                 </h4>  
               </a>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
+            <div id="collapseFour" class="panel-collapse collapse">
               <div class="panel-body">
 
-                <!--   2. Skills  -->
-                Developer Skills<div><?php echo form_input($skillsdev);?></div>
-                Design Skills<div><?php echo form_input($skillsdes);?></div>
-                Media Skills<div><?php echo form_input($skillsmed);?></div>
-                Data Skills<div><?php echo form_input($skillsdat);?></div>  
+
+                <div class="row">  
+                  <div class="col-sm-6">
+                    First<div><?php echo form_input($first_name);?></div>  
+                  </div>  
+                  <div class="col-sm-6">
+                    Last<div><?php echo form_input($last_name);?></div>  
+                  </div>
+                </div>
+                <div class="row">  
+                  <div class="col-sm-6">
+                    Email<div><?php echo form_input($email);?></div>  
+                  </div>  
+                  <div class="col-sm-3">
+                  City<div><?php echo form_input($city);?></div>
+                  </div>
+                  <div class="col-sm-3">
+                  Country<div><?php echo form_input($country);?></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    Show email  
+                      
+                      <input type="checkbox" 
+                      name="translator" 
+                      value="01" 
+                      data-on-color="success" 
+                      data-on-text="yep" 
+                      data-off-text="nope" 
+                      data-label-text=""
+                      data-size="medium"
+                      checked> 
+                  </div>
+                   
+
+                  <div class="col-sm-3">
+                    Tshirt Size
+                    <select class="">
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-3">
+                    <br/>
+                    <select class="">
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+
+                  </div>
+                </div>
 
               </div>
             </div>
           </div>
+
           <div class="panel panel-default">
             <div class="panel-tcb">
               <!-- panel1  -->
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                 <h4 class="panel-title">
-                  <span class="basetxt2">3. Social </span>
+                  <span class="basetxt2">B. Social Media </span>
                   <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
                      <i class="fa fa-circle fa-stack-2x"></i>
                      <i class="fa fa-check fa-stack-1x fa-inverse"></i>
@@ -143,14 +380,14 @@
                 </h4>  
               </a>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">  <!-- in -->
+            <div id="collapseThree" class="panel-collapse collapse in">  <!-- in -->
               <div class="panel-body">
 
                 <?php function social_select($select,$value,$pre){ 
 
                 if(!isset($select) || $select==""){$select=$pre;} ?>
                     <select class="form-control" style="background-color:#ccc;">
-                      <option value="" >:::Choose one:::</option> 
+                      <option value="" >Choose </option> 
                       
                       <option value="gh" <?php echo ($select =='gh' ? "selected" : "" ); ?> >Github</option> 
                       <option value="hn" <?php echo ($select =='hn' ? "selected" : "" ); ?> >HackerNews</option> 
@@ -165,12 +402,29 @@
                       <option value="in" <?php echo ($select =='in' ? "selected" : "" ); ?> >Linkedin</option> 
                     </select> 
 
-                <?php $select="bh";}
+                <?php $select="";}
+
+                ?>
+
+
+                <?php function payment_select($select,$value,$pre){ 
+
+                if(!isset($select) || $select==""){$select=$pre;} ?>
+                    <select class="form-control" style="background-color:#ccc;">
+                      <option value="" >:::Choose one:::</option> 
+                      
+                      <option value="pb" <?php echo ($select =='pb' ? "selected" : "" ); ?> >Probono</option> 
+                      <option value="ch" <?php echo ($select =='ch' ? "selected" : "" ); ?> >Check</option> 
+                      <option value="tr" <?php echo ($select =='tr' ? "selected" : "" ); ?> >Transfer</option>
+
+
+                    </select> 
+
+                <?php $select="";}
 
                 ?>
 
                 <!-- 3. Social --> 
-                <br/>   
 
                 Twitter
                 <div class="input-group">
@@ -179,33 +433,64 @@
                   <?php echo form_input($s01);?>
                 </div>
 
-                <br/> 
-                Social 2<div><?php echo form_input($s02);?></div>  
-                
-
-                  <?php social_select("","",""); ?>
-
-                <br/> 
-                Social 3<div><?php echo form_input($s03);?></div>  
+                <br/>
+                <div class="row">  
+                  <div class="col-sm-3">
                     <?php social_select("","",""); ?>
-
-                <br/> 
-                Social 4<div><?php echo form_input($s04);?></div>  
-                    <?php social_select("","",""); ?>  
-                <br/> 
-                Social 5<div><?php echo form_input($s05);?></div>  
+                  </div> 
+                  <div class="col-sm-9">
+                    <div><?php echo form_input($s02);?></div>  
+                  </div> 
+                </div>
+                <div class="row">  
+                  <div class="col-sm-3">
                     <?php social_select("","",""); ?>
-                <br/> 
+                  </div> 
+                  <div class="col-sm-9">
+                    <div><?php echo form_input($s03);?></div>  
+                  </div> 
+                </div>
+                <div class="row">  
+                  <div class="col-sm-3">
+                    <?php social_select("","",""); ?>
+                  </div> 
+                  <div class="col-sm-9">
+                    <div><?php echo form_input($s04);?></div>  
+                  </div> 
+                </div>
+                <div class="row">  
+                  <div class="col-sm-3">
+                    <?php social_select("","",""); ?>
+                  </div> 
+                  <div class="col-sm-9">
+                    <div><?php echo form_input($s05);?></div>  
+                  </div> 
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+
+                      <p style="line-height:2em;">
+                        <hr/>
+                      It's 
+                      <input type="checkbox" name"recruiters" data-on-color="success"  data-size="mini" data-on-text="ok" data-off-text="not ok"/> 
+                      to be contacted by recruiters. 
+                      </p>
+                  </div>
+                </div> 
+
 
               </div>
             </div>
           </div>
+
+
+
           <div class="panel panel-default">
             <div class="panel-tcb">
-              <!-- panel1  -->
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+              <!-- panel2  -->
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
                 <h4 class="panel-title">
-                  <span class="basetxt2">4. Password </span>
+                  <span class="basetxt2">C. Getting Paid</span>
                   <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
                      <i class="fa fa-circle fa-stack-2x"></i>
                      <i class="fa fa-check fa-stack-1x fa-inverse"></i>
@@ -213,18 +498,87 @@
                 </h4>  
               </a>
             </div>
-            <div id="collapseFour" class="panel-collapse collapse">
+            <div id="collapseFive" class="panel-collapse collapse">
               <div class="panel-body">
-
-                  <div><?php echo lang('edit_user_password_label', 'password');?> </div>
-                  <div><?php echo form_input($password);?></div>
-                  <div><?php echo lang('edit_user_password_confirm_label', 'password_confirm');?></div>
-                  <div><?php echo form_input($password_confirm);?></div>
+                <!-- 2. Skills -->
                 
+                      How do you like getting paid for completed projects.
+                      <hr/>
+                      
+                <div class="row">  
+                  <div class="col-sm-4">
+                     <?php payment_select("pb","",""); ?> 
+                  </div>  
+                  <div class="col-sm-8">
+                    <?php echo form_input($first_name);?>
+                  </div>
+                </div>
+                <div class="row">  
+                  <div class="col-sm-4">
+                     <?php payment_select("tr","",""); ?> 
+                  </div>  
+                  <div class="col-sm-8">
+                    <?php echo form_input($first_name);?>
+
+                  </div>
+                </div>
+                <div class="row">  
+                  <div class="col-sm-4">
+                     <?php payment_select("ch","",""); ?> 
+                  </div>  
+                  <div class="col-sm-8">
+                    <?php echo form_input($first_name);?>
+
+                  </div>
+                </div>
+
+                <hr/>
+
+                  <div class="alert alert-success" role="alert" style="font-size:0.7em;">
+                  <i class="fa fa-warning"></i>
+                  More options soon..   
+                  </div>                  
+                </div>  
 
               </div>
             </div>
           </div>
+
+
+          <div class="panel panel-default">
+            <div class="panel-tcb">
+              <!-- panelRECRUITERS  -->
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                <h4 class="panel-title">
+                  <span class="basetxt2">D. Change Password</span>
+                  <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
+                     <i class="fa fa-circle fa-stack-2x"></i>
+                     <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </h4>  
+              </a>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse">
+              <div class="panel-body">
+                  
+                  <br/>
+                  <span class="label label-warning"><i class="fa fa-warning"></i> This will change your actual password </span>
+                  <hr/>
+                  <div>Password: (Only if changing)</div>
+                  <div><?php echo form_input($password);?></div>
+                  <div><?php echo lang('edit_user_password_confirm_label', 'password_confirm');?></div>
+                  <div><?php echo form_input($password_confirm);?></div>
+
+                  
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+
         </div> <!--  CLOSE ACCORDION -->
         
       </div> <!-- close 5 -->
@@ -233,7 +587,8 @@
             <?php echo form_hidden('id', $user->id);?>
               <?php echo form_hidden($csrf); ?>
               <br/>
-              <p><?php echo form_submit('submit', lang('edit_user_submit_btn'));?></p>
+              
+              <input type="submit" name="submit" value="Save" class="btn btn-success">
             <?php echo form_close();?>
       </div>
 	  </div> <!-- close row -->
@@ -242,5 +597,6 @@
 
 </div> <!-- close row -->		
 
-
+<input type="hidden" value="pasto" name="tags" class="tagit-hidden-field">
+<input type="hidden" value="algodon" name="tags" class="tagit-hidden-field">
 

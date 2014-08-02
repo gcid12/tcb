@@ -523,11 +523,14 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 		$this->form_validation->set_rules('iwant', 'I want', 'xss_clean');
 		$this->form_validation->set_rules('city', 'City', 'xss_clean');
 		$this->form_validation->set_rules('country', 'Country', 'xss_clean');
-		$this->form_validation->set_rules('skillsdev', 'Dev skills', 'xss_clean');
+		$this->form_validation->set_rules('skillsdev', 'Developer skills', 'xss_clean');
 		$this->form_validation->set_rules('skillsdes', 'Design skills', 'xss_clean');
 		$this->form_validation->set_rules('skillsmed', 'Media skills', 'xss_clean');
-		$this->form_validation->set_rules('skillsdat', 'Data skills', 'xss_clean');
 		$this->form_validation->set_rules('skillsfin', 'Finance skills', 'xss_clean');
+		$this->form_validation->set_rules('pay01', 'Payment 1', 'xss_clean');
+		$this->form_validation->set_rules('pay02', 'Payment 2', 'xss_clean');
+		$this->form_validation->set_rules('pm01', 'Payment Method 1', 'xss_clean');
+		$this->form_validation->set_rules('pm02', 'Payment Method 2', 'xss_clean');
 		$this->form_validation->set_rules('s01', 'Social 1', 'xss_clean');
 		$this->form_validation->set_rules('s02', 'Social 2', 'xss_clean');
 		$this->form_validation->set_rules('s03', 'Social 3', 'xss_clean');
@@ -538,6 +541,8 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 		$this->form_validation->set_rules('k03', 'Key 3', 'xss_clean');
 		$this->form_validation->set_rules('k04', 'Key 4', 'xss_clean');
 		$this->form_validation->set_rules('k05', 'Key 5', 'xss_clean');
+		$this->form_validation->set_rules('showemail', 'Show Email', 'xss_clean');
+		$this->form_validation->set_rules('recru', 'Recruiters', 'xss_clean');
 		$this->form_validation->set_rules('groups', $this->lang->line('edit_user_validation_groups_label'), 'xss_clean');
 
 		if (isset($_POST) && !empty($_POST))
@@ -551,21 +556,29 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			$data = array(
 				'first_name' => $this->input->post('first_name'),
 				'last_name'  => $this->input->post('last_name'),
+				'email'  => $this->input->post('email'),
 				'pitch'      => $this->input->post('pitch'),
 				'about'      => $this->input->post('about'),
 				'iwant'      => $this->input->post('iwant'),
 				'city'      => $this->input->post('city'),
 				'country'      => $this->input->post('country'),
+				'tshirt'      => $this->input->post('tshirt'),
+				'gender'      => $this->input->post('gender'),
 				'skillsdev'      => $this->input->post('skillsdev'),
 				'skillsdes'      => $this->input->post('skillsdes'),
 				'skillsmed'      => $this->input->post('skillsmed'),
-				'skillsdat'      => $this->input->post('skillsdat'),
 				'skillsfin'      => $this->input->post('skillsfin'),
 				's01'      => $this->input->post('s01'),
 				's02'      => $this->input->post('s02'),
 				's03'      => $this->input->post('s03'),
 				's04'      => $this->input->post('s04'),
 				's05'      => $this->input->post('s05'),
+				'showemail'      => $this->input->post('showemail'),
+				'recru'      => $this->input->post('recru'),
+				'pay01'      => $this->input->post('pay01'),
+				'pay02'      => $this->input->post('pay02'),
+				'pm01'      => $this->input->post('pm01'),
+				'pm02'      => $this->input->post('pm02'),
 				/* ////////////*/
 			);
 
@@ -627,163 +640,226 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 		$this->data['first_name'] = array(
 			'name'  => 'first_name',
 			'id'    => 'first_name',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('first_name', $user->first_name),
 		);
 		$this->data['last_name'] = array(
 			'name'  => 'last_name',
 			'id'    => 'last_name',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('last_name', $user->last_name),
+		);
+		$this->data['email'] = array(
+				'name'  => 'email',
+				'id'    => 'email',
+				'type'  => 'text',
+				'class'    => 'form-control',
+				'value' => $this->form_validation->set_value('email'),
 		);
 // Intrusos
 		$this->data['pitch'] = array(
 			'name'  => 'pitch',
 			'id'    => 'pitch',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pitch', $user->pitch),
 		);
 		$this->data['about'] = array(
 			'name'  => 'about',
 			'id'    => 'about',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('about', $user->about),
 		);
 		$this->data['iwant'] = array(
 			'name'  => 'iwant',
 			'id'    => 'iwant',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('iwant', $user->iwant),
 		);
 				$this->data['city'] = array(
 			'name'  => 'city',
 			'id'    => 'city',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('city', $user->city),
 		);
 				$this->data['country'] = array(
 			'name'  => 'country',
 			'id'    => 'country',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('country', $user->country),
 		);
-				$this->data['skillsdev'] = array(
-			'name'  => 'skillsdev',
-			'id'    => 'skillsdev',
+				$this->data['tshirt'] = array(
+			'name'  => 'tshirt',
+			'id'    => 'tshirt',
 			'type'  => 'text',
-			'class'    => 'form-control',
-			'value' => $this->form_validation->set_value('skillsdev', $user->skillsdev),
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('tshirt', $user->tshirt),
 		);
-				$this->data['skillsdes'] = array(
-			'name'  => 'skillsdes',
-			'id'    => 'skillsdes',
+			$this->data['gender'] = array(
+			'name'  => 'gender',
+			'id'    => 'gender',
 			'type'  => 'text',
-			'class'    => 'form-control',
-			'value' => $this->form_validation->set_value('skillsdes', $user->skillsdes),
-		);
-				$this->data['skillsmed'] = array(
-			'name'  => 'skillsmed',
-			'id'    => 'skillsmed',
-			'type'  => 'text',
-			'class'    => 'form-control',
-			'value' => $this->form_validation->set_value('skillsmed', $user->skillsmed),
-		);
-				$this->data['skillsdat'] = array(
-			'name'  => 'skillsdat',
-			'id'    => 'skillsdat',
-			'type'  => 'text',
-			'class'    => 'form-control',
-			'value' => $this->form_validation->set_value('skillsdat', $user->skillsdat),
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('gender', $user->gender),
 		);
 				$this->data['s01'] = array(
 			'name'  => 's01',
 			'id'    => 's01',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s01', $user->s01),
 		);
 				$this->data['s02'] = array(
 			'name'  => 's02',
 			'id'    => 's02',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s02', $user->s02),
 		);
 				$this->data['s03'] = array(
 			'name'  => 's03',
 			'id'    => 's03',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s03', $user->s03),
 		);
 				$this->data['s04'] = array(
 			'name'  => 's04',
 			'id'    => 's04',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s04', $user->s04),
 		);
 				$this->data['s05'] = array(
 			'name'  => 's05',
 			'id'    => 's05',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s05', $user->s05),
 		);
 				$this->data['k01'] = array(
 			'name'  => 'k01',
 			'id'    => 'k01',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('k01', $user->k01),
 		);
 				$this->data['k02'] = array(
 			'name'  => 'k02',
 			'id'    => 'k02',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('k02', $user->k02),
 		);
 				$this->data['k03'] = array(
 			'name'  => 'k03',
 			'id'    => 'k03',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('k03', $user->k03),
 		);
 				$this->data['k04'] = array(
 			'name'  => 'k04',
 			'id'    => 'k04',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('k04', $user->k04),
 		);
 				$this->data['k05'] = array(
 			'name'  => 'k05',
 			'id'    => 'k05',
 			'type'  => 'text',
-			'class'    => 'form-control',
+			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('k05', $user->k05),
+		);
+					$this->data['skillsdev'] = array(
+			'name'  => 'skillsdev',
+			'id'    => 'skillsdev',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('skillsdev', $user->skillsdev),
+		);
+					$this->data['skillsdes'] = array(
+			'name'  => 'skillsdes',
+			'id'    => 'skillsdes',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('skillsdes', $user->skillsdes),
+		);
+					$this->data['skillsmed'] = array(
+			'name'  => 'skillsmed',
+			'id'    => 'skillsmed',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('skillsmed', $user->skillsmed),
+		);
+					$this->data['skillsfin'] = array(
+			'name'  => 'skillsfin',
+			'id'    => 'skillsfin',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('skillsfin', $user->skillsfin),
+		);	
+					$this->data['showemail'] = array(
+			'name'  => 'showemail',
+			'id'    => 'showemail',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('showemail', $user->showemail),
+		);
+		 			$this->data['recru'] = array(
+			'name'  => 'recru',
+			'id'    => 'recru',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('recru', $user->recru),
+		);
+				$this->data['pay01'] = array(
+			'name'  => 'pay01',
+			'id'    => 'pay01',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pay01', $user->pay01),
+		);
+			$this->data['pay02'] = array(
+			'name'  => 'pay02',
+			'id'    => 'pay02',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pay02', $user->pay02),
+		);	
+			$this->data['pm01'] = array(
+			'name'  => 'pm01',
+			'id'    => 'pm01',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pm01', $user->pm01),
+		);
+			$this->data['pm02'] = array(
+			'name'  => 'pm02',
+			'id'    => 'pm02',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pm02', $user->pm02),
 		);
 //intrusos finish		
 		$this->data['password'] = array(
 			'name' => 'password',
 			'id'   => 'password',
 			'type' => 'password',
-			'class'    => 'form-control'
+			'class'    => 'form-control input-sm'
 		);
 		$this->data['password_confirm'] = array(
 			'name' => 'password_confirm',
 			'id'   => 'password_confirm',
 			'type' => 'password',
-			'class'    => 'form-control'
+			'class'    => 'form-control input-sm'
 		);
 
 		$this->_render_page('auth/edit_user', $this->data);

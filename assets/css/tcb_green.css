@@ -11,6 +11,29 @@ body {
    background-color:#000;
 }
 
+
+/*this overwrite tagit.ui-sendesk.css:53*/
+.ui-widget{font-size:0.9em;} 
+ul.tagit li.tagit-choice {
+-moz-border-radius: 6px;
+border-radius: 6px;
+-webkit-border-radius: 6px;
+border: 1px solid #CAD8F3;
+background: none;
+background-color: #FFF;
+font-weight: normal;
+color: red;
+}
+ul.tagit input[type="text"] {
+color: #99CC00;
+background: none;
+}
+
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on, .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off, .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
+line-height: 10px;
+}
+
+
 .panel-tcb{background-color:#99CC00; color:black; padding:5px;}
 
 

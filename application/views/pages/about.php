@@ -4,7 +4,7 @@
 	</div>
 
   	<div class="col-xs-8">
-  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_infographic.jpg') ?>?" alt="tcb infographic"/>
+  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_infographic.jpg')."?=".rand(1,100); ?>" alt="tcb infographic"/>
 	
 <br/><br/>
 

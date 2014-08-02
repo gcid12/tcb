@@ -153,6 +153,17 @@ $this->load->model('tcbmodel');  //loading model
 
 	}
 
+
+				public function tagtest()
+	{
+	
+      $this->load->view('pages/tagtest');
+      $this->load->view('include/footer');
+
+
+	}
+
+
 	
 	
 	

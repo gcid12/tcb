@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-xs-12 ">
   	<center>
- 1234
+
 	<br/><br/><br/>
 	<img src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="tcb" />
 	<br/><br/><br/>

@@ -48,13 +48,9 @@
         <hr>
         <h3>Preloading Data in Markup</h3>
         <form>
-            <p>
-                Using a UL in HTML to prefill the widget with some tags.
-            </p>
-            <ul id="myULTags">
+            <ul id="myULTags" class="font-size:0.5em;">
                 <!-- Existing list items will be pre-added to the tags. -->
-                <li>Tag1</li>
-                <li>Tag2</li>
+                <li>Hustler</li>
             </ul>
         </form>
 

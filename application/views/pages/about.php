@@ -27,7 +27,7 @@
 
   
   
-  	BUSINESS MODEL
+<!--   	BUSINESS MODEL
 
 We want to be as clear as possible about how we do money: 
 1. There’s a ZERO membership fee and there will never be. You can find and be found in TCB network without ever paying a single dollar. 
@@ -48,7 +48,7 @@ Notes:
 The payment through our system is totally optional, we know that you can contact or be contacted by the counterpart, but by doing it with us:
 -We guarantee payment (We withdraw payment before project start and we don’t release it until the project is done. In case of controversy it will be splitted 50-50 NQA.)
 -Other Perk is that we can (if you decide it do so), withheld your taxes so you don’t get into trouble by spending them beforehand. The best thing that can happen is to have a Xmas in April.
-
+ -->
 	
 <br/><br/>
 

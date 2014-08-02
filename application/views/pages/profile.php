@@ -43,7 +43,7 @@
   
   <div class="col-sm-1 col-md-1 text-center basetxt">
   
-  	<a href="/"><img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif') ?>" alt="846766"/></a>
+  	<a href="/"><img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766"/></a>
   </div>
   <div class="col-sm-9 col-md-9 text-left">
   

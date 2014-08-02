@@ -21,9 +21,11 @@
 		  			
 			<?php }?>
 
+				<a href="http://tcb-io.tumblr.com/" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="BLOG"><i class="fa fa-pencil fa-2x"></i></a>
 				<a href="/story" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="TCB"><i class="fa fa-bolt fa-2x"></i></a>
 				<a href="/about" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="ABOUT"><i class="fa fa-flag fa-2x"></i></a>
 				<a href="/home" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="HOME"><i class="fa fa-home fa-2x"></i></a>
+
 		
 	</div>
 </div>	

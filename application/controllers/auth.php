@@ -514,18 +514,22 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 		$groups=$this->ion_auth->groups()->result_array();
 		$currentGroups = $this->ion_auth->get_users_groups($id)->result();
 
+		
+
 		//validate form input
 		$this->form_validation->set_rules('first_name', $this->lang->line('edit_user_validation_fname_label'), 'required|xss_clean');
 		$this->form_validation->set_rules('last_name', $this->lang->line('edit_user_validation_lname_label'), 'required|xss_clean');
-		/* $this->form_validation->set_rules('phone', $this->lang->line('edit_user_validation_phone_label'), 'required|xss_clean'); */
+		$this->form_validation->set_rules('email', 'Email', 'xss_clean'); 
 		$this->form_validation->set_rules('pitch', 'Pitch', 'xss_clean'); 
 		$this->form_validation->set_rules('about', 'About', 'xss_clean');
 		$this->form_validation->set_rules('iwant', 'I want', 'xss_clean');
+		$this->form_validation->set_rules('pw', 'Personal web', 'xss_clean');
 		$this->form_validation->set_rules('city', 'City', 'xss_clean');
 		$this->form_validation->set_rules('country', 'Country', 'xss_clean');
 		$this->form_validation->set_rules('skillsdev', 'Developer skills', 'xss_clean');
 		$this->form_validation->set_rules('skillsdes', 'Design skills', 'xss_clean');
-		$this->form_validation->set_rules('skillsmed', 'Media skills', 'xss_clean');
+		$this->form_validation->set_rules('skillspro', 'Product skills', 'xss_clean');
+		$this->form_validation->set_rules('skillsdat', 'Data Skills', 'xss_clean');
 		$this->form_validation->set_rules('skillsfin', 'Finance skills', 'xss_clean');
 		$this->form_validation->set_rules('pay01', 'Payment 1', 'xss_clean');
 		$this->form_validation->set_rules('pay02', 'Payment 2', 'xss_clean');
@@ -544,6 +548,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 		$this->form_validation->set_rules('showemail', 'Show Email', 'xss_clean');
 		$this->form_validation->set_rules('recru', 'Recruiters', 'xss_clean');
 		$this->form_validation->set_rules('groups', $this->lang->line('edit_user_validation_groups_label'), 'xss_clean');
+		$this->form_validation->set_rules('skills', 'Skills', 'xss_clean');
 
 		if (isset($_POST) && !empty($_POST))
 		{
@@ -560,19 +565,26 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 				'pitch'      => $this->input->post('pitch'),
 				'about'      => $this->input->post('about'),
 				'iwant'      => $this->input->post('iwant'),
+				'pw'      => $this->input->post('pw'),
 				'city'      => $this->input->post('city'),
 				'country'      => $this->input->post('country'),
 				'tshirt'      => $this->input->post('tshirt'),
 				'gender'      => $this->input->post('gender'),
 				'skillsdev'      => $this->input->post('skillsdev'),
 				'skillsdes'      => $this->input->post('skillsdes'),
-				'skillsmed'      => $this->input->post('skillsmed'),
+				'skillspro'      => $this->input->post('skillspro'),
 				'skillsfin'      => $this->input->post('skillsfin'),
+				'skillsdat'      => $this->input->post('skillsdat'),
 				's01'      => $this->input->post('s01'),
 				's02'      => $this->input->post('s02'),
 				's03'      => $this->input->post('s03'),
 				's04'      => $this->input->post('s04'),
 				's05'      => $this->input->post('s05'),
+				'k01'      => $this->input->post('k01'),
+				'k02'      => $this->input->post('k02'),
+				'k03'      => $this->input->post('k03'),
+				'k04'      => $this->input->post('k04'),
+				'k05'      => $this->input->post('k05'),
 				'showemail'      => $this->input->post('showemail'),
 				'recru'      => $this->input->post('recru'),
 				'pay01'      => $this->input->post('pay01'),
@@ -582,9 +594,9 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 				/* ////////////*/
 			);
 
-			// Only allow updating groups if user is admin
-			if ($this->ion_auth->is_admin())
-			{
+			
+			//if ($this->ion_auth->is_admin())   //Originally only Admin can update
+			//{
 				//Update the groups user belongs to
 				$groupData = $this->input->post('groups');
 
@@ -597,7 +609,10 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 					}
 
 				}
-			}
+			//}
+
+
+
 
 			//update the password if it was posted
 			if ($this->input->post('password'))
@@ -637,10 +652,12 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 		$this->data['groups'] = $groups;
 		$this->data['currentGroups'] = $currentGroups;
 
+
 		$this->data['first_name'] = array(
 			'name'  => 'first_name',
 			'id'    => 'first_name',
 			'class'    => 'form-control input-sm',
+			'placeholder' => 'First Name',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('first_name', $user->first_name),
 		);
@@ -648,6 +665,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 'last_name',
 			'id'    => 'last_name',
 			'class'    => 'form-control input-sm',
+			'placeholder' => 'Last Name',
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('last_name', $user->last_name),
 		);
@@ -655,14 +673,16 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 				'name'  => 'email',
 				'id'    => 'email',
 				'type'  => 'text',
+				'placeholder' => 'email',
 				'class'    => 'form-control',
-				'value' => $this->form_validation->set_value('email'),
+				'value' => $this->form_validation->set_value('email', $user->email),
 		);
 // Intrusos
 		$this->data['pitch'] = array(
 			'name'  => 'pitch',
 			'id'    => 'pitch',
 			'type'  => 'text',
+			'placeholder' => 'your personal pitch',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pitch', $user->pitch),
 		);
@@ -670,6 +690,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 'about',
 			'id'    => 'about',
 			'type'  => 'text',
+			'placeholder' => 'Try to be concise and to the point',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('about', $user->about),
 		);
@@ -677,13 +698,23 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 'iwant',
 			'id'    => 'iwant',
 			'type'  => 'text',
+			'placeholder' => 'Save the rainforest, explore other possibilities, make money, meet new people, etc..',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('iwant', $user->iwant),
+		);
+			$this->data['pw'] = array(
+			'name'  => 'pw',
+			'id'    => 'pw',
+			'placeholder' => 'Your personal website',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pw', $user->pw),
 		);
 				$this->data['city'] = array(
 			'name'  => 'city',
 			'id'    => 'city',
 			'type'  => 'text',
+			'placeholder' => 'Where you live',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('city', $user->city),
 		);
@@ -712,6 +743,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 's01',
 			'id'    => 's01',
 			'type'  => 'text',
+			'placeholder' => 'Twitter handle',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s01', $user->s01),
 		);
@@ -719,6 +751,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 's02',
 			'id'    => 's02',
 			'type'  => 'text',
+			'placeholder' => 'URL',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s02', $user->s02),
 		);
@@ -726,6 +759,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 's03',
 			'id'    => 's03',
 			'type'  => 'text',
+			'placeholder' => 'URL',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s03', $user->s03),
 		);
@@ -733,6 +767,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 's04',
 			'id'    => 's04',
 			'type'  => 'text',
+			'placeholder' => 'URL',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s04', $user->s04),
 		);
@@ -740,6 +775,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 's05',
 			'id'    => 's05',
 			'type'  => 'text',
+			'placeholder' => 'URL',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('s05', $user->s05),
 		);
@@ -782,6 +818,9 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 'skillsdev',
 			'id'    => 'skillsdev',
 			'type'  => 'text',
+			'rows'  => '3',
+			'max_length'  => '300',
+			'placeholder'  => 'max 300 chars, separate with comas',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('skillsdev', $user->skillsdev),
 		);
@@ -789,27 +828,47 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 'skillsdes',
 			'id'    => 'skillsdes',
 			'type'  => 'text',
+			'rows'  => '3',
+			'max_length'  => '300',
+			'placeholder'  => 'max 300 chars, separate with comas',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('skillsdes', $user->skillsdes),
 		);
-					$this->data['skillsmed'] = array(
-			'name'  => 'skillsmed',
-			'id'    => 'skillsmed',
+					$this->data['skillspro'] = array(
+			'name'  => 'skillspro',
+			'id'    => 'skillspro',
 			'type'  => 'text',
+			'rows'  => '3',
+			'max_length'  => '300',
+			'placeholder'  => 'max 300 chars, separate with comas',
 			'class'    => 'form-control input-sm',
-			'value' => $this->form_validation->set_value('skillsmed', $user->skillsmed),
+			'value' => $this->form_validation->set_value('skillspro', $user->skillspro),
+		);
+					$this->data['skillsdat'] = array(
+			'name'  => 'skillsdat',
+			'id'    => 'skillsdat',
+			'type'  => 'text',
+			'rows'  => '3',
+			'max_length'  => '300',
+			'placeholder'  => 'max 300 chars, separate with comas',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('skillsdat', $user->skillsdat),
 		);
 					$this->data['skillsfin'] = array(
 			'name'  => 'skillsfin',
 			'id'    => 'skillsfin',
 			'type'  => 'text',
+			'rows'  => '3',
+			'max_length'  => '300',
+			'placeholder'  => 'max 300 chars, separate with comas',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('skillsfin', $user->skillsfin),
 		);	
 					$this->data['showemail'] = array(
 			'name'  => 'showemail',
 			'id'    => 'showemail',
-			'type'  => 'text',
+			'value'  => 'accept',
+			'checked'  => 'TRUE',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('showemail', $user->showemail),
 		);
@@ -824,6 +883,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 'pay01',
 			'id'    => 'pay01',
 			'type'  => 'text',
+			'placeholder' => 'Payment details',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pay01', $user->pay01),
 		);
@@ -831,23 +891,38 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'name'  => 'pay02',
 			'id'    => 'pay02',
 			'type'  => 'text',
+			'placeholder' => 'Payment details',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pay02', $user->pay02),
 		);	
+			$this->data['pay03'] = array(
+			'name'  => 'pay03',
+			'id'    => 'pay03',
+			'type'  => 'text',
+			'placeholder' => 'Payment details',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pay03', $user->pay03),
+		);		
 			$this->data['pm01'] = array(
 			'name'  => 'pm01',
 			'id'    => 'pm01',
-			'type'  => 'text',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pm01', $user->pm01),
 		);
 			$this->data['pm02'] = array(
 			'name'  => 'pm02',
 			'id'    => 'pm02',
-			'type'  => 'text',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pm02', $user->pm02),
 		);
+				$this->data['pm03'] = array(
+			'name'  => 'pm03',
+			'id'    => 'pm03',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pm03', $user->pm03),
+		);
+
 //intrusos finish		
 		$this->data['password'] = array(
 			'name' => 'password',

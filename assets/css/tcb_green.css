@@ -34,6 +34,18 @@ line-height: 10px;
 }
 
 
+
+a:hover, a:focus {
+color: #CCC;
+text-decoration: none;
+}
+
+a:link {
+    color: #99CC00;
+}
+
+
+
 .panel-tcb{background-color:#99CC00; color:black; padding:5px;}
 
 

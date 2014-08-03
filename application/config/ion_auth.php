@@ -54,7 +54,9 @@ $config['collections']['login_attempts'] = 'login_attempts';
 */
 $config['tables']['users']           = 'users';
 $config['tables']['groups']          = 'groups';
+$config['tables']['skills']          = 'skills';
 $config['tables']['users_groups']    = 'users_groups';
+$config['tables']['users_skills']    = 'users_skills';
 $config['tables']['login_attempts']  = 'login_attempts';
 $config['tables']['tblMember']  = 'tblMember';
 

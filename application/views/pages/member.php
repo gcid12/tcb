@@ -55,7 +55,14 @@
 				<?php echo $tcbuser->city; ?> , 
 				<?php echo $tcbuser->country; ?> |
 				
-				<?php echo $tcbuser->email; ?> | 
+
+				<?php 
+					if($tcbuser->showemail==1){
+				echo $tcbuser->email." | "; 
+							}
+				?> 
+
+
 				<strong>@</strong>  <?php echo $tcbuser->s01; ?> 
 				</div>
 
@@ -97,20 +104,7 @@
 
 			</div>
 		</div> <!-- CLOSE ROW -->
-		<div class="row">
 
-			<div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
-					<h3 class="lead text-muted">About me</h3>
-					<div><?php echo $tcbuser->about; ?></div>
-
-		  </div>
-
-			<div class="col-sm-6 text-left basetxt txtsmall graytxt1">
-					
-					
-
-			</div>
-		</div> <!-- CLOSE ROW -->
 
 
 				

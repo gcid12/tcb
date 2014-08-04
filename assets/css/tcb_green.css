@@ -25,7 +25,7 @@ font-weight: normal;
 color: red;
 }
 ul.tagit input[type="text"] {
-color: #99CC00;
+color: #232323;
 background: none;
 }
 
@@ -41,15 +41,19 @@ text-decoration: none;
 }
 
 a:link {
-    color: #99CC00;
+    color: #232323;
 }
 
+.bg-dev{background-color:#8FC637;}
+.bg-des{background-color:#48D837;}
+.bg-dat{background-color:#23C12F;}
+.bg-pro{background-color:#55B592;}
+.bg-fin{background-color:#95AC37;}
+
+.panel-tcb{background-color:#232323; color:black; padding:5px;}
 
 
-.panel-tcb{background-color:#99CC00; color:black; padding:5px;}
-
-
-.tcb-accordion{background-color:#99CC00; color:#000;}
+.tcb-accordion{background-color:#232323; color:#000;}
 
 .nametag{padding:15px; color:#666;}
 
@@ -58,7 +62,7 @@ a:link {
   	background-color:#000;
   }
   .basetxt{
-  color:#99CC00;
+  color:#232323;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;  
   }
@@ -71,7 +75,7 @@ a:link {
   }
 
       .contactme{
-  background-color:#99CC00;
+  background-color:#232323;
   font-size:1em;
   color:black;
   padding:5px 10px;
@@ -79,7 +83,7 @@ a:link {
   }
   
   .menu1{
-  background-color:#99CC00;
+  background-color:#232323;
   font-size:0.7em;
   color:black;
   padding:5px 10px;
@@ -88,11 +92,11 @@ a:link {
   
   
   .fhr{ display: block; height: 1px;
-    border: 0; border-top: 1px solid #99CC00;
+    border: 0; border-top: 1px solid #232323;
     margin: 1em 0; padding: 0; }
     
    .fhr2{ display: block; height: 1px;
-    border: 0; border-top: 1px solid #99CC00;
+    border: 0; border-top: 1px solid #232323;
     margin: 0.3em 0; padding: 0; }
   
   .inmessage{background-color:#669900;}
@@ -102,7 +106,7 @@ a:link {
   color:#000; 
   }
     .redtxt{
-  color:#99CC00; 
+  color:#232323; 
   }
   
       .darkgreen{
@@ -136,10 +140,10 @@ a:link {
   
   
 
-.redlink:link {color:#99CC00; text-decoration: none !important;}      /* unvisited link */
+.redlink:link {color:#232323; text-decoration: none !important;}      /* unvisited link */
 .redlink:visited {color:#CCC; text-decoration: none !important;}  /* visited link */
 .redlink:hover {color:#FFF; text-decoration: none !important;}  /* mouse over link */
-.redlink:active {color:#99CC00; text-decoration: none !important;}
+.redlink:active {color:#232323; text-decoration: none !important;}
 
 .menulink:link {color:#000; text-decoration: none !important;}      /* unvisited link */
 .menulink:visited {color:#000; text-decoration: none !important;}  /* visited link */

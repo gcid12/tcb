@@ -1441,7 +1441,7 @@ class Ion_auth_model extends CI_Model
 	 * add_to_skill  copy of add_to_group
 	 *
 	 * @return bool
-	 * @author Modified by Cid
+	 * @author Modified by Cid **
 	 **/
 	public function add_to_skill($skill_id, $user_id=false)
 	{

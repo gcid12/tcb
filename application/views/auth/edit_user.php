@@ -1,44 +1,3 @@
-<?php function social_select($select,$value,$pre){ 
-
-if(!isset($select) || $select==""){$select=$pre;} ?>
-    <select class="form-control" style="background-color:#ccc;">
-      <option value="" >Choose </option> 
-      
-      <option value="gh" <?php echo ($select =='gh' ? "selected" : "" ); ?> >Github</option> 
-      
-      <option value="so" <?php echo ($select =='so' ? "selected" : "" ); ?> >StackOverFlow</option>
-      <option value="an" <?php echo ($select =='an' ? "selected" : "" ); ?> >AngelList</option>
-      <option value="cb" <?php echo ($select =='so' ? "selected" : "" ); ?> >CrunchBase</option> 
-      <option value="qr" <?php echo ($select =='qr' ? "selected" : "" ); ?> >Quora</option> 
-      <option value="fb" <?php echo ($select =='fb' ? "selected" : "" ); ?> >Facebook</option>
-      <option value="tb" <?php echo ($select =='tb' ? "selected" : "" ); ?> >Tumblr</option>  
-      <option value="dr" <?php echo ($select =='dr' ? "selected" : "" ); ?> >Dribble</option> 
-      <option value="bh" <?php echo ($select =='bh' ? "selected" : "" ); ?> >Behance</option> 
-      <option value="in" <?php echo ($select =='in' ? "selected" : "" ); ?> >Linkedin</option> 
-      <option value="hn" <?php echo ($select =='hn' ? "selected" : "" ); ?> >HackerNews</option> 
-    </select> 
-
-
-
-<?php $select="";} ?>
-
-
-<?php function payment_select($select,$value,$pre){ 
-
-if(!isset($select) || $select==""){$select=$pre;} ?>
- <select class="form-control" style="background-color:#ccc;">
- <option value="" >:::Choose one:::</option> 
-
- <option value="pb" <?php echo ($select =='pb' ? "selected" : "" ); ?> >Probono</option> 
-  <option value="ch" <?php echo ($select =='ch' ? "selected" : "" ); ?> >Check</option> 
-  <option value="tr" <?php echo ($select =='tr' ? "selected" : "" ); ?> >Transfer</option>
-
-
-</select> 
-
-<?php $select="";} ?>
-
-
 
 
 
@@ -288,6 +247,9 @@ if(!isset($select) || $select==""){$select=$pre;} ?>
                   </div>  
                   <div class="col-sm-3">
                   City<div><?php echo form_input($city);?></div>
+
+                
+
                   </div>
                   <div class="col-sm-3">
                   Country<div><?php echo form_input($country);?></div>
@@ -391,7 +353,7 @@ if(!isset($select) || $select==""){$select=$pre;} ?>
                       'hn'    => 'HackerNews',
                       );
 
-                    $currentk02= $tcbuser->k02;
+                    $currentk02= $tcbuser->k02;   //getting info from the Admin array ,not good
                     $currentk03= $tcbuser->k03;
                     $currentk04= $tcbuser->k04;
                     $currentk05= $tcbuser->k05;

@@ -61,11 +61,32 @@ class Tcb_functions
 		default: $icon="fa-gear";
 			}
 			
-		echo "<a href='http://$link' class='redlink'><i class='fa $icon fa-2x'></i></a>";
+		echo "<a href='http://".$link."' class='redlink'><i class='fa ".$icon." fa-2x'></i></a>";
+
+
+	}
+
+	public function tcb_payment_method($pm,$details){
+
+		switch($pm){
+			case "ch": $icon="fa-gear"; $label="Check";
+		break;
+			case "tr": $icon="fa-gear"; $label="Transfer";
+	 	break;
+	 		case "pb": $icon="fa-gear"; $label="Pro Bono";
+		break;
+		
+
+		default: $icon="fa-book";
+			}
+			
+		echo "<span class='label basetxt' style='margin:2px;'><i class='fa $icon'></i> &nbsp;".$label."</span>";
 
 
 	}
 
 
 }
+
+
 

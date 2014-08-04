@@ -6,6 +6,7 @@ class Tcb extends Main_Controller {
 	function __construct()
     {
         parent::__construct();
+
         
         $this->load->library('ion_auth');
 		$this->load->library('form_validation');
@@ -140,14 +141,23 @@ $this->load->model('tcbmodel');  //loading model
 
 	}
 
-				public function zone()
+				public function backstage($id)
 	{
 	
+	$user = $this->ion_auth->user($id)->row();
+	$groups=$this->ion_auth->groups()->result_array();
+	$currentGroups = $this->ion_auth->get_users_groups($id)->result();
+
+	$this->data['user'] = $user;
+	$this->data['groups'] = $groups;
+	$this->data['currentGroups'] = $currentGroups;
+
+
 		if (!$this->ion_auth->logged_in())
 		{
 		redirect('tcb', 'refresh');
 		}else{
-      $this->load->view('pages/zone');
+      $this->load->view('pages/zone',$this->data);
       $this->load->view('include/footer');
 		}
 

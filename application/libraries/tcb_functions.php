@@ -34,4 +34,38 @@ class Tcb_functions
 	}
 
 
+
+	public function tcb_social_icons($name,$link){
+
+		switch($name){
+			case "tw": $icon="fa-twitter";
+		break;
+			case "gh": $icon="fa-github";
+	 	break;
+	 		case "so": $icon="fa-stack-overflow";
+		break;
+			case "an": $icon="fa-circle-o";
+		break;
+			case "dr": $icon="fa-dribbble";
+		break;
+			case "bh": $icon="fa-behance";
+		break;
+			case "fb": $icon="fa-facebook-square";
+		break;
+			case "in": $icon="fa-linkedin";
+		break;
+			case "hn": $icon="fa-hacker-news";
+		break;
+		
+
+		default: $icon="fa-gear";
+			}
+			
+		echo "<a href='http://$link' class='redlink'><i class='fa $icon fa-2x'></i></a>";
+
+
+	}
+
+
 }
+

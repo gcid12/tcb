@@ -14,7 +14,7 @@
   	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766"/>
   </div>
   <div class="col-xs-7 col-md-7 text-left">
-  		<span class="txttitle" title="UX Designer">MY ZONE</span>
+  		<span class="txttitle" title="UX Designer">Backstage</span>
       <br/>
   		<br/>
 		
@@ -25,91 +25,157 @@
 
 			<div class=" col-sm-12 text-left basetxt txtsmall graytxt1">
 
+			<a class="btn btn-success pull-right" <?php echo "href='/auth/edit_user/".$tcbuser->id."'"; ?> > 
+			<i class="fa fa-gear fa-3x"></i><br/>Edit Info</a>
+
+			<h1 class="lead" style="font-size:3em;"><?php echo $tcbuser->first_name." ".$tcbuser->last_name; ?></h1>
+			
+
+			<div class="lead">
+			<?php echo $tcbuser->city; ?> , 
+			<?php echo $tcbuser->country; ?> |
+			
+			<?php echo $tcbuser->email; ?> | 
+			<strong>@</strong>  <?php echo $tcbuser->s01; ?> 
+			</div>
+
+			<div><?php echo $tcbuser->pitch; ?></div>
+			<br/><br/>
+
+			
+
+
+		<?php								     		
+			foreach($currentGroups as $object){				
+				
+				
+				$name=($object->name);
+				$des=($object->description);
+
+				switch($des){
+					case "dev": $icon="gear"; $bg="bg-dev";
+						break;
+					case "dat": $icon="database"; $bg="bg-dat";
+						break;
+					case "des": $icon="pencil"; $bg="bg-des";
+						break;
+					case "pro": $icon="cube"; $bg="bg-pro";
+						break;
+					case "fin": $icon="money"; $bg="bg-fin";
+						break;
+					default: $icon=""; $bg="";
+								
+
+				}
+				
+				
+		echo "<div class='label label-default ".$bg." pull-left' style='padding:5px; margin:2px;'>
+		<i class='fa fa-".$icon."'></i>".$name."</div>";
+		
+		}
+		?>
+
+			
+			
+
+			
+			</div>
+		</div>	
+		<div class="row">
+
+			<div class=" col-sm-12 text-left basetxt txtsmall graytxt1">
+
+			<br/>
 			<!-- ACCORDION -->
 		    <div class="panel-group" id="accordion">
-				  <div class="panel panel-default">
-				    <div class="panel-heading">
-				      <h4 class="panel-title">
-				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-				          PROFILE
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseOne" class="panel-collapse collapse in">
-				      <div class="panel-body">
-				      	<a class="btn btn-primary pull-right" <?php echo "href='/auth/edit_user/".$tcbuser->id."'"; ?> > Edit</a>
-				        
-								<div class="nametag">Name: <?php echo $tcbuser->first_name." ".$tcbuser->last_name; ?></div>
-								<div class="nametag">Mail: <?php echo $tcbuser->email; ?></div>
-								<div class="nametag">Twitter: <?php echo $tcbuser->tw; ?></div>
-				        
-				        <?php //print_r($tcbuser); ?>
-				      </div>
-				    </div>
-				  </div>
+				  
 				  <div class="panel panel-default">
 				    <div class="panel-heading">
 				      <h4 class="panel-title">
 				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-				          INVITE
+				          Invite
 				        </a>
 				      </h4>
 				    </div>
-				    <div id="collapseTwo" class="panel-collapse collapse in">
+				    <div id="collapseTwo" class="panel-collapse collapse">
 				      <div class="panel-body">
+				      		<div class="col-sm-5">
+				      			<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_badge.png'); ?>" alt="846766"/>
 
-				      		<a class="btn btn-default" href="/auth/invite_user">Invite to TCB</a>
+				      		</div>
+				      		<div class="col-sm-7">
+
+				      			<span style="color:black; font-size:0.8em;">
+				      			TCB846766 it's a network of Tech Talent looking for projects to increase their experience
+				      			, get exposure to new projects, meet new people and why not make an extra money. If you know
+				      			someone interested in joining TCB please follow this steps:
+				      			</span>
+
+				      			<br/><br/>
+				      			<div style="color:gray;">
+				      			<ol>
+				      				<li>Fill out the form with his/her basic info</li>
+				      				<li>Invite him personally (We don't belive in robotic invitations)</li>
+				      				<li>Ask him to go to tcb.io/welcome</li>
+
+				      			</ol>
+				      			</div>
+
+
+				      			
+				      			<br/>
+
+				      			<a class="btn btn-success pull-right" href="/auth/invite_user">Invite</a>
+
+				      		</div>
+
+
 
 				      </div>
 				    </div>
 				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading">
-				      <h4 class="panel-title">
-				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-				          TRANSACTIONS
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseThree" class="panel-collapse collapse">
-				      <div class="panel-body">
 
-				      	You don't have any transaction yet
-
-				      </div>
-				    </div>
-				  </div>
 				  <div class="panel panel-default">
 				    <div class="panel-heading">
 				      <h4 class="panel-title">
 				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-				          STICKERS
+
+
+				          Gifts
 				        </a>
 				      </h4>
 				    </div>
 				    <div id="collapseFour" class="panel-collapse collapse">
 				      <div class="panel-body">
+				      	<div class="row">
+				      		<div class="col-sm-4">
+				      			<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_stickerpack.png'); ?>" alt="846766"/>
 
+				      		</div>
+				      		<div class="col-sm-8">
+				      			<span style="color:black; font-size:0.8em;">
+				      			Free goodies for TCB846766 Members. Redeem yours at www.retinal.co
+				      			</span>
 
-								<span style="font-size:0.8em; color:#666;">[ Stickers available  
-								<a href="http://retinal.co/collections/frontpage/products/tcb-sticker" target="_blank" class="redlink wtt">here</a> ]</span>
+				      			<hr/>
+				      			<a class="btn btn-default btn-sm"><h5>Sticker Pack</h5>  #TCB94884 </a>
+				      			<a class="btn btn-default btn-sm"><h5>Sticker Pack</h5>  #TCB23456 </a>
+				      			<a class="btn btn-default btn-sm"><h5>Sticker Pack</h5>  #TCB42309 </a>
+				      			
+				      			<br/><br/>
 
-				      		<div class="row">
-										
-										<div class="col-sm-4">
-				        		<img src="<?php echo base_url('assets/img/tcb/tcb-sticker.png') ?>" class="img-responsive" style=" margin:10px;"/>		
-				        		</div>
-				        		<div class="col-sm-3">
-				        		
-				        		</div>
-				        		<div class="col-sm-5">
-				        		<img src="<?php echo base_url('assets/img/tcb/tcb-sticker2.png') ?>" class="img-responsive" style=" margin:10px;"/>
-				        		</div>		
-				     			</div> <!-- close tinyrow -->
+				      			<a class="btn btn-success" href="http://retinal.co/collections/frontpage/products/tcb-sticker">Redeem gifts</a>
 
+				      		</div>
+				      		
+				      	</div>
 				      </div>
 				    </div>
+
+
 				  </div>
+
+
 				</div> <!--  CLOSE ACCORDION -->
 
 		    <br/><br/>

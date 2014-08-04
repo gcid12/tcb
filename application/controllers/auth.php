@@ -611,9 +611,6 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 				}
 			//}
 
-
-
-
 			//update the password if it was posted
 			if ($this->input->post('password'))
 			{

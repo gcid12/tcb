@@ -9,6 +9,8 @@ class Tcb extends Main_Controller {
 
         
         $this->load->library('ion_auth');
+        $this->load->library('tcb_functions');
+
 		$this->load->library('form_validation');
 		$this->load->helper('url');
 
@@ -144,6 +146,12 @@ $this->load->model('tcbmodel');  //loading model
 				public function backstage($id)
 	{
 	
+	if (!$this->ion_auth->logged_in() || (!$this->ion_auth->is_admin() && !($this->ion_auth->user()->row()->id == $id)))
+		{
+			redirect('auth', 'refresh');
+		}
+
+
 	$user = $this->ion_auth->user($id)->row();
 	$groups=$this->ion_auth->groups()->result_array();
 	$currentGroups = $this->ion_auth->get_users_groups($id)->result();
@@ -162,6 +170,31 @@ $this->load->model('tcbmodel');  //loading model
 		}
 
 	}
+
+
+					public function member($id)
+	{
+	
+	$user = $this->ion_auth->user($id)->row();
+	$groups=$this->ion_auth->groups()->result_array();
+	$currentGroups = $this->ion_auth->get_users_groups($id)->result();
+
+	$this->data['user'] = $user;
+	$this->data['groups'] = $groups;
+	$this->data['currentGroups'] = $currentGroups;
+
+
+		if (!$this->ion_auth->logged_in())
+		{
+		redirect('tcb', 'refresh');
+		}else{
+      $this->load->view('pages/member',$this->data);
+      $this->load->view('include/footer');
+		}
+
+	}
+
+
 
 
 				public function tagtest()

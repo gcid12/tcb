@@ -26,10 +26,9 @@
 		<br/>
 	  <div class="fhr"></div>		
 
-    <?php $persona = $tcbuser->first_name; ?>
-    <?php $personafull = $tcbuser->first_name." ".$tcbuser->last_name; ?>
+    
 
-    <span class="txttitle" title="UX Designer"><?php echo $personafull; ?></span>
+    <span class="txttitle" >Edit your info</span>
 		
   	<div class="row">
   		<div class=" col-sm-6 text-left basetxt txtsmall graytxt1">

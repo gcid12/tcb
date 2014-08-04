@@ -53,6 +53,18 @@ class Tcb extends Main_Controller {
       $this->load->view('pages/home',$data);
       $this->load->view('include/footer');
 	}
+
+	   public function home()
+	{
+	
+		$this->load->model('tcbmodel');  //loading model
+		$data['query'] = $this->tcbmodel->get_all_home();
+		
+      
+      $this->load->view('pages/casa',$data);
+      $this->load->view('include/footer');
+	}
+
 	
 	
 	   public function about()

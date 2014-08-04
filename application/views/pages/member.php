@@ -33,15 +33,15 @@
   		?>
 
 
-  		<?php if (isset($s01)) { echo " <a href='http://$s03' class='redlink'><i class='fa fa-user fa-2x'></i></a> "; } ?>
+  		<?php if (isset($s01)) { $this->tcb_functions->tcb_social_icons("tw",$s01); } ?>
   		&nbsp;&nbsp;
-  		
-  		<?php if (isset($s02)) { echo " <a href='http://twitter.com/$s01' class='redlink'><i class='fa fa-twitter fa-2x'></i></a> "; } ?>
+  		<?php if (isset($s02)) { $this->tcb_functions->tcb_social_icons($k02,$s02); } ?>
   		&nbsp;&nbsp;
-  		<?php if (isset($s03)) { echo " <a href='http://$s02' class='redlink'><i class='fa fa-linkedin fa-2x'></i></a> "; } ?>
+  		<?php if (isset($s03)) { $this->tcb_functions->tcb_social_icons($k03,$s03); } ?>
   		&nbsp;&nbsp;
-  		<?php if (isset($s04)) { echo " <a href='http://$s04' class='redlink'><i class='fa fa-github fa-2x'></i></a> "; } ?>
-
+  		<?php if (isset($s04)) { $this->tcb_functions->tcb_social_icons($k04,$s04); } ?>
+  		&nbsp;&nbsp;
+  		<?php if (isset($s05)) { $this->tcb_functions->tcb_social_icons($k05,$s05); } ?>
 
   		  <div class="fhr"></div>		
   	     	<p title="UX Designer" class="txtsmall">
@@ -81,12 +81,33 @@
 					<h3 class="lead text-muted">About me</h3>
 					<div><?php echo $tcbuser->about; ?></div>
 
+					<h3 class="lead text-muted">Looking for </h3>
+					<div><?php echo $tcbuser->iwant; ?></div>
+
 		  </div>
 
 			<div class="col-sm-6 text-left basetxt txtsmall graytxt1">
 					
-					<h3 class="lead text-muted">I want </h3>
-					<div><?php echo $tcbuser->iwant; ?></div>
+					<br/><br/>
+
+					<?php if (isset($s01)) {?>
+						<a data-screen-name="<?php echo "$s01";?>" class="twitter-timeline" href="https://twitter.com/<?php echo "$s01";?>" data-widget-id="472368192304586752"><?php echo "$s01";?></a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					<?php }?>
+
+			</div>
+		</div> <!-- CLOSE ROW -->
+		<div class="row">
+
+			<div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
+					<h3 class="lead text-muted">About me</h3>
+					<div><?php echo $tcbuser->about; ?></div>
+
+		  </div>
+
+			<div class="col-sm-6 text-left basetxt txtsmall graytxt1">
+					
+					
 
 			</div>
 		</div> <!-- CLOSE ROW -->

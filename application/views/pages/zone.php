@@ -97,7 +97,7 @@
 				        </a>
 				      </h4>
 				    </div>
-				    <div id="collapseTwo" class="panel-collapse collapse">
+				    <div id="collapseTwo" class="panel-collapse collapse in">
 				      <div class="panel-body">
 				      		<div class="col-sm-5">
 				      			<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_badge.png'); ?>" alt="846766"/>
@@ -145,7 +145,7 @@
 				        </a>
 				      </h4>
 				    </div>
-				    <div id="collapseFour" class="panel-collapse collapse">
+				    <div id="collapseFour" class="panel-collapse collapse in">
 				      <div class="panel-body">
 				      	<div class="row">
 				      		<div class="col-sm-4">

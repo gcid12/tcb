@@ -15,7 +15,7 @@
 				LOGGED IN
 				<a href="/auth/logout" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="SIGN OUT"><i class="fa fa-sign-out fa-2x"></i></a>
 
-				<a href="/tcb/zone" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="MY ZONE"><i class="fa fa-plus fa-2x"></i></a> 
+				<a href="/tcb/backstage/<?php echo $tcbuser->id;?>" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="BACKSTAGE"><i class="fa fa-plus fa-2x"></i></a> 
 
 				<span class="nametag">Welcome back <?php echo $tcbuser->first_name;?></span>
 		  			

@@ -91,6 +91,25 @@
 					<h3 class="lead text-muted">Looking for </h3>
 					<div><?php echo $tcbuser->iwant; ?></div>
 
+					<hr/>
+					<h3 class="lead text-muted">Payment </h3>
+					<?php echo $tcbuser->first_name; ?> prefer getting paid by:<br/>
+
+							<?php 
+							$pm01=$tcbuser->pm01;
+							$pm02=$tcbuser->pm02;
+							$pm03=$tcbuser->pm03;
+
+							$pay01=$tcbuser->pay01;
+							$pay02=$tcbuser->pay02;
+							$pay03=$tcbuser->pay03;
+
+							?>
+
+					<?php if (isset($pm01)) { $this->tcb_functions->tcb_payment_method($pm01,$pay01); } ?>
+					<?php if (isset($pm02)) { $this->tcb_functions->tcb_payment_method($pm02,$pay02); } ?>
+					<?php if (isset($pm03)) { $this->tcb_functions->tcb_payment_method($pm03,$pay03); } ?>
+
 		  </div>
 
 			<div class="col-sm-6 text-left basetxt txtsmall graytxt1">

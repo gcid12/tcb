@@ -14,8 +14,16 @@
   	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766"/>
   </div>
   <div class="col-xs-7 col-md-7 text-left">
+
+   	<div class="pull-right" style="color:#3A3A3A;">
+  		<h2>23 
+  			<i class="fa fa-bolt fa-2x"></i>
+  		</h2>
+  	</div>
+
   <h1 class="lead" style="font-size:3em;"><?php echo $tcbuser->first_name." ".$tcbuser->last_name; ?></h1>
-  		
+  	
+		
 
   		<?php
   		$k01=$tcbuser->k01;
@@ -92,23 +100,27 @@
 					<div><?php echo $tcbuser->iwant; ?></div>
 
 					<hr/>
-					<h3 class="lead text-muted">Payment </h3>
-					<?php echo $tcbuser->first_name; ?> prefer getting paid by:<br/>
+					<h3 class="lead text-muted"> </h3>
+
+					
+
+					<?php //echo $tcbuser->first_name; ?> 
+
 
 							<?php 
-							$pm01=$tcbuser->pm01;
-							$pm02=$tcbuser->pm02;
-							$pm03=$tcbuser->pm03;
+							// $pm01=$tcbuser->pm01;
+							// $pm02=$tcbuser->pm02;
+							// $pm03=$tcbuser->pm03;
 
-							$pay01=$tcbuser->pay01;
-							$pay02=$tcbuser->pay02;
-							$pay03=$tcbuser->pay03;
+							// $pay01=$tcbuser->pay01;
+							// $pay02=$tcbuser->pay02;
+							// $pay03=$tcbuser->pay03;
 
 							?>
 
-					<?php if (isset($pm01)) { $this->tcb_functions->tcb_payment_method($pm01,$pay01); } ?>
-					<?php if (isset($pm02)) { $this->tcb_functions->tcb_payment_method($pm02,$pay02); } ?>
-					<?php if (isset($pm03)) { $this->tcb_functions->tcb_payment_method($pm03,$pay03); } ?>
+					<?php //if (isset($pm01)) { $this->tcb_functions->tcb_payment_method($pm01,$pay01); } ?>
+					<?php //if (isset($pm02)) { $this->tcb_functions->tcb_payment_method($pm02,$pay02); } ?>
+					<?php //if (isset($pm03)) { $this->tcb_functions->tcb_payment_method($pm03,$pay03); } ?>
 
 		  </div>
 

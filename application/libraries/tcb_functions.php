@@ -69,18 +69,18 @@ class Tcb_functions
 	public function tcb_payment_method($pm,$details){
 
 		switch($pm){
-			case "ch": $icon="fa-gear"; $label="Check";
+			case "ch": $icon="fa-envelope"; $label="Check";
 		break;
-			case "tr": $icon="fa-gear"; $label="Transfer";
+			case "tr": $icon="fa-arrow-right"; $label="Transfer";
 	 	break;
-	 		case "pb": $icon="fa-gear"; $label="Pro Bono";
+	 		case "pb": $icon="fa-heart"; $label="Pro Bono";
 		break;
 		
 
 		default: $icon="fa-book";
 			}
 			
-		echo "<span class='label basetxt' style='margin:2px;'><i class='fa $icon'></i> &nbsp;".$label."</span>";
+		echo "<span class='label tcb-color' style='margin:2px;'><i class='fa $icon'></i> &nbsp;".$label."</span>";
 
 
 	}

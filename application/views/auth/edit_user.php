@@ -237,7 +237,7 @@
                 <div class="row">  
                   <div class="col-sm-6">
                     Email: <br/>
-                    <strong><span style="color:#000;"><?php echo $tcbuser->email; ?></span></strong>
+                    <strong><span style="color:#000;"><?php echo $user->email; ?></span></strong>
                     <div class="pull-right">
                     <a data-toggle="collapse" data-parent="#accordion" href="#c4">(Edit)</a>
                     </div>
@@ -267,7 +267,7 @@
                   </div>
 
                   <div class="col-sm-3">
-                    Tshirt Size
+                    Tshirt
                     
                     <?php
                     $options = array(
@@ -282,9 +282,8 @@
                 echo form_dropdown('tshirt', $options, $currentshirt);
 
                     ?>
-
-                    
                   </div>
+
                   <div class="col-sm-3">
                     <br/>
                     
@@ -304,10 +303,47 @@
                   </div>
                 </div>
                 <div class="row">  
-                  <div class="col-sm-12">
-                    Personal Web (Blog, Portfolio,etc..)<div><?php echo form_input($pw);?></div>
+                  <div class="col-sm-6">
+                    Personal Web <div><?php echo form_input($pw);?></div>
+                  </div>
+                  <div class="col-sm-6">
+                    Battletag (Starcraft)<div><?php echo form_input($battletag);?></div>
                   </div>
                 </div>  
+                <div class="row">
+                  <div class="col-sm-6">
+                      Working Location:
+                      <?php
+                      $options = array(
+                    'os'  => 'On site',
+                    're'    => 'Remote',
+                    'fl'   => 'Flexible',
+                        );
+
+                      $worklocation= $tcbuser->work;
+
+                      echo form_dropdown('work', $options, $worklocation);
+
+                      ?>
+                  </div>
+                  <div class="col-sm-6">
+                      Co-founding?:
+                      <?php
+                      $options = array(
+                    'no'  => 'no',
+                    'ye'    => 'yes',
+                    'wc'   => 'will consider',
+                    'me'   => 'mentoring',
+                    'cm'   => 'Contact Me',
+                        );
+
+                      $cofound= $tcbuser->cofound;
+
+                      echo form_dropdown('cofound', $options, $cofound);
+
+                      ?>
+                  </div>
+                </div>
 
               </div> <!-- close panel body -->
             </div>
@@ -475,6 +511,9 @@
                   <i class="fa fa-clock-o"></i>
                   More options soon..   
                 </div>  
+                
+
+
 
               </div> <!-- close Panel-Body -->
             </div>

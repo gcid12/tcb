@@ -196,13 +196,10 @@ $this->load->model('tcbmodel');  //loading model
 	$this->data['currentGroups'] = $currentGroups;
 
 
-		if (!$this->ion_auth->logged_in())
-		{
-		redirect('tcb', 'refresh');
-		}else{
+		
       $this->load->view('pages/member',$this->data);
       $this->load->view('include/footer');
-		}
+		
 
 	}
 

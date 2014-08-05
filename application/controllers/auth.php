@@ -546,9 +546,13 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 		$this->form_validation->set_rules('k04', 'Key 4', 'xss_clean');
 		$this->form_validation->set_rules('k05', 'Key 5', 'xss_clean');
 		$this->form_validation->set_rules('showemail', 'Show Email', 'xss_clean');
+		$this->form_validation->set_rules('battletag', 'Battle tag', 'xss_clean');
+		$this->form_validation->set_rules('cofound', 'Co-found', 'xss_clean');
+		$this->form_validation->set_rules('work', 'work', 'xss_clean');
 		$this->form_validation->set_rules('recru', 'Recruiters', 'xss_clean');
 		$this->form_validation->set_rules('groups', $this->lang->line('edit_user_validation_groups_label'), 'xss_clean');
 		$this->form_validation->set_rules('skills', 'Skills', 'xss_clean');
+		
 
 		if (isset($_POST) && !empty($_POST))
 		{
@@ -591,6 +595,9 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 				'pay02'      => $this->input->post('pay02'),
 				'pm01'      => $this->input->post('pm01'),
 				'pm02'      => $this->input->post('pm02'),
+				'battletag'      => $this->input->post('battletag'),
+				'cofound'      => $this->input->post('cofound'),
+				'work'      => $this->input->post('work'),
 				/* ////////////*/
 			);
 
@@ -875,6 +882,27 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'type'  => 'text',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('recru', $user->recru),
+		);
+		 			$this->data['battletag'] = array(
+			'name'  => 'battletag',
+			'id'    => 'battletag',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('battletag', $user->battletag),
+		);
+		 			$this->data['cofound'] = array(
+			'name'  => 'cofound',
+			'id'    => 'cofound',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('cofound', $user->cofound),
+		);
+		 			$this->data['work'] = array(
+			'name'  => 'work',
+			'id'    => 'work',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('work', $user->work),
 		);
 				$this->data['pay01'] = array(
 			'name'  => 'pay01',

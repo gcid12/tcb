@@ -24,30 +24,18 @@
   <!-- TCB -->
   		
   		<br/>
-
-  		  		
-  			
-  		  		
-  		  		<span class="txttitle" title="UX Designer">Done</span>
-  				
-  				
+  		  		<span class="txttitle" title="UX Designer">Thanks! </span>
 		  		<p title="UX Designer" class="graytxt1">
-		  		
-					Your invite will be sent once we confirm the person exist (and that you are not a robot).					    
-		  		</p> 
-		  		
-		  		<div class="fhr"></div>	
-		  		
-		  		<a href="/" class="btn btn-danger">Go back to home</a>
+		  		for inviting a friend!, we are looking forward to meet her/him</span>
 
+          <br/><br/>
+					 
+		  		</p> 
+		  		<div class="fhr"></div>	
+		  		<a href="/" class="btn btn-success">Go back to home</a>
   		</div>	
-	
 		</div> <!-- close row -->
 
-
- 
-
-  	
   </div>
    <div class="col-xs-1 col-md-1 text-center basetxt lead">
   </div>

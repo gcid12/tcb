@@ -420,7 +420,7 @@ class Auth extends CI_Controller {
 		//validate form input
 		$this->form_validation->set_rules('first_name', $this->lang->line('create_user_validation_fname_label'), 'required|xss_clean');
 		$this->form_validation->set_rules('last_name', $this->lang->line('create_user_validation_lname_label'), 'required|xss_clean');
-		$this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email|is_unique['.$tables['users'].'.email]');
+		$this->form_validation->set_rules('email', "Email exist already, please try to <a href='/auth/login' class='btn btn-success'> log-in </a> first. &nbsp;", 'required|valid_email|is_unique['.$tables['users'].'.email]');
 		/* $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'required|xss_clean'); */
 		/*
 $this->form_validation->set_rules('password', $this->lang->line('create_user_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
@@ -951,6 +951,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pm03', $user->pm03),
 		);
+
 //intrusos finish		
 		$this->data['password'] = array(
 			'name' => 'password',

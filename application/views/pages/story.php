@@ -26,18 +26,6 @@
             </div>
           </div> 
 
-          <!-- <div class="row">
-            <div class=" col-sm-6 txtsmaller graytxt1">
-              <p class="lead">As a founder, owner</p>
-              Have access to active players, that you normally won't have access to because they are currently employed by other company. Hire a Growth Hacker specialist for 2 days, a financial expert or a specialist in DB to take a look at your problem from a fresh point of view.
-            </div>
-            <div class=" col-sm-6 txtsmaller graytxt1">
-              <p class="lead">As a skilled Tech</p>
-              Meet new people, get out of a routine, beef up your CV and skills with different set of problems.
-            </div>
-          </div>   -->
-
-
         <div class="fhr3"></div> 
 
           <div class="row">

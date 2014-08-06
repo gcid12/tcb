@@ -148,7 +148,7 @@
                     </div>
                     <div class="col-sm-4">
                       <div class="fhr3"></div>
-                      <div class="text-muted basetxt" style="font-size:0.7em;">
+                      <div class="text-muted" style="font-size:0.7em;">
                           (1.)1968 Photo, Las Vegas NV, Some of the original members of TCB, (2.)A jewerly gift by Elvis to members of TCB,(3) Elvis Aircraft with TCB logo
                       </div>
                     </div>  

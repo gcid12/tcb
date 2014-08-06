@@ -125,7 +125,7 @@
 				      			
 				      			<br/>
 
-				      			<a class="btn btn-success pull-right" href="/auth/invite_user">Invite</a>
+				      			<a class="btn btn-success pull-right" href="/auth/invite_user">Invitez</a>
 
 				      		</div>
 
@@ -171,8 +171,37 @@
 				      	</div>
 				      </div>
 				    </div>
+				  </div>  
 
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
 
+				        		Your Posts in TCB Blog
+				         
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseFive" class="panel-collapse collapse">
+				      <div class="panel-body">
+				      	<div class="row">
+				      		
+				      		<div class="col-sm-12 text-center">
+				      			<span style="color:black; font-size:0.8em;">
+				      			Send your article or collaboration to:
+				      			</span>
+
+				      			<br/>
+					      				<h2>hello@tcb.io</h2>
+
+				      			<br/>
+
+				      		</div>
+				      		
+				      	</div>
+				      </div>
+				    </div>
 				  </div>
 
 

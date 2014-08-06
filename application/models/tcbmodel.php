@@ -29,7 +29,7 @@
 		function get_all_home(){
 		
         
-        $query = $this->db->query("SELECT id,username,first_name,last_name,pitch,city,country FROM users ORDER BY first_name ASC");
+        $query = $this->db->query("SELECT id,username,first_name,last_name,pitch,city,country FROM users WHERE id>='2' ORDER BY first_name ASC");
 
 
 			if($query->num_rows() >0){

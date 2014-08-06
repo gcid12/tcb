@@ -31,8 +31,12 @@
           <br/><br/>
 					 
 		  		</p> 
-		  		<div class="fhr"></div>	
-		  		<a href="/" class="btn btn-success">Go back to home</a>
+		  		<div class="fhr"></div>
+
+          <?php $id=$tcbuser->id;	 
+            echo "<a href='/tcb/backstage/".$id."' class='btn btn-success'>Go back to home</a>";
+          ?>
+		  		
   		</div>	
 		</div> <!-- close row -->
 

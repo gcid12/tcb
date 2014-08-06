@@ -56,8 +56,7 @@
 						<br/><br/>
 					      
 
-							<?php		
-					if ($this->ion_auth->is_admin()){ // it wont work, password is hirewired in Controller ?>
+							<?php		//if ($this->ion_auth->is_admin()){ ?>
 							<div class="well" style="background-color:#333;">
 						
 							Password<br/>		
@@ -72,7 +71,7 @@
 					            <?php echo form_input($password_confirm);?> 
 					     </p>
 					    </div> 
-					<?php } ?>	
+					<?php // } ?>	
 								
 					    
 					           

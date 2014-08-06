@@ -1,25 +1,31 @@
 <div class="row">
   <div class="col-xs-12 ">
 
-	<span class="redlink wtt" title="ABOUT">
-		<div class="contactme" style="float:right; height:30px;"></div>
+	<span class="nametag"> 
+						<?php  //name label
+						$first_name=$tcbuser->first_name; 
+						$gender=$tcbuser->gender;
+						?>
+
+						<?php 
+						$this->tcb_functions->label_user($gender,$first_name); 
+						?>
 	</span>
 	
-	<!-- <a href="/news" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="NEWS"><i class="fa fa-bullhorn fa-2x"></i></a> -->
 
-			<?php if($logged==false){?>
+
+			<?php if($logged==false){ ?>
 				<a href="/auth/login" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="SIGN IN"><i class="fa fa-sign-in fa-2x"></i></a>
 				Logged OUT
-			<?php }else{?>			
+			<?php }else{ ?>			
 
-				LOGGED IN
-				<a href="/auth/logout" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="SIGN OUT"><i class="fa fa-sign-out fa-2x"></i></a>
+						<a href="/auth/logout" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="SIGN OUT"><i class="fa fa-sign-out fa-2x"></i></a>
 
-				<a href="/tcb/backstage/<?php echo $tcbuser->id;?>" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="BACKSTAGE"><i class="fa fa-plus fa-2x"></i></a> 
+						<a href="/tcb/backstage/<?php echo $tcbuser->id;?>" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="BACKSTAGE"><i class="fa fa-plus fa-2x"></i></a> 
 
-				<span class="nametag">Welcome back <?php echo $tcbuser->first_name;?></span>
+						
 		  			
-			<?php }?>
+				<?php } ?>
 
 				<a href="http://tcb-io.tumblr.com/" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="BLOG"><i class="fa fa-pencil fa-2x"></i></a>
 				<a href="/story" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="ABOUT TCB"><i class="fa fa-bolt fa-2x"></i></a>

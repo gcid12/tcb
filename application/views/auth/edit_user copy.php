@@ -28,12 +28,12 @@
 
     
 
-    <span class="txttitle" ><?php echo $user->first_name." ".$user->last_name; ?>  info</span>
+    <span class="txttitle" >Edit your info</span>
 		
   	<div class="row">
   		<div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
 
-                 <span class="">Please complete the following information</span><br/><br/>
+                 <span class="">Please complete your information</span><br/><br/>
 				
                 <div id="infoMessage" class="inmessage"><?php echo $message;?></div>
 				
@@ -248,7 +248,7 @@
                 <div class="row">
                   <div class="col-sm-6">
                     Show email  
-                      <?php $showemail= $user->showemail; ?>
+                      <?php $showemail= $tcbuser->showemail; ?>
                     
                       <input type="checkbox" name="showemail" value="1"  <?php echo ($showemail ==1 ? "checked" : ""); ?> > 
                         <?php echo "(".$showemail.")"; ?>
@@ -266,7 +266,7 @@
                   'xl' => 'Extra Large',
                       );
 
-                    $currentshirt= $user->tshirt;
+                    $currentshirt= $tcbuser->tshirt;
 
                 echo form_dropdown('tshirt', $options, $currentshirt);
 
@@ -282,7 +282,7 @@
                   'f'    => 'Female',
                       );
 
-                    $currentgender= $user->gender;
+                    $currentgender= $tcbuser->gender;
 
                 echo form_dropdown('gender', $options, $currentgender);
 
@@ -309,7 +309,7 @@
                     'fl'   => 'Flexible',
                         );
 
-                      $worklocation= $user->work;
+                      $worklocation= $tcbuser->work;
 
                       echo form_dropdown('work', $options, $worklocation);
 
@@ -326,7 +326,7 @@
                     'cm'   => 'Contact Me',
                         );
 
-                      $cofound= $user->cofound;
+                      $cofound= $tcbuser->cofound;
 
                       echo form_dropdown('cofound', $options, $cofound);
 
@@ -377,10 +377,10 @@
                       'hn'    => 'HackerNews',
                       );
 
-                    $currentk02= $user->k02;   //getting info from the Admin array ,not good
-                    $currentk03= $user->k03;
-                    $currentk04= $user->k04;
-                    $currentk05= $user->k05;
+                    $currentk02= $tcbuser->k02;   //getting info from the Admin array ,not good
+                    $currentk03= $tcbuser->k03;
+                    $currentk04= $tcbuser->k04;
+                    $currentk05= $tcbuser->k05;
   
                     ?>
 
@@ -423,7 +423,7 @@
                       <p style="line-height:2em;">
                         <hr/>
 
-                      <?php $recru= $user->recru; ?>
+                      <?php $recru= $tcbuser->recru; ?>
 
                       <input type="checkbox" name="recru" value="1"  <?php echo ($recru ==1 ? "checked" : ""); ?> > 
                         
@@ -457,12 +457,12 @@
                       '00'  => 'Select',
                       'pb'  => 'Pro-bono',
                       'tr'  => 'Transfer',
-                      'ch'  => 'Check',
+                      'ch'    => 'Check',
                       );
 
-                    $pm01= $user->pm01;
-                    $pm02= $user->pm02;
-                    $pm03= $user->pm03;
+                    $pm01= $tcbuser->pm01;
+                    $pm02= $tcbuser->pm02;
+                    $pm03= $tcbuser->pm03;
                     
   
                     ?>

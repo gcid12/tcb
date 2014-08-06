@@ -85,6 +85,21 @@ class Tcb_functions
 
 	}
 
+	public function label_user($gender,$name){
+
+		switch($gender){
+			case "m": $icon="fa-male";
+				break;
+			case "f": $icon="fa-female";
+				break;
+			default: $icon="fa-user";
+				break;
+		}
+
+		echo "<span> <i class='fa ".$icon."'></i> ".$name."</span>";
+
+	}
+
 
 }
 

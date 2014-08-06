@@ -26,7 +26,7 @@
 			<div class=" col-sm-12 text-left basetxt txtsmall graytxt1">
 
 			<a class="btn btn-success pull-right" <?php echo "href='/auth/edit_user/".$tcbuser->id."'"; ?> > 
-			<i class="fa fa-gear fa-3x"></i><br/>Edit Info</a>
+			<i class="fa fa-gear fa-3x"></i><br/>Edit My Info</a>
 
 			<h1 class="lead" style="font-size:3em;"><?php echo $tcbuser->first_name." ".$tcbuser->last_name; ?></h1>
 			

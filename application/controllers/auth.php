@@ -533,8 +533,10 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 		$this->form_validation->set_rules('skillsfin', 'Finance skills', 'xss_clean');
 		$this->form_validation->set_rules('pay01', 'Payment 1', 'xss_clean');
 		$this->form_validation->set_rules('pay02', 'Payment 2', 'xss_clean');
+		$this->form_validation->set_rules('pay03', 'Payment 3', 'xss_clean');
 		$this->form_validation->set_rules('pm01', 'Payment Method 1', 'xss_clean');
 		$this->form_validation->set_rules('pm02', 'Payment Method 2', 'xss_clean');
+		$this->form_validation->set_rules('pm03', 'Payment Method 3', 'xss_clean');
 		$this->form_validation->set_rules('s01', 'Social 1', 'xss_clean');
 		$this->form_validation->set_rules('s02', 'Social 2', 'xss_clean');
 		$this->form_validation->set_rules('s03', 'Social 3', 'xss_clean');
@@ -593,8 +595,10 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 				'recru'      => $this->input->post('recru'),
 				'pay01'      => $this->input->post('pay01'),
 				'pay02'      => $this->input->post('pay02'),
+				'pay03'      => $this->input->post('pay03'),
 				'pm01'      => $this->input->post('pm01'),
 				'pm02'      => $this->input->post('pm02'),
+				'pm03'      => $this->input->post('pm03'),
 				'battletag'      => $this->input->post('battletag'),
 				'cofound'      => $this->input->post('cofound'),
 				'work'      => $this->input->post('work'),
@@ -947,7 +951,6 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pm03', $user->pm03),
 		);
-
 //intrusos finish		
 		$this->data['password'] = array(
 			'name' => 'password',

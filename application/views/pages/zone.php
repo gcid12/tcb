@@ -108,24 +108,17 @@
 				      			<span style="color:black; font-size:0.8em;">
 				      			TCB846766 it's a network of Tech Talent looking for projects to increase their experience
 				      			, get exposure to new projects, meet new people and why not make an extra money. If you know
-				      			someone interested in joining TCB please follow this steps:
+				      			someone interested in joining TCB please invite her/him here
 				      			</span>
 
-				      			<br/><br/>
-				      			<div style="color:gray;">
-				      			<ol>
-				      				<li>Fill out the form with his/her basic info</li>
-				      				<li>Invite him personally (We don't belive in robotic invitations)</li>
-				      				<li>Ask him to go to tcb.io/welcome</li>
-
-				      			</ol>
-				      			</div>
+				      			
+			
 
 
 				      			
 				      			<br/>
 
-				      			<a class="btn btn-success pull-right" href="/auth/invite_user">Invitez</a>
+				      			<a class="btn btn-success pull-right" href="/auth/invite_user">Invite</a>
 
 				      		</div>
 

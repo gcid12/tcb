@@ -15,25 +15,24 @@
   <div class="col-xs-1 col-md-1">
   </div>
   
-  <div class="col-xs-2 col-md-2 text-center basetxt">
-  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif') ?>?" alt="846766" width="100px"/>
+  <div class="col-xs-4 col-md-4 text-center basetxt">
+  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_badge2.png'); ?>"/>
   </div>
-  <div class="col-xs-7 col-md-7 text-left">
+  <div class="col-xs-5 col-md-5 text-left">
   
 		<span class="txttitle">Invite a New Member</span>
 		
 		
 		<br/>
 				
-		  
-		<div class="fhr"></div>		
+
 			
 	  	<div class="row">
 	  		<div class=" col-sm-10 text-left basetxt txtsmall graytxt1">
 				
 
 				
-					<span class=""><?php echo lang('create_user_subheading');?></span><br/><br/>
+					<span class="">Please enter the information below.</span><br/><br/>
 					
 					<div id="infoMessage" class="inmessage"><?php echo $message;?></div>
 					
@@ -53,30 +52,12 @@
 					            <?php echo lang('create_user_email_label', 'email');?> <br />
 					            <?php echo form_input($email);?>
 					      </p>
-					
-					      
-						 <p>
-					            WEB<br/>
-					            <div class="label label-vader graytxt2">
-					    			 URL that best describe her/him (Blog, Twitter, github, Linkedin..)
-					    		</div><br/>
-					    	
-					            <?php echo form_input($company);?>
-					      </p>
-
+				
 						<br/><br/>
 					      
-					
-					      <!--
-<p>
-					            <?php //echo lang('create_user_phone_label', 'phone');?> <br />
-					            <?php //echo form_input($phone);?>
-					      </p>
--->
-			
-							
+
 							<?php		
-					if ($this->ion_auth->is_admin()){ ?>
+					if ($this->ion_auth->is_admin()){ // it wont work, password is hirewired in Controller ?>
 							<div class="well" style="background-color:#333;">
 						
 							Password<br/>		
@@ -97,22 +78,23 @@
 					           
 					    
 					    
-					    
-					    <div class="label label-warning"> Endorsed by:
-							<?php 
-							$endorser= $tcbuser->first_name." ".$tcbuser->last_name;
+					    Endorsed by:
+					    <span class="label label-warning"> 
+								<?php 
+								$endorser= $tcbuser->first_name." ".$tcbuser->last_name;
 							
-							  echo $endorser;
-							$endorserid= $tcbuser->id;
-						   echo form_hidden('endorser', $endorserid); //endorser ?>
-						</div>
+							  	echo $endorser;
+								$endorserid= $tcbuser->id;
+						  	 echo form_hidden('endorser', $endorserid); //endorser 
+						  	 ?>
+							</span>
 						
 					    	
 							
 						
 					      <?php //echo form_submit('submit', "INVITE");?>
 					      <br/><br/><br/>
-					      <input class="form-control btn btn-danger" type="submit" name="submit" value="SEND" />
+					      <input class="form-control btn btn-success" type="submit" name="submit" value="INVITE" />
 					
 					<?php echo form_close();?>
 				

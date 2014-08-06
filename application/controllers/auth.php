@@ -7,7 +7,7 @@ class Auth extends CI_Controller {
 		parent::__construct();
 		$this->load->library('ion_auth');
 		$this->load->library('tcb_functions');
-		
+
 		$this->load->library('form_validation');
 		$this->load->helper('url');
 
@@ -424,10 +424,10 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_rules('last_name', $this->lang->line('create_user_validation_lname_label'), 'required|xss_clean');
 		$this->form_validation->set_rules('email', "Email exist already, please try to <a href='/auth/login' class='btn btn-success'> log-in </a> first. &nbsp;", 'required|valid_email|is_unique['.$tables['users'].'.email]');
 		/* $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'required|xss_clean'); */
-		/*
-$this->form_validation->set_rules('password', $this->lang->line('create_user_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
+		
+		$this->form_validation->set_rules('password', $this->lang->line('create_user_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
 		$this->form_validation->set_rules('password_confirm', $this->lang->line('create_user_validation_password_confirm_label'), 'required');
-*/
+
 
 		if ($this->form_validation->run() == true)
 		{
@@ -487,15 +487,13 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 				'name'  => 'password',
 				'id'    => 'password',
 				'type'  => 'password',
-				'value' => 'Suchil.5618',
-				//'value' => $this->form_validation->set_value('password'),
+				'value' => $this->form_validation->set_value('password'),
 			);
 			$this->data['password_confirm'] = array(
 				'name'  => 'password_confirm',
 				'id'    => 'password_confirm',
 				'type'  => 'password',
-				'value' => 'Suchil.5618',
-				//'value' => $this->form_validation->set_value('password_confirm'),
+				'value' => $this->form_validation->set_value('password_confirm'),
 			);
 
 			$this->_render_page('auth/create_user', $this->data);
@@ -646,7 +644,7 @@ $this->form_validation->set_rules('password', $this->lang->line('create_user_val
 				}
 				else
 				{
-					redirect('/', 'refresh');
+					redirect("/tcb/backstage/".$user->id." ", 'refresh');
 				}
 			}
 		}

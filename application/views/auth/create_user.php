@@ -36,7 +36,8 @@
 					
 					<div id="infoMessage" class="inmessage"><?php echo $message;?></div>
 					
-					
+					<?php $endorserid= $tcbuser->id; ?>
+
 					<?php echo form_open("auth/invite_user");?>
 					
 					      <p>
@@ -54,9 +55,10 @@
 					      </p>
 				
 						<br/><br/>
-					      
+					     
 
-							<?php		//if ($this->ion_auth->is_admin()){ ?>
+					<?php		
+					//if ($this->ion_auth->is_admin()){ ?>
 							<div class="well" style="background-color:#333;">
 						
 							Password<br/>		
@@ -83,7 +85,7 @@
 								$endorser= $tcbuser->first_name." ".$tcbuser->last_name;
 							
 							  	echo $endorser;
-								$endorserid= $tcbuser->id;
+								
 						  	 echo form_hidden('endorser', $endorserid); //endorser 
 						  	 ?>
 							</span>

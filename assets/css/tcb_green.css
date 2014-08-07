@@ -26,7 +26,7 @@ font-weight: normal;
 color: red;
 }
 ul.tagit input[type="text"] {
-color: #515759;
+color: #99CC00;
 background: none;
 }
 
@@ -42,10 +42,13 @@ text-decoration: none;
 }
 
 a:link {
-    color: #515759;
+    color: #99CC00;
 }
 
-.tcb-color{color:#515759;}
+
+
+
+.endicon{padding:5px; color:#99CC00;}
 
 .bg-dev{background-color:#8FC637;}
 .bg-des{background-color:#48D837;}
@@ -53,10 +56,17 @@ a:link {
 .bg-pro{background-color:#55B592;}
 .bg-fin{background-color:#95AC37;}
 
-.panel-tcb{background-color:#515759; color:black; padding:5px;}
+.text-dev{color:#8FC637;}
+.text-des{color:#48D837;}
+.text-dat{color:#23C12F;}
+.text-pro{color:#55B592;}
+.text-fin{color:#95AC37;}
 
 
-.tcb-accordion{background-color:#515759; color:#000;}
+.panel-tcb{background-color:#99CC00; color:black; padding:5px;}
+
+
+.tcb-accordion{background-color:#99CC00; color:#000;}
 
 .nametag{padding:15px; color:#666;}
 
@@ -65,7 +75,7 @@ a:link {
   	background-color:#000;
   }
   .basetxt{
-  color:#515759;
+  color:#99CC00;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;  
   }
@@ -78,7 +88,7 @@ a:link {
   }
 
       .contactme{
-  background-color:#515759;
+  background-color:#99CC00;
   font-size:1em;
   color:black;
   padding:5px 10px;
@@ -86,7 +96,7 @@ a:link {
   }
   
   .menu1{
-  background-color:#515759;
+  background-color:#99CC00;
   font-size:0.7em;
   color:black;
   padding:5px 10px;
@@ -95,25 +105,27 @@ a:link {
   
   
   .fhr{ display: block; height: 1px;
-    border: 0; border-top: 1px solid #515759;
+    border: 0; border-top: 1px solid #99CC00;
     margin: 1em 0; padding: 0; }
     
    .fhr2{ display: block; height: 1px;
-    border: 0; border-top: 1px solid #515759;
+    border: 0; border-top: 1px solid #99CC00;
     margin: 0.3em 0; padding: 0; }
 
        .fhr3{ display: block; height: 1px;
     border: 0; border-top: 1px solid #4D4D4D;
-    margin: 2em 0; padding: 0; }
+    margin: 5em 0; padding: 0; }
   
   .inmessage{background-color:#669900;}
   
+
+  .tcb-color{color:#99CC00;}
  
     .blacktxt{
   color:#000; 
   }
     .redtxt{
-  color:#515759; 
+  color:#99CC00; 
   }
   
       .darkgreen{
@@ -144,13 +156,17 @@ a:link {
      .graytxt2{
   color:#999; 
   }
+
+       .graytxt3{
+  color:#303030; 
+  }
   
   
 
-.redlink:link {color:#515759; text-decoration: none !important;}      /* unvisited link */
+.redlink:link {color:#99CC00; text-decoration: none !important;}      /* unvisited link */
 .redlink:visited {color:#CCC; text-decoration: none !important;}  /* visited link */
 .redlink:hover {color:#FFF; text-decoration: none !important;}  /* mouse over link */
-.redlink:active {color:#515759; text-decoration: none !important;}
+.redlink:active {color:#99CC00; text-decoration: none !important;}
 
 .menulink:link {color:#000; text-decoration: none !important;}      /* unvisited link */
 .menulink:visited {color:#000; text-decoration: none !important;}  /* visited link */
@@ -161,9 +177,19 @@ a:link {
 .wtt + .tooltip > .tooltip-inner {background-color: #FFF; color:#669900;}
 
 .txtsmall {font-size: 1em;}
-.txtsmaller {font-size: 0.8em;}
+.txtsmaller {font-size: 0.9em;}
 .txtlook {font-size: 0.7em; font-style: italic;}
 .txttitle {font-size: 3em; line-height:0.8em;}
+
+
+.text-small {font-size: 1em;}
+.text-smaller {font-size: 0.9em;}
+.text-mini {font-size: 0.7em; font-style: italic;}
+.text-title {font-size: 3em; line-height:0.8em;}
+
+.text-white {color:#FFF;}
+.text-gray {color:#666;}
+
 
 
 

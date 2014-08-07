@@ -41,10 +41,6 @@
 
 			<div><?php echo $tcbuser->pitch; ?></div>
 			<br/><br/>
-
-			
-
-
 		<?php								     		
 			foreach($currentGroups as $object){				
 				
@@ -105,7 +101,7 @@
 				      		</div>
 				      		<div class="col-sm-7">
 
-				      			<span style="color:black; font-size:0.8em;">
+				      			<span class="blacktxt txtsmaller">
 				      			TCB846766 it's a network of Tech Talent looking for projects to increase their experience
 				      			, get exposure to new projects, meet new people and why not make an extra money. If you know
 				      			someone interested in joining TCB please invite her/him here
@@ -134,7 +130,7 @@
 				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
 
 
-				          Gifts
+				          TCB Gifts
 				        </a>
 				      </h4>
 				    </div>
@@ -146,7 +142,7 @@
 
 				      		</div>
 				      		<div class="col-sm-8">
-				      			<span style="color:black; font-size:0.8em;">
+				      			<span class="blacktxt txtsmaller">
 				      			Free goodies for TCB846766 Members. Redeem yours at www.retinal.co
 				      			</span>
 
@@ -171,7 +167,7 @@
 				      <h4 class="panel-title">
 				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
 
-				        		Your Posts in TCB Blog
+				        		TCB Blog
 				         
 				        </a>
 				      </h4>
@@ -181,7 +177,7 @@
 				      	<div class="row">
 				      		
 				      		<div class="col-sm-12 text-center">
-				      			<span style="color:black; font-size:0.8em;">
+				      			<span class="blacktxt txtsmaller">
 				      			Send your article or collaboration to:
 				      			</span>
 
@@ -196,6 +192,38 @@
 				      </div>
 				    </div>
 				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+
+				        		TCB Wall
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseSix" class="panel-collapse collapse">
+				      <div class="panel-body">
+				      	<div class="row">
+				      		
+				      		<div class="col-sm-12 text-center">
+				      			
+				      			<div class="lead blacktxt"> What happens in las Vegas stays in las Vegas!! </div>
+				      			
+				      			<div class="blacktxt txtsmaller">
+				      				Go to TCB Private discussion wall: 
+				      			</div>	
+				      			
+					      				<a href="http://www.reddit.com/r/TCB846766/"><h2>http://www.reddit.com/r/TCB846766/</h2></a>
+				      			<div class="text-muted text-smaller pull-right"> questions: hello@tcb.io </div>
+
+				      		</div>
+				      		
+				      	</div>
+				      </div>
+				    </div>
+				  </div>
+
+
 
 
 				</div> <!--  CLOSE ACCORDION -->

@@ -408,7 +408,7 @@ class Auth extends CI_Controller {
 	}
 
 	//formerly create_user
-	function invite_user()
+	function invite_user() //this $id it's only used to redirect user to invitesent
 	{
 		$this->data['title'] = "Create User";
 

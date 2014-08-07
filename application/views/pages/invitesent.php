@@ -19,21 +19,30 @@
   	
   </div>
   <div class="col-xs-7 col-md-7 text-left">
-  
+          <?php 
+          $first_name=$tcbuser->first_name;
+          $last_name=$tcbuser->last_name;  
+          ?>
   
   <!-- TCB -->
   		
   		<br/>
-  		  		<span class="txttitle" title="UX Designer">Thanks! </span>
+  		  		<span class="txttitle" title="UX Designer">Thanks <?php echo $first_name; ?> !</span>
 		  		<p title="UX Designer" class="graytxt1">
-		  		for inviting a friend!, we are looking forward to meet her/him</span>
-
-          <br/><br/>
-					 
+		  		<span class="lead">you have endorsed a new member</span>  
+          <br/><br/><br/>
+           <img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_badge3.png'); ?>" alt="TCB Badge" width="300px"/>
+           <br/><br/><br/>
 		  		</p> 
-		  		<div class="fhr"></div>
+          <div class="label label-default"> <?php echo "Invitations left: (".$first_name." ".$last_name." - No limit) "; ?></div>
+		  		
+
+          <div class="fhr"></div>
+
+          <span class="lead"> Invite more?</span><br/>
 
           <?php $id=$tcbuser->id;	 
+            echo "<a href='/auth/invite_user' class='btn btn-default'>Invite</a> &nbsp;";
             echo "<a href='/tcb/backstage/".$id."' class='btn btn-success'>Go back to home</a>";
           ?>
 		  		

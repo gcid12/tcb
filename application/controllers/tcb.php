@@ -148,7 +148,7 @@ $this->load->model('tcbmodel');  //loading model
 		redirect('tcb', 'refresh');
 		
 		}else{
-	
+
       $this->load->view('pages/invitesent');
       $this->load->view('include/footer');
 		}

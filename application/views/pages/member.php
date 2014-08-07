@@ -33,24 +33,56 @@
   		$k04=$user->k04;
   		$k05=$user->k05;
 
-  		$s01=$user->s01;
-  		$s02=$user->s02;
-  		$s03=$user->s03;
-  		$s04=$user->s04;
-  		$s05=$user->s05;
+
+function strip_http($str){
+$str = preg_replace('#^https?://#', '', $str);
+return $str;
+}
+
+  		$s01=strip_http($user->s01);
+  		$s02=strip_http($user->s02);
+  		$s03=strip_http($user->s03);
+  		$s04=strip_http($user->s04);
+  		$s05=strip_http($user->s05);
+
+
+
 
   		?>
 
 
-  		<?php if (isset($s01)) { $this->tcb_functions->tcb_social_icons("tw",$s01); } ?>
-  		&nbsp;&nbsp;
-  		<?php if (isset($s02)) { $this->tcb_functions->tcb_social_icons($k02,$s02); } ?>
-  		&nbsp;&nbsp;
-  		<?php if (isset($s03)) { $this->tcb_functions->tcb_social_icons($k03,$s03); } ?>
-  		&nbsp;&nbsp;
-  		<?php if (isset($s04)) { $this->tcb_functions->tcb_social_icons($k04,$s04); } ?>
-  		&nbsp;&nbsp;
-  		<?php if (isset($s05)) { $this->tcb_functions->tcb_social_icons($k05,$s05); } ?>
+  		<?php 
+
+  			//first Twitter
+  			if (isset($s01)) { $icon01=$this->tcb_functions->tcb_social_icons("tw");  
+  		 echo "<a target='blank' href='http://twitter.com/".$s01."' class='redlink'><i class='fa ".$icon01." fa-2x'></i></a>&nbsp;&nbsp;";
+  						}else{} 
+
+  			//second			
+  		  if (isset($s01)) { $icon02=$this->tcb_functions->tcb_social_icons($k02);  
+  		 echo "<a target='blank' href='http://".$s02."' class='redlink'><i class='fa ".$icon02." fa-2x'></i></a>&nbsp;&nbsp;"; 
+  		   }else{}  
+
+  		   //third		
+  		  if (isset($s03)) { $icon03=$this->tcb_functions->tcb_social_icons($k03);  
+  		 echo "<a target='blank' href='http://".$s03."' class='redlink'><i class='fa ".$icon03." fa-2x'></i></a>&nbsp;&nbsp;"; 
+  		   }else{} 
+
+  		   //fourth		
+  		  if (isset($s04)) { $icon04=$this->tcb_functions->tcb_social_icons($k04);  
+  		 echo "<a target='blank' href='http://".$s04."' class='redlink'><i class='fa ".$icon04." fa-2x'></i></a>&nbsp;&nbsp;"; 
+  		   }else{}  
+
+  		   //fifth		
+  		  if (isset($s05)) { $icon05=$this->tcb_functions->tcb_social_icons($k05);  
+  		 echo "<a target='blank' href='http://".$s05."' class='redlink'><i class='fa ".$icon05." fa-2x'></i></a>&nbsp;&nbsp;"; 
+  		   }else{}  
+
+  		 ?>
+
+
+  		
+  		
 
   		  <div class="fhr"></div>		
   	     	<p title="UX Designer" class="txtsmall">

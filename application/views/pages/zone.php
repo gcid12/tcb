@@ -104,7 +104,7 @@
 				      			<span class="blacktxt txtsmaller">
 				      			TCB846766 it's a network of Tech Talent looking for projects to increase their experience
 				      			, get exposure to new projects, meet new people and why not make an extra money. If you know
-				      			someone interested in joining TCB please invite her/him here
+				      			someone interested in joining TCB please invite her/him here:
 				      			</span>
 
 				      			
@@ -148,10 +148,10 @@
 
 				      			<hr/>
 				      			<a class="btn btn-default btn-sm"><h5>Sticker Pack</h5>  #TCB94884 </a>
-				      			<a class="btn btn-default btn-sm"><h5>Sticker Pack</h5>  #TCB23456 </a>
-				      			<a class="btn btn-default btn-sm"><h5>Sticker Pack</h5>  #TCB42309 </a>
+				      			
 				      			
 				      			<br/><br/>
+
 
 				      			<a class="btn btn-success" href="http://retinal.co/collections/frontpage/products/tcb-sticker">Redeem gifts</a>
 
@@ -214,7 +214,9 @@
 				      			</div>	
 				      			
 					      				<a href="http://www.reddit.com/r/TCB846766/"><h2>http://www.reddit.com/r/TCB846766/</h2></a>
-				      			<div class="text-muted text-smaller pull-right"> questions: hello@tcb.io </div>
+
+					      				<br/><br/>
+				      			<div class="text-muted text-smaller pull-right"> (Send your reddit username to hello@tcb.io to add you.) </div>
 
 				      		</div>
 				      		

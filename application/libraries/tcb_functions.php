@@ -35,7 +35,7 @@ class Tcb_functions
 
 
 
-	public function tcb_social_icons($name,$link){
+	public function tcb_social_icons($name){
 
 		switch($name){
 			case "tw": $icon="fa-twitter";
@@ -61,7 +61,8 @@ class Tcb_functions
 		default: $icon="fa-gear";
 			}
 			
-		echo "<a href='http://".$link."' class='redlink'><i class='fa ".$icon." fa-2x'></i></a>";
+		return $icon;	
+		
 
 
 	}

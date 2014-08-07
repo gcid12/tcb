@@ -160,7 +160,7 @@
           
             <div class=" col-xs-8 basetxt txtsmaller graytxt1 text-center">
                 <br/>
-                Only TCB members can invite new members, <br/>hustle your way in, we are waiting for you.
+                <span class="tcb-color">Only TCB members can invite new members, <br/>hustle your way in, we are waiting for you. </span>
 
                  <br/><br/> <br/><br/> <br/><br/>
             </div>

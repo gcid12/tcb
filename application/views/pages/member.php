@@ -8,12 +8,12 @@
 <!-- r2 -->
 
 <div class="row basetxt">
-  <div class="col-xs-1 col-md-1 text-center basetxt">
+  <div class="col-sm-1 col-md-1 text-center basetxt">
   </div>
-  <div class="col-xs-2 col-md-2 text-center basetxt">
+  <div class="col-sm-1 col-md-2 text-center basetxt">
   	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766"/>
   </div>
-  <div class="col-xs-7 col-md-7 text-left">
+  <div class="col-sm-8 col-md-7 text-left">
 
    	<div class="pull-right" style="color:#666;">
   		<h2>23 

@@ -15,11 +15,11 @@
   </div>
   <div class="col-sm-8 col-md-7 text-left">
 
-   	<div class="pull-right" style="color:#666;">
+   <!-- 	<div class="pull-right" style="color:#666;">
   		<h2>23 
   			<i class="fa fa-bolt fa-2x"></i>
   		</h2>
-  	</div>
+  	</div> -->
 
 
   <h1 class="lead" style="font-size:3em;"><?php echo $user->first_name." ".$user->last_name; ?></h1>
@@ -40,6 +40,7 @@ return $str;
 }
 
   		$s01=strip_http($user->s01);
+
   		$s02=strip_http($user->s02);
   		$s03=strip_http($user->s03);
   		$s04=strip_http($user->s04);
@@ -54,29 +55,36 @@ return $str;
   		<?php 
 
   			//first Twitter
-  			if (isset($s01)) { $icon01=$this->tcb_functions->tcb_social_icons("tw");  
+
+  			if(!empty($s01)){ $icon01=$this->tcb_functions->tcb_social_icons("tw");  
   		 echo "<a target='blank' href='http://twitter.com/".$s01."' class='redlink'><i class='fa ".$icon01." fa-2x'></i></a>&nbsp;&nbsp;";
   						}else{} 
 
-  			//second			
-  		  if (isset($s01)) { $icon02=$this->tcb_functions->tcb_social_icons($k02);  
+
+
+
+  		  if(!empty($s02)){ $icon02=$this->tcb_functions->tcb_social_icons($k02);  
   		 echo "<a target='blank' href='http://".$s02."' class='redlink'><i class='fa ".$icon02." fa-2x'></i></a>&nbsp;&nbsp;"; 
-  		   }else{}  
+  		   } 
 
   		   //third		
-  		  if (isset($s03)) { $icon03=$this->tcb_functions->tcb_social_icons($k03);  
+  		  if(!empty($s03)){ $icon03=$this->tcb_functions->tcb_social_icons($k03);  
   		 echo "<a target='blank' href='http://".$s03."' class='redlink'><i class='fa ".$icon03." fa-2x'></i></a>&nbsp;&nbsp;"; 
-  		   }else{} 
+  		   }
 
   		   //fourth		
-  		  if (isset($s04)) { $icon04=$this->tcb_functions->tcb_social_icons($k04);  
+  		  if(!empty($s04)){ $icon04=$this->tcb_functions->tcb_social_icons($k04);  
   		 echo "<a target='blank' href='http://".$s04."' class='redlink'><i class='fa ".$icon04." fa-2x'></i></a>&nbsp;&nbsp;"; 
-  		   }else{}  
+  		   }  
 
   		   //fifth		
-  		  if (isset($s05)) { $icon05=$this->tcb_functions->tcb_social_icons($k05);  
+  		  if(!empty($s05)){ $icon05=$this->tcb_functions->tcb_social_icons($k05);  
   		 echo "<a target='blank' href='http://".$s05."' class='redlink'><i class='fa ".$icon05." fa-2x'></i></a>&nbsp;&nbsp;"; 
-  		   }else{}  
+  		   } 
+
+  
+
+
 
   		 ?>
 
@@ -93,23 +101,29 @@ return $str;
 
 
 				<div class="lead">
-				<?php echo $user->city; ?> , 
-				<?php echo $user->country; ?> |
-				
+						<?php
+							$city=$user->city;
+							$country=$user->country;
+							$email=$user->email;
+							$showemail=$user->showemail;
+							$pitch=$user->pitch;
 
-				<?php 
-					if($user->showemail==1){
-				echo $user->email." | "; 
-							}
-				?> 
+							if(!empty($city)){ echo $city." ,";}
+
+							if(!empty($country)){ echo $country." |";}	
+
+							if(!empty($email)){  
+										if($showemail==1){echo $email." | "; }
+									}
+
+							if(!empty($s01)){ echo "<strong>@</strong>".$s01;}	
 
 
-				<strong>@</strong>  <?php echo $user->s01; ?> 
+						?>		
 				</div>
-
-				<div><?php echo $user->pitch; ?></div>
+				<div><?php echo $pitch; ?></div>
+				
 				<br/><br/>
-
 
 						<?php		
 
@@ -126,15 +140,22 @@ return $str;
 		<div class="row">
 
 			<div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
-					<h3 class="lead text-muted">About me</h3>
-					<div><?php echo $user->about; ?></div>
-
-					<h3 class="lead text-muted">Looking for </h3>
-					<div><?php echo $user->iwant; ?></div>
-					<br/><br/>
 
 
-							<?php 
+			<?php
+				$about=$user->about;
+				if(!empty($about)){ 
+					echo "<h3 class='lead text-muted'>About me</h3> <div>".$about." </div>";
+					} 
+
+				
+				$iwant=$user->iwant;
+				if(!empty($iwant)){ 
+					echo "<h3 class='lead text-muted'>Looking for </h3> <div>".$iwant." </div>";
+
+					} 
+					echo "<br/><br/>";
+
 							 $pm01=$user->pm01;
 							 $pm02=$user->pm02;
 							 $pm03=$user->pm03;
@@ -143,7 +164,7 @@ return $str;
 							 $pay02=$user->pay02;
 							 $pay03=$user->pay03;
 
-							?>
+				?>
 
 				<div class="well text-muted" style="background-color:#000;">
 
@@ -192,7 +213,7 @@ return $str;
 
 					<?php  //COFOUND
 						$cofound=$user->cofound;
-							if(isset($cofound) || $cofound!="no"){
+							if(!empty($cofound)){
 								
 								if($cofound=='ye'){ $message="yes";}
 								elseif($cofound=='wc'){$message="Will consider";} 
@@ -207,10 +228,15 @@ return $str;
 					?>
 
 					<?php //RECRUITERS
-						if($user->recru==1){ 
-							echo "Recruiters: <i class='fa fa-check tcb-color'></i> Its ok to contact me. <br/>";
-						}else{ echo "Recruiters: I rather not be contacted, thanks. <br/>";}
-						?>
+					$recru=$user->recru;
+						if(!empty($recru)){
+
+								if($user->recru==1){ 
+									echo "Recruiters: <i class='fa fa-check tcb-color'></i> Its ok to contact me. <br/>";
+								}else{ echo "Recruiters: I rather not be contacted, thanks. <br/>";}
+							
+						}
+					?>
 
 					<?php  //TSHIRT
 						$gender=$user->gender;
@@ -236,14 +262,16 @@ return $str;
 					
 					<br/><br/>
 
-					<?php if (isset($s01)) {?>
+					<?php if(!empty($s01)){ ?>
 
-					<a data-screen-name="<?php echo "$s01";?>" class="twitter-timeline" href="https://twitter.com/techstars" data-widget-id="496444200594849793">Tweets by @techstars</a>
+						<br/>
+
+					<a data-screen-name="<?php echo "$s01";?>" class="twitter-timeline" href="https://twitter.com/<?php echo "$s01";?>" data-widget-id="496444200594849793">Tweets by <?php echo "$s01";?></a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 			
-					<?php }?>
+					<?php } ?>
 
 			</div>
 		</div> <!-- CLOSE ROW -->

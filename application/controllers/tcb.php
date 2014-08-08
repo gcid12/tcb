@@ -43,7 +43,7 @@ class Tcb extends Main_Controller {
 
 	
 	
-   public function index()
+   public function index_old()
 	{
 	
 		$this->load->model('tcbmodel');  //loading model
@@ -54,7 +54,7 @@ class Tcb extends Main_Controller {
       $this->load->view('include/footer');
 	}
 
-	   public function home()
+	   public function index()
 	{
 	
 		$this->load->model('tcbmodel');  //loading model
@@ -67,14 +67,14 @@ class Tcb extends Main_Controller {
 
 	
 	
-	   public function about()
+	   public function about_old()
 	{
 
       $this->load->view('pages/about');
       $this->load->view('include/footer');
 	}
 	
-	   public function story()
+	   public function about()
 	{
 
       $this->load->view('pages/story');

@@ -67,7 +67,7 @@
                 <div class="lead text-white">Who's behind TCB?
                 </div> 
                 <p class="txtsmall">
-                TCB was founded by former Hackstars and Associates that went through the Techstars program, we are sworn by the "Do more Faster" mantra. We iterate fast, we get things done. However TCB is not exclusive to former Techstars , we are always looking for amazing people to join.
+                TCB was founded by former Alumni, Associates and Hackstars that went through the Techstars program, we are sworn by the "Do more Faster" mantra. We iterate fast, we get things done. However TCB is not exclusive to former Techstars , we are always looking for amazing people to join.
                 </p>
             </div>
           
@@ -160,7 +160,7 @@
           
             <div class=" col-xs-8 basetxt txtsmaller graytxt1 text-center">
                 <br/>
-                <span class="tcb-color">Only TCB members can invite new members, <br/>hustle your way in, we are waiting for you. </span>
+                <span class="tcb-color">Only TCB members can invite new ones, <br/>hustle your way in, we are waiting for you. </span>
 
                  <br/><br/> <br/><br/> <br/><br/>
             </div>
@@ -173,7 +173,7 @@
 
 <hr/>
 <div class="text-smaller pull-right" style="color:#4d4d4d; font-size:0.8em;"> 
-<a href="/">Home</a>  |  <a href="/story">About</a>  |  <a href="http://tcb-io.tumblr.com/">Blog</a> 
+<a href="/" class="text-gray">Home</a>  |  <a href="/about" class="text-gray">About</a>  |  <a href="http://tcb-io.tumblr.com/" class="text-gray">Blog</a> 
 </div>
 
 <div class="text-smaller" style="color:#4d4d4d; font-size:0.8em;"> <i class="fa fa-bolt"></i>TCB846766 MMXIV  <br/>Contact: hello@tcb.io</div>

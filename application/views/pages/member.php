@@ -22,17 +22,11 @@
   	</div> -->
 
 
-  	<h1 class="lead text-white" style="font-size:3em;"><?php echo $user->first_name." ".$user->last_name; ?></h1>
+  <h1 class="lead" style="font-size:3em;"><?php echo $user->first_name." ".$user->last_name; ?></h1>
+  	
+		
 
-
-		<?php 
-
-			$pw = $user->pw;
-			if(!empty($pw)){
-
-				echo "<a href='".$pw."'><h4 class='lead' style='font-size:1em;'>".$pw."</h4></a>";
-			}
-
+  		<?php
   		$k01=$user->k01;
   		$k02=$user->k02;
   		$k03=$user->k03;
@@ -40,10 +34,10 @@
   		$k05=$user->k05;
 
 
-			function strip_http($str){
-			$str = preg_replace('#^https?://#', '', $str);
-			return $str;
-			}
+function strip_http($str){
+$str = preg_replace('#^https?://#', '', $str);
+return $str;
+}
 
   		$s01=strip_http($user->s01);
 
@@ -53,9 +47,21 @@
   		$s05=strip_http($user->s05);
 
 
+
+
+  		?>
+
+
+  		<?php 
+
+  			//first Twitter
+
   			if(!empty($s01)){ $icon01=$this->tcb_functions->tcb_social_icons("tw");  
   		 echo "<a target='blank' href='http://twitter.com/".$s01."' class='redlink'><i class='fa ".$icon01." fa-2x'></i></a>&nbsp;&nbsp;";
   						}else{} 
+
+
+
 
   		  if(!empty($s02)){ $icon02=$this->tcb_functions->tcb_social_icons($k02);  
   		 echo "<a target='blank' href='http://".$s02."' class='redlink'><i class='fa ".$icon02." fa-2x'></i></a>&nbsp;&nbsp;"; 
@@ -75,10 +81,19 @@
   		  if(!empty($s05)){ $icon05=$this->tcb_functions->tcb_social_icons($k05);  
   		 echo "<a target='blank' href='http://".$s05."' class='redlink'><i class='fa ".$icon05." fa-2x'></i></a>&nbsp;&nbsp;"; 
   		   } 
-  	?>
 
-  	<div class="fhr"></div>		
-  	
+  
+
+
+
+  		 ?>
+
+
+  		
+  		
+
+  		  <div class="fhr"></div>		
+  	     	<p title="UX Designer" class="txtsmall">
  
 		<div class="row">
 
@@ -95,16 +110,10 @@
 
 							if(!empty($city)){ echo $city." ,";}
 
-							if(!empty($country)){ echo $country." | ";}	
+							if(!empty($country)){ echo $country." |";}	
 
 							if(!empty($email)){  
 										if($showemail==1){echo $email." | "; }
-									}else{
-
-											//If there's no email kill this page
-										header("Location: http://tcb.io/auth/logout");
-										die();
-
 									}
 
 							if(!empty($s01)){ echo "<strong>@</strong>".$s01;}	
@@ -129,123 +138,122 @@
 			</div> <!-- close column -->
 		</div>	<!-- close row -->
 		<div class="row">
+
 			<div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
 
+
 			<?php
-
-$about=$user->about;
-$iwant=$user->iwant;
-//details:
-$work=$user->work;
-$pm01=$user->pm01;
-$pm02=$user->pm02;
-$pm03=$user->pm03;
-$pay01=$user->pay01;
-$pay02=$user->pay02;
-$pay03=$user->pay03;
-$cofound=$user->cofound;
-$recru=$user->recru;
-$gender=$user->gender;
-$tshirt=$user->tshirt;
-$battletag=$user->battletag;
-
-
-				
+				$about=$user->about;
 				if(!empty($about)){ 
 					echo "<h3 class='lead text-muted'>About me</h3> <div>".$about." </div>";
 					} 
 
 				
+				$iwant=$user->iwant;
 				if(!empty($iwant)){ 
 					echo "<h3 class='lead text-muted'>Looking for </h3> <div>".$iwant." </div>";
 
 					} 
 					echo "<br/><br/>";
 
-							 
+							 $pm01=$user->pm01;
+							 $pm02=$user->pm02;
+							 $pm03=$user->pm03;
+
+							 $pay01=$user->pay01;
+							 $pay02=$user->pay02;
+							 $pay03=$user->pay03;
 
 				?>
 
-				<?php  if(!empty($work) || 
-									!empty($pm01) || 
-									!empty($pay01) ||  
-									!empty($cofound) ||  
-									!empty($recru) || 
-									!empty($tshirt) ||  
-									!empty($battletag)){$showdetails="<div class='lead'>Details</div>";}
-									else{$showdetails="";} ?> 
-
-
 				<div class="well text-muted" style="background-color:#000;">
-					<?php echo $showdetails; ?>
+
+					<div class="lead">Details</div>
+
+					
+
+					<!-- Work: <i class="fa fa-check tcb-color"></i> Remote | 
+					<i class="fa fa-check tcb-color"></i> On Site<br/> -->
+
+					<!-- Languages: <i class="fa fa-language tcb-color"></i> ENG, SPA, FRA<br/> -->
 
 
-							<?php  //WORK
-									
-										if(!empty($work)){
-											echo "Work:";
-											if($work=='rm'){ $icon="fa-gear"; $message="Remote";}
-											elseif($work=='os'){$icon="fa-gear"; $message="On-Site";} 
-											elseif($work=='fl'){$icon="fa-gear"; $message="Flexible";} 
-											else{$icon="fa-gear"; $message="Contact me";}
-											echo " &nbsp;<i class='fa ".$icon." tcb-color'></i>  <span class='tcb-color'> ".$message."</span><br/>";
-										}	
-								?>
 
-								<?php  //payment preferences
-										 
 
-								if(!empty($pm01) || !empty($pm02) || !empty($pm03)) echo "Payments preferences: <br/>";
+				<?php  //WORK
+						$work=$user->work;
+							if(isset($work)){
+								echo "Work:";
+								if($work=='rm'){ $icon="fa-gear"; $message="Remote";}
+								elseif($work=='os'){$icon="fa-gear"; $message="On-Site";} 
+								elseif($work=='fl'){$icon="fa-gear"; $message="Flexible";} 
+								else{$icon="fa-gear"; $message="Contact me";}
+								echo " &nbsp;<i class='fa ".$icon." tcb-color'></i>  <span class='tcb-color'> ".$message."</span><br/>";
+							}	
+					?>
 
-								if (isset($pm01)) { $this->tcb_functions->tcb_payment_method($pm01,$pay01); } 
-								if (isset($pm02)) { $this->tcb_functions->tcb_payment_method($pm02,$pay02); } 
-								if (isset($pm03)) { $this->tcb_functions->tcb_payment_method($pm03,$pay03); } 
-								?>
+					<?php  //payment preferences
+							 $pm01=$user->pm01;
+							 $pm02=$user->pm02;
+							 $pm03=$user->pm03;
 
-								<br/>
+							 $pay01=$user->pay01;
+							 $pay02=$user->pay02;
+							 $pay03=$user->pay03;
 
-								<?php  //COFOUND
-									
-										if(!empty($cofound)){
-											
-											if($cofound=='ye'){ $message="yes";}
-											elseif($cofound=='wc'){$message="Will consider";} 
-											elseif($cofound=='me'){$message="As Mentor";}
-											elseif($cofound=='cm'){$message="Contact Me";}
-											else{$message="no";} 
+					if(isset($pm01) || isset($pm02) || isset($pm03)) echo "Payments preferences: <br/>";
 
-											if($cofound=='no'){ //silence 
-											}else{echo "Co-founding: ".$message."<br/>";} 
-											
-										}	
-								?>
+					if (isset($pm01)) { $this->tcb_functions->tcb_payment_method($pm01,$pay01); } 
+					if (isset($pm02)) { $this->tcb_functions->tcb_payment_method($pm02,$pay02); } 
+					if (isset($pm03)) { $this->tcb_functions->tcb_payment_method($pm03,$pay03); } 
+					?>
 
-								<?php //RECRUITERS
+					<br/>
+
+
+					<?php  //COFOUND
+						$cofound=$user->cofound;
+							if(!empty($cofound)){
 								
-									if(!empty($recru)){
+								if($cofound=='ye'){ $message="yes";}
+								elseif($cofound=='wc'){$message="Will consider";} 
+								elseif($cofound=='me'){$message="As Mentor";}
+								elseif($cofound=='cm'){$message="Contact Me";}
+								else{$message="no";} 
 
-											if($user->recru==1){ 
-												echo "Recruiters: <i class='fa fa-check tcb-color'></i> Its ok to contact me. <br/>";
-											}else{ echo "Recruiters: I rather not be contacted, thanks. <br/>";}
-										
-									}
-								?>
+								if($cofound=='no'){ //silence 
+								}else{echo "Co-founding: ".$message."<br/>";} 
+								
+							}	
+					?>
 
-								<?php  //TSHIRT
-									
-										if(!empty($tshirt)){
-											echo "Tshirt Size:";
-											if($gender=='m'){ $icon="fa-male";}elseif($gender=='f'){$icon="fa-female";}else{$icon="";} 
-											echo " &nbsp;<i class='fa ".$icon." tcb-color'></i>  <span class='tcb-color'> ".$tshirt."</span><br/>";
-										}	
-								?>
+					<?php //RECRUITERS
+					$recru=$user->recru;
+						if(!empty($recru)){
 
-								<?php  //BATTLETAG
-									
-										if(!empty($battletag)){
-											echo "Battletag: <i class='fa fa-rocket tcb-color'></i> ".$battletag."<br/>";	
-										}	
-								?>
+								if($user->recru==1){ 
+									echo "Recruiters: <i class='fa fa-check tcb-color'></i> Its ok to contact me. <br/>";
+								}else{ echo "Recruiters: I rather not be contacted, thanks. <br/>";}
+							
+						}
+					?>
+
+					<?php  //TSHIRT
+						$gender=$user->gender;
+						$tshirt=$user->tshirt;
+							if(isset($tshirt)){
+								echo "Tshirt Size:";
+								if($gender=='m'){ $icon="fa-male";}elseif($gender=='f'){$icon="fa-female";} 
+								echo " &nbsp;<i class='fa ".$icon." tcb-color'></i>  <span class='tcb-color'> ".$tshirt."</span><br/>";
+							}	
+					?>
+
+					<?php  //BATTLETAG
+						$battletag=$user->battletag;
+							if(isset($battletag)){
+								echo "Battletag: <i class='fa fa-rocket tcb-color'></i> ".$battletag."<br/>";	
+							}	
+					?>
 
 				</div>
 		  </div>
@@ -258,8 +266,8 @@ $battletag=$user->battletag;
 
 						<br/>
 
-						<a data-screen-name="<?php echo "$s01";?>" class="twitter-timeline" href="https://twitter.com/<?php echo "$s01";?>" data-widget-id="496444200594849793">Tweets by <?php echo "$s01";?></a>
-						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					<a data-screen-name="<?php echo "$s01";?>" class="twitter-timeline" href="https://twitter.com/<?php echo "$s01";?>" data-widget-id="496444200594849793">Tweets by <?php echo "$s01";?></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 			
@@ -274,6 +282,7 @@ $battletag=$user->battletag;
 
 
 			</div>
+
 		</div>
 
 

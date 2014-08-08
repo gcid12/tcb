@@ -44,7 +44,9 @@ class Tcb_functions
 	 	break;
 	 		case "so": $icon="fa-stack-overflow";
 		break;
-			case "an": $icon="fa-circle-o";
+			case "bp": $icon="fa-bitbucket";
+		break;
+			case "an": $icon="fa-arrow-circle-o-right";
 		break;
 			case "dr": $icon="fa-dribbble";
 		break;
@@ -54,8 +56,29 @@ class Tcb_functions
 		break;
 			case "in": $icon="fa-linkedin";
 		break;
+			case "tl": $icon="fa-trello";
+		break;
 			case "hn": $icon="fa-hacker-news";
 		break;
+			case "go": $icon="fa-google-plus-square";
+		break;
+			case "re": $icon="fa-reddit";
+		break;
+			case "yh": $icon="fa-yahoo";
+		break;
+			case "vi": $icon="fa-vimeo-square";
+		break;
+			case "yt": $icon="fa-youtube";
+		break;
+			case "ig": $icon="fa-instagram";
+		break;
+			case "wb": $icon="fa-tencent-weibo";
+		break;
+			case "wn": $icon="fa-windows";
+		break;
+			case "pn": $icon="fa-pinterest";
+		break;
+
 		
 
 		default: $icon="fa-gear";
@@ -78,7 +101,7 @@ class Tcb_functions
 		break;
 		
 
-		default: $icon="fa-book";
+		default: $icon=""; $label="";
 			}
 			
 		echo "<span class='label tcb-color' style='margin:2px;'><i class='fa $icon'></i> &nbsp;".$label."</span>";

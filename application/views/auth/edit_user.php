@@ -114,7 +114,7 @@
                       <div class="tab-content">
                         <div class="tab-pane active" id="dev">
                             
-                            <div class="lead">Programming Skills </div>
+                            <div class="lead">Programming </div>
                             <div class="row">
                               <div class="col-sm-6">
 
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <div class="tab-pane" id="des">
-                            <div class="lead">Design Skills </div>
+                            <div class="lead">Design </div>
                             <div class="row">
                               <div class="col-sm-6">
                                 <?php  skillfilter($groups, $currentGroups ,"des"); ?>
@@ -142,7 +142,7 @@
                         </div>
 
                         <div class="tab-pane" id="pro">
-                            <div class="lead">Product Skills</div>
+                            <div class="lead">Product Dev / Marketing </div>
                             <div class="row">
                               <div class="col-sm-6">
                                 <?php  skillfilter($groups, $currentGroups ,"pro"); ?>
@@ -156,7 +156,7 @@
                         </div>
 
                         <div class="tab-pane" id="dat">
-                            <div class="lead">Data Skills </div>
+                            <div class="lead">Data </div>
                             <div class="row">
                               <div class="col-xs-6">
                                   <?php  skillfilter($groups, $currentGroups ,"dat"); ?>
@@ -169,7 +169,7 @@
                             </div>
                         </div>
                         <div class="tab-pane" id="fin">
-                            <div class="lead">Finance Skills </div>
+                            <div class="lead">Business / Finance </div>
                             <div class="row">
                               <div class="col-xs-6">
                                   <?php  skillfilter($groups, $currentGroups ,"fin"); ?>
@@ -260,6 +260,7 @@
                     
                     <?php
                     $options = array(
+                  NULL  => '::Choose::',
                   'sm'  => 'Small',
                   'md'    => 'Medium',
                   'lg'   => 'Large',
@@ -278,6 +279,7 @@
                     
                     <?php
                     $options = array(
+                  NULL  => '::Choose::',
                   'm'  => 'Male',
                   'f'    => 'Female',
                       );
@@ -304,6 +306,7 @@
                       Working Location:
                       <?php
                       $options = array(
+                    NULL  => '::Choose::',    
                     'os'  => 'On site',
                     're'    => 'Remote',
                     'fl'   => 'Flexible',
@@ -319,6 +322,7 @@
                       Co-founding?:
                       <?php
                       $options = array(
+                    NULL  => '::Choose::',    
                     'no'  => 'no',
                     'ye'    => 'yes',
                     'wc'   => 'will consider',
@@ -362,9 +366,11 @@
                   <?php echo form_input($s01);?>
                 </div>
 
+
+
                 <?php
                     $options= array(
-                      '00'  => '::Choose::',
+                      NULL  => '::Choose::',
                       'gh'  => 'Github',
                       'so'    => 'StackOverflow',
                       'an'    => 'AngelList',
@@ -374,7 +380,17 @@
                       'dr'    => 'Dribble',
                       'bh'    => 'Behance',
                       'in'    => 'Linkedin',
+                      'go'    => 'Google+',
+                      'yh'    => 'yahoo',
+                      're'    => 'reddit',
                       'hn'    => 'HackerNews',
+                      'bp'    => 'Bitbucket',
+                      'tl'    => 'Trello',
+                      'yt'    => 'YouTube',
+                      'vi'    => 'Vimeo',
+                      'ig'    => 'Instagram',
+                      'wb'    => 'Tencent-weibo',
+                      'pn'    => 'Pinterest',
                       );
 
                     $currentk02= $user->k02;   //getting info from the Admin array ,not good
@@ -454,7 +470,7 @@
 
                   <?php
                     $options= array(
-                      '00'  => 'Select',
+                      NULL  => 'Select',
                       'pb'  => 'Pro-bono',
                       'tr'  => 'Transfer',
                       'ch'  => 'Check',

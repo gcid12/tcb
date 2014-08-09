@@ -1,5 +1,10 @@
 
-
+<style type="text/css">
+  body{
+    background-image: url('<?php echo base_url('assets/img/tcb/tcb-backstage.jpg'); ?>');
+    background-repeat: no-repeat;
+  } 
+</style>
 
 <div class="row">
   <div class="col-xs-12 ">
@@ -18,11 +23,18 @@
   </div>
   
   <div class="col-xs-1 col-md-1 text-center basetxt">
-  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766" width="100px"/>
   </div>
   <div class="col-xs-9 col-md-9 text-left">
   
-		<span class="txttitle"><!-- Edit your info --></span>
+    <div class="pull-right">
+        <img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" width="50"/>
+      </div>
+
+		<span class="pull-right">
+    <?php $iduser=$tcbuser->id;?>
+    <a href="/tcb/backstage/<?php echo $iduser; ?>" > Backstage</a>
+      <span class="text-muted">/ Edit your info</span>
+    </span>
 		<br/>
 	  <div class="fhr"></div>		
 
@@ -581,7 +593,7 @@
           <br/><br/>
           <input type="submit" name="submit" value="Save" class="btn btn-success btn-lg">
 
-          <?php $iduser=$tcbuser->id;?>
+          
           <a href="/tcb/backstage/<?php echo $iduser; ?>" class="btn btn-default btn-sm"> Go back without saving</a>
 
         </div> <!--  CLOSE ACCORDION -->

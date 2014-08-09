@@ -216,6 +216,16 @@ $this->load->model('tcbmodel');  //loading model
 	}
 
 
+					public function sorttest()
+	{
+	
+      $this->load->view('pages/test');
+      $this->load->view('include/footer');
+
+
+	}
+
+
 	
 	
 	

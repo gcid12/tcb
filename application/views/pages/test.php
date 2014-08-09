@@ -1,53 +1,37 @@
+Test
 
-<div class="row">
-  <div class="col-xs-12 ">
+
+
+
+
+
+<div class="controls">
+  <label>Filter:</label>
   
-  <br/><br/><br/>
-  </div>
-    
-
+  <button class="filter" data-filter="all">All</button>
+  <button class="filter" data-filter=".category-1">Category 1</button>
+  <button class="filter" data-filter=".category-2">Category 2</button>
+  
+  <label>Sort:</label>
+  
+  <button class="sort" data-sort="myorder:asc">Asc</button>
+  <button class="sort" data-sort="myorder:desc">Desc</button>
 </div>
-
-<!-- r2 -->
-
-<div class="row basetxt">
-
-  <div class="col-xs-1 col-md-1 text-center basetxt">
-  </div>
+<div id="Container" class="container">
+  <div class="mix category-1" data-myorder="1">123</div>abc
+  <div class="mix category-1" data-myorder="2">456</div>def
+  <div class="mix category-1" data-myorder="3"></div>
+  <div class="mix category-2" data-myorder="4"></div>
+  <div class="mix category-1" data-myorder="5"></div>
+  <div class="mix category-1" data-myorder="6"></div>
+  <div class="mix category-2" data-myorder="7"></div>
+  <div class="mix category-2" data-myorder="8"></div>
   
-  <div class="col-xs-2 col-md-2 text-center basetxt">
-  	
-  </div>
-  <div class="col-xs-7 col-md-7 text-left">
-  
-  
-  <!-- TCB -->
-  		
-  		<br/>
-
-  		  		
-  		<div class="fhr"></div>		
-  		  		
-  		123456
-		  		<p title="UX Designer" class="txtsmall graytxt1">
-		  		Welcome back: <?php echo $tcbuser->first_name;?>
-
-		  		</p> 
-
-  		</div>	
-	
-		</div> <!-- close row -->
-
-
- 
-
-  	
-  </div>
-   <div class="col-xs-1 col-md-1 text-center basetxt lead">
-  </div>
-
-
+  <div class="gap"></div>
+  <div class="gap"></div>
 </div>
 
 
- 
+
+
+

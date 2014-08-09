@@ -22,6 +22,7 @@
   	</div> -->
 
 
+
   	<h1 class="lead text-white" style="font-size:3em;"><?php echo $user->first_name." ".$user->last_name; ?></h1>
 
 

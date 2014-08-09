@@ -30,9 +30,13 @@
    <link href="<?php echo base_url('assets/css/jquery.tagit.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/css/tagit.ui-zendesk.css') ?>" rel="stylesheet">
 
+      
+
+      <link href="<?php echo base_url('assets/css/mixitup.css') ?>" rel="stylesheet">
+
       <link href="<?php echo base_url('assets/css/tcb_green.css') ?>" rel="stylesheet">
 
-   
+
   
   
 

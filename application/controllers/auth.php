@@ -547,6 +547,7 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_rules('k03', 'Key 3', 'xss_clean');
 		$this->form_validation->set_rules('k04', 'Key 4', 'xss_clean');
 		$this->form_validation->set_rules('k05', 'Key 5', 'xss_clean');
+		$this->form_validation->set_rules('reddit', 'Reddit', 'xss_clean');
 		$this->form_validation->set_rules('showemail', 'Show Email', 'xss_clean');
 		$this->form_validation->set_rules('battletag', 'Battle tag', 'xss_clean');
 		$this->form_validation->set_rules('cofound', 'Co-found', 'xss_clean');
@@ -591,6 +592,7 @@ class Auth extends CI_Controller {
 				'k03'      => $this->input->post('k03'),
 				'k04'      => $this->input->post('k04'),
 				'k05'      => $this->input->post('k05'),
+				'reddit'      => $this->input->post('reddit'),
 				'showemail'      => $this->input->post('showemail'),
 				'recru'      => $this->input->post('recru'),
 				'pay01'      => $this->input->post('pay01'),
@@ -822,6 +824,13 @@ class Auth extends CI_Controller {
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('k05', $user->k05),
 		);
+						$this->data['reddit'] = array(
+			'name'  => 'reddit',
+			'id'    => 'reddit',
+			'type'  => 'reddit',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('reddit', $user->reddit),
+		);		
 					$this->data['skillsdev'] = array(
 			'name'  => 'skillsdev',
 			'id'    => 'skillsdev',

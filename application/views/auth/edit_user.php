@@ -580,7 +580,9 @@
 
           <br/><br/>
           <input type="submit" name="submit" value="Save" class="btn btn-success btn-lg">
-          
+
+          <?php $iduser=$tcbuser->id;?>
+          <a href="/tcb/backstage/<?php echo $iduser; ?>" class="btn btn-default btn-sm"> Go back without saving</a>
 
         </div> <!--  CLOSE ACCORDION -->
 

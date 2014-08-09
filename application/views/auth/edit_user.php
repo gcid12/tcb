@@ -3,6 +3,7 @@
   body{
     background-image: url('<?php echo base_url('assets/img/tcb/tcb-backstage.jpg'); ?>');
     background-repeat: no-repeat;
+    background-position: right top;
   } 
 </style>
 
@@ -30,9 +31,9 @@
         <img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" width="50"/>
       </div>
 
-		<span class="pull-right">
+		<span class="pull-right text-small">
     <?php $iduser=$tcbuser->id;?>
-    <a href="/tcb/backstage/<?php echo $iduser; ?>" > Backstage</a>
+    <a href="/tcb/backstage/<?php echo $iduser; ?>"  class="text-gray"> Backstage</a>
       <span class="text-muted">/ Edit your info</span>
     </span>
 		<br/>
@@ -40,12 +41,12 @@
 
     
 
-    <span class="txttitle" ><?php echo $user->first_name." ".$user->last_name; ?>  info</span>
+    <span class="txttitle" ><?php echo $user->first_name." ".$user->last_name; ?>  <span class="text-white">info</span></span>
 		
   	<div class="row">
   		<div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
 
-                 <span class="">Please complete the following information</span><br/><br/>
+                 <span class="">Please complete your information</span><br/><br/><br/>
 				
                 <div id="infoMessage" class="inmessage"><?php echo $message;?></div>
 				
@@ -591,10 +592,12 @@
           </div>
 
           <br/><br/>
+
+           <a href="/tcb/backstage/<?php echo $iduser; ?>" class="text-small text-gray pull-right"> Go back without saving</a>
           <input type="submit" name="submit" value="Save" class="btn btn-success btn-lg">
 
-          
-          <a href="/tcb/backstage/<?php echo $iduser; ?>" class="btn btn-default btn-sm"> Go back without saving</a>
+          <br/><br/>
+         
 
         </div> <!--  CLOSE ACCORDION -->
 

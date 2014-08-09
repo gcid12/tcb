@@ -18,7 +18,7 @@
   <div class="col-xs-2 col-md-2 text-center basetxt">
   	
   </div>
-  <div class="col-xs-7 col-md-7 text-left">
+  <div class="col-xs-8 col-md-8 text-left">
           <?php 
           $first_name=$tcbuser->first_name;
           $last_name=$tcbuser->last_name;  
@@ -29,7 +29,9 @@
   		<br/>
   		  		<span class="txttitle" title="UX Designer">Thanks <?php echo $first_name; ?> !</span>
 		  		<p title="UX Designer" class="graytxt1">
-		  		<span class="lead">you have endorsed a new member</span>  
+		  		<span class="lead">you have endorsed a new member</span> 
+          <br> 
+          
           <br/><br/><br/>
            <img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_badge3.png'); ?>" alt="TCB Badge" width="300px"/>
            <br/><br/><br/>
@@ -45,6 +47,10 @@
             echo "<a href='/auth/invite_user' class='btn btn-default'>Invite</a> &nbsp;";
             echo "<a href='/tcb/backstage/".$id."' class='btn btn-success'>Go back to home</a>";
           ?>
+
+
+        
+
 		  		
   		</div>	
 		</div> <!-- close row -->

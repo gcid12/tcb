@@ -1,3 +1,10 @@
+<style type="text/css">
+	body{
+    background-image: url('<?php echo base_url('assets/img/tcb/tcb-backstage.jpg'); ?>');
+    background-repeat: no-repeat;
+	} 
+</style>
+
 
 <div class="row">
   <div class="col-xs-12 ">
@@ -8,13 +15,22 @@
 <!-- r2 -->
 
 <div class="row basetxt">
-  <div class="col-xs-1 col-md-1 text-center basetxt">
+  <div class=" col-sm-1 col-md-1 text-center basetxt">
   </div>
-  <div class="col-xs-2 col-md-2 text-center basetxt">
-  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766"/>
+  <div class="col-xs-1 col-sm-1 col-md-1 text-center basetxt">
+  	
   </div>
-  <div class="col-xs-7 col-md-7 text-left">
+  <div class="col-xs-9 col-sm-9 col-md-8 text-left">
+
+
+  <!-- <div class="col-xs-1 col-sm-1 col-md-2"> -->  <!-- ERASE -->
+
+
+  		<div class="pull-right">
+  			<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" width="50"/>
+  		</div>
   		<span class="txttitle" title="UX Designer">Backstage</span>
+  		
       <br/>
   		<br/>
 		
@@ -234,9 +250,9 @@
 		    </p> 
 		  </div>
 
-			<div class="col-xs-1 col-md-1 text-center basetxt lead">
-			</div>
-		</div> <!-- CLOSE ROW -->
+	<div class="col-sm-1 col-md-2">
+	</div>
+</div> <!-- CLOSE ROW -->
 
 
 				

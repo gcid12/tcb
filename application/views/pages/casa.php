@@ -14,24 +14,17 @@
   </div>
   <div class="col-xs-10 redtxt">
 
-	
   </div>
   <div class="col-xs-1">
   </div>
-
 </div>
-
 <!-- r2 -->
-
-
-
 <div class="row">
 
   <div class="col-xs-1 col-md-1 text-center redtxt lead"></div>
   <div class="col-xs-10 col-md-10 text-center redtxt ">
   
   	<div class="txtsmall basetxt">
-  	
   	
   	   <?php								     		
 			foreach($query as $object){				
@@ -50,19 +43,13 @@
 		?>
 				
 		<br/><br/><br/><br/><br/>		
-
   	</div>	
-
- 
-  	
   </div>
-
-  
-
-  
-
-
 </div>
+
+
+
+
 
 
 

@@ -393,7 +393,7 @@
                       'pn'    => 'Pinterest',
                       );
 
-                    $currentk02= $user->k02;   //getting info from the Admin array ,not good
+                    $currentk02= $user->k02;   
                     $currentk03= $user->k03;
                     $currentk04= $user->k04;
                     $currentk05= $user->k05;
@@ -401,6 +401,11 @@
                     ?>
 
                 <br/>
+                <div class="row">  
+                  <div class="col-sm-12">
+                    Your Social Media
+                  </div>
+                </div>  
                 <div class="row">  
                   <div class="col-sm-3">
                     <?php echo form_dropdown('k02', $options, $currentk02); ?>
@@ -433,6 +438,19 @@
                     <div><?php echo form_input($s05);?></div>  
                   </div> 
                 </div>
+                <div class="row">  
+                  <div class="col-sm-12">
+
+                  <br/><br/>
+                     TCB Discussion Wall
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="fa fa-reddit"></i></div>
+                      <div class="input-group-addon">Reddit username</div>
+                      <?php echo form_input($reddit);?>
+                    </div>
+                     
+                  </div> 
+                </div>
                 <div class="row">
                   <div class="col-sm-12">
 
@@ -444,7 +462,7 @@
                       <input type="checkbox" name="recru" value="1"  <?php echo ($recru ==1 ? "checked" : ""); ?> > 
                         
 
-                        It's ok to be contacted by recruiters.  <?php echo "(".$recru.")"; ?>
+                        It's ok to be contacted by recruiters. 
                       </p>
                   </div>
                 </div>
@@ -562,6 +580,7 @@
 
           <br/><br/>
           <input type="submit" name="submit" value="Save" class="btn btn-success btn-lg">
+          
 
         </div> <!--  CLOSE ACCORDION -->
 

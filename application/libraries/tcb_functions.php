@@ -74,8 +74,6 @@ class Tcb_functions
 		break;
 			case "wb": $icon="fa-tencent-weibo";
 		break;
-			case "wn": $icon="fa-windows";
-		break;
 			case "pn": $icon="fa-pinterest";
 		break;
 

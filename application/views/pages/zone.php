@@ -2,6 +2,8 @@
 	body{
     background-image: url('<?php echo base_url('assets/img/tcb/tcb-backstage.jpg'); ?>');
     background-repeat: no-repeat;
+    background-position: right top; 
+   
 	} 
 </style>
 
@@ -21,77 +23,84 @@
   	
   </div>
   <div class="col-xs-9 col-sm-9 col-md-8 text-left">
+  		<div class="text-gray text-smaller pull-right"><em>This section is private</em></div><br/>
+  		<div class="fhr"></div>		
+  		  
+		<div class="row">
+			<div class=" col-sm-10 text-left basetxt txtsmall graytxt1">
 
+					<span class="txttitle tcb-color" ><?php echo $user->first_name." ".$user->last_name; ?>  <span class="text-white">Backstage</span></span>
 
-  <!-- <div class="col-xs-1 col-sm-1 col-md-2"> -->  <!-- ERASE -->
+					<br/><br/>
+					<div class="text-smaller"> 
 
+					<?php 
+					$exist=$user->exist;
+					
+					if($exist==1){ echo "<span class='glyphicon glyphicon-star'></span> Founder Member</div>";}
+					
+					?>
+					
 
-  		<div class="pull-right">
-  			<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" width="50"/>
-  		</div>
-  		<span class="txttitle" title="UX Designer">Backstage</span>
-  		
-      <br/>
-  		<br/>
-		
-  		  <div class="fhr"></div>		
-  	     	<p title="UX Designer" class="txtsmall">
- 
+					<span class="lead">
+							<?php echo $tcbuser->city; ?> , 
+							<?php echo $tcbuser->country; ?> |
+							
+							<?php echo $tcbuser->email; ?> | 
+							<strong>@</strong>  <?php echo $tcbuser->s01; ?> 
+					</span>
+
+					<div class="text-gray"><em><?php echo $tcbuser->pitch; ?></em></div>
+			</div>
+			<br/>
+			<div class=" col-sm-2 text-left basetxt txtsmall graytxt1">
+				<a class="btn btn-success" <?php echo "href='/auth/edit_user/".$tcbuser->id."'"; ?> > 
+				<i class="fa fa-gear fa-3x"></i><br/>Edit My Info</a>
+			</div>
+		</div> <!-- close row -->	
 		<div class="row">
 
 			<div class=" col-sm-12 text-left basetxt txtsmall graytxt1">
 
-			<a class="btn btn-success pull-right" <?php echo "href='/auth/edit_user/".$tcbuser->id."'"; ?> > 
-			<i class="fa fa-gear fa-3x"></i><br/>Edit My Info</a>
+						<br/><br/>
+						<?php								     		
+						foreach($currentGroups as $object){				
+						
+						
+						$name=($object->name);
+						$des=($object->description);
 
-			<h1 class="lead" style="font-size:3em;"><?php echo $tcbuser->first_name." ".$tcbuser->last_name; ?></h1>
-			
+						switch($des){
+							case "dev": $icon="gear"; $bg="bg-dev";
+								break;
+							case "dat": $icon="database"; $bg="bg-dat";
+								break;
+							case "des": $icon="pencil"; $bg="bg-des";
+								break;
+							case "pro": $icon="cube"; $bg="bg-pro";
+								break;
+							case "fin": $icon="money"; $bg="bg-fin";
+								break;
+							default: $icon=""; $bg="";
+										
 
-			<div class="lead">
-			<?php echo $tcbuser->city; ?> , 
-			<?php echo $tcbuser->country; ?> |
-			
-			<?php echo $tcbuser->email; ?> | 
-			<strong>@</strong>  <?php echo $tcbuser->s01; ?> 
-			</div>
-
-			<div><?php echo $tcbuser->pitch; ?></div>
-			<br/><br/>
-		<?php								     		
-			foreach($currentGroups as $object){				
-				
-				
-				$name=($object->name);
-				$des=($object->description);
-
-				switch($des){
-					case "dev": $icon="gear"; $bg="bg-dev";
-						break;
-					case "dat": $icon="database"; $bg="bg-dat";
-						break;
-					case "des": $icon="pencil"; $bg="bg-des";
-						break;
-					case "pro": $icon="cube"; $bg="bg-pro";
-						break;
-					case "fin": $icon="money"; $bg="bg-fin";
-						break;
-					default: $icon=""; $bg="";
-								
-
-				}
-				
-				
-		echo "<div class='label label-default ".$bg." pull-left' style='padding:5px; margin:2px;'>
-		<i class='fa fa-".$icon."'></i>".$name."</div>";
-		
-		}
-		?>
+									}
+									
+									
+							echo "<div class='label label-default ".$bg." pull-left' style='padding:5px; margin:2px;'>
+							<i class='fa fa-".$icon."'></i>".$name."</div>";
+							
+							}
+							?>
 
 			
 			
 
 			
 			</div>
+			<a class="tcb-color pull-right" <?php echo "href='/tcb/member/".$tcbuser->id."'"; ?> > 
+			<span class="text-smaller"><i class="fa fa-eye fa-1x"></i> view public profile</span></a>
+
 		</div>	
 		<div class="row">
 
@@ -122,19 +131,9 @@
 				      			, get exposure to new projects, meet new people and why not make an extra money. If you know
 				      			someone interested in joining TCB please invite her/him here:
 				      			</span>
-
-				      			
-			
-
-
-				      			
 				      			<br/>
-
 				      			<a class="btn btn-success pull-right" href="/auth/invite_user">Invite</a>
-
 				      		</div>
-
-
 
 				      </div>
 				    </div>
@@ -145,12 +144,11 @@
 				      <h4 class="panel-title">
 				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
 
-
-				          TCB Gifts
+				          TCB Goodies
 				        </a>
 				      </h4>
 				    </div>
-				    <div id="collapseFour" class="panel-collapse collapse in">
+				    <div id="collapseFour" class="panel-collapse collapse">
 				      <div class="panel-body">
 				      	<div class="row">
 				      		<div class="col-sm-4">
@@ -232,7 +230,9 @@
 					      				<a href="http://www.reddit.com/r/TCB846766/"><h2>http://www.reddit.com/r/TCB846766/</h2></a>
 
 					      				<br/><br/>
-				      			<div class="text-muted text-smaller pull-right"> (Send your reddit username to hello@tcb.io to add you.) </div>
+				      			<div class="text-muted text-smaller text-right pull-right"> (Please include your Reddit username in the <a <?php echo "href='/auth/edit_user/".$tcbuser->id."'"; ?>>social media section.</a>) 
+				      			<br/>Can't log-in?, shoot us an email to: hello@tcb.io
+				      			</div>
 
 				      		</div>
 				      		

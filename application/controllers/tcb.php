@@ -219,7 +219,10 @@ $this->load->model('tcbmodel');  //loading model
 					public function sorttest()
 	{
 	
-      $this->load->view('pages/test');
+		$this->load->model('tcbmodel');  //loading model
+		$data['query'] = $this->tcbmodel->get_all_home();
+
+      $this->load->view('pages/test', $data);
       $this->load->view('include/footer');
 
 

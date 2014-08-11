@@ -27,9 +27,20 @@
 		
 
 		function get_all_home(){
-		
         
-        $query = $this->db->query("SELECT id,username,first_name,last_name,pitch,city,country FROM users WHERE exist>='1' ORDER BY first_name ASC");
+        $query = $this->db->query("SELECT id,username,first_name,last_name,pitch,city,country,main FROM users WHERE exist>='1' ORDER BY first_name ASC");
+
+			if($query->num_rows() >0){
+				return $query->result();
+			}else{
+				return NULL;
+			}
+		
+		}
+
+		function get_all_with_tags(){
+        
+        $query = $this->db->query("SELECT id,username,first_name,last_name,pitch,city,country,main  FROM users WHERE exist>='1' ORDER BY first_name ASC");
 
 
 			if($query->num_rows() >0){
@@ -37,10 +48,9 @@
 			}else{
 				return NULL;
 			}
-			
-		
 		
 		}
+
 
 		function get_Member($slug){
 		$query = $this->db->query("SELECT * FROM tblMember WHERE slug='$slug'");

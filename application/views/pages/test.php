@@ -24,62 +24,55 @@
   <div class="col-xs-10 col-md-10 text-center redtxt ">
   
     <div class="txtsmall basetxt">
+
+    <!-- open sort -->
+
+      <div class="controls">
+        <label>Filter:</label>
+        
+        <button class="filter" data-filter="all">All</button>
+        <button class="filter" data-filter=".dev">Programming</button>
+        <button class="filter" data-filter=".dat">Data</button>
+        <button class="filter" data-filter=".des">Design</button>
+        <button class="filter" data-filter=".pro">Product</button>
+        <button class="filter" data-filter=".fin">Finance</button>
+        
+        <label>Sort:</label>
+        
+        <button class="sort" data-sort="myorder:asc">Asc</button>
+        <button class="sort" data-sort="myorder:desc">Desc</button>
+      </div>
+      <div id="Container" class="container">
     
        <?php                        
-      foreach($query as $object){       
+            foreach($query as $object){       
 
-        $id=($object->id);
-        $first_name=($object->first_name);
-        $last_name=($object->last_name);
-        $pitch=($object->pitch);
-        $city=($object->city);
-        $country=($object->country);
-        
-        
-    echo "<a href='/tcb/member/".$id."' rel='tooltip' class='redlink wtt' title='".$pitch."'>".$first_name." ".$last_name."</a> + ";
-    
-    }
-    ?>
+              $id=($object->id);
+              $first_name=($object->first_name);
+              $last_name=($object->last_name);
+              $pitch=($object->pitch);
+              $city=($object->city);
+              $country=($object->country);
+              $main=($object->main);
+              
+             
+          echo "<a href='/tcb/member/".$id."' rel='tooltip' class='redlink wtt' title='".$pitch."'>";
+          echo "<div class='redlink wtt mix ".$main."' data-myorder='".$first_name." ".$last_name."'> </div>"; 
+          echo "</a>";
+
+
+          }
+        ?>
+
+        <div class="gap"></div>
+        <div class="gap"></div>
+      </div>
+
+      <!-- close sort -->
         
     <br/><br/><br/><br/><br/>   
     </div>  
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<div class="controls">
-  <label>Filter:</label>
-  
-  <button class="filter" data-filter="all">All</button>
-  <button class="filter" data-filter=".category-1">Category 1</button>
-  <button class="filter" data-filter=".category-2">Category 2</button>
-  
-  <label>Sort:</label>
-  
-  <button class="sort" data-sort="myorder:asc">Asc</button>
-  <button class="sort" data-sort="myorder:desc">Desc</button>
-</div>
-<div id="Container" class="container">
-  <div class="mix category-1" data-myorder="1">123</div>abc
-  <div class="mix category-1" data-myorder="2">456</div>def
-  <div class="mix category-1" data-myorder="3"></div>
-  <div class="mix category-2" data-myorder="4"></div>
-  <div class="mix category-1" data-myorder="5"></div>
-  <div class="mix category-1" data-myorder="6"></div>
-  <div class="mix category-2" data-myorder="7"></div>
-  <div class="mix category-2" data-myorder="8"></div>
-  
-  <div class="gap"></div>
-  <div class="gap"></div>
 </div>
 
 

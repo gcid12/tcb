@@ -10,7 +10,7 @@ body, button{
 
 .controls{
   padding: 2%;
-  background: #333;
+  background: #000;
   color: #eee;
 }
 
@@ -24,7 +24,7 @@ button{
   padding: .4em .8em;
   background: #666;
   border: 0;
-  color: #ddd;
+  color: #000;
   font-size: 16px;
   font-weight: 300;
   border-radius: 4px;
@@ -32,22 +32,22 @@ button{
 }
 
 button.active{
-  background: #68b8c4;
+  background: #000;
 }
 
 button:focus{
   outline: 0 none;
+  color: yellow;
 }
 
 button + label{
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 .container{
   padding: 2% 2% 0;
   text-align: justify;
   font-size: 0.1px;
-  background: #68b8c4;
   
   -webkit-backface-visibility: hidden;
 }
@@ -66,7 +66,7 @@ button + label{
 
 .container .mix{
   text-align: left;
-  background: #03899c;
+  background: #000;
   margin-bottom: 2%;
   display: none;
 }
@@ -92,7 +92,7 @@ button + label{
 .container .mix:before{
   content: '';
   display: inline-block;
-  padding-top: 60%;
+  padding-top: 0%;
 }
 
 @media all and (min-width: 420px){
@@ -105,6 +105,12 @@ button + label{
 @media all and (min-width: 640px){
   .container .mix,
   .container .gap{
-    width: 23.5%;
+    width: 20%;
   }
 }
+/*this overwrite mixitup.css*/
+.container .mix:before {
+padding-top: 0;
+}
+
+

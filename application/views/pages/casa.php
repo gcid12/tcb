@@ -35,6 +35,7 @@
 				$pitch=($object->pitch);
 				$city=($object->city);
 				$country=($object->country);
+				$main=($object->main);
 				
 				
 		echo "<a href='/tcb/member/".$id."' rel='tooltip' class='redlink wtt' title='".$pitch."'>".$first_name." ".$last_name."</a> + ";

@@ -28,19 +28,21 @@
     <!-- open sort -->
 
       <div class="controls">
-        <label>Filter:</label>
+        <!-- <label>Filter:</label> -->
         
-        <button class="filter" data-filter="all">All</button>
-        <button class="filter" data-filter=".dev">Programming</button>
-        <button class="filter" data-filter=".dat">Data</button>
-        <button class="filter" data-filter=".des">Design</button>
-        <button class="filter" data-filter=".pro">Product</button>
-        <button class="filter" data-filter=".fin">Finance</button>
+        <button class="filter" data-filter="all">All</button> | 
+        <button class="filter" data-filter=".dev">Programming</button> | 
+        <button class="filter" data-filter=".dat">Data</button> | 
+        <button class="filter" data-filter=".des">Design</button> | 
+        <button class="filter" data-filter=".pro">Product</button> |
+        <button class="filter" data-filter=".fin">Finance</button> 
         
-        <label>Sort:</label>
         
+        
+        <!-- 
+<label>Sort:</label>
         <button class="sort" data-sort="myorder:asc">Asc</button>
-        <button class="sort" data-sort="myorder:desc">Desc</button>
+        <button class="sort" data-sort="myorder:desc">Desc</button> -->
       </div>
       <div id="Container" class="container">
     
@@ -56,7 +58,7 @@
               $main=($object->main);
               
              
-          echo "<a href='/tcb/member/".$id."' rel='tooltip' class='redlink wtt' title='".$pitch."'>";
+          echo "<a href='/tcb/member/".$id."' rel='tooltipXXX' class='redlink wtt' title='".$pitch."'>";
           echo "<div class='redlink wtt mix ".$main."' data-myorder='".$first_name." ".$last_name."'> </div>"; 
           echo "</a>";
 

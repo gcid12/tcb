@@ -41,29 +41,20 @@ class Tcb extends Main_Controller {
     
     
 
-	
-	
-   public function index_old()
-	{
-	
-		$this->load->model('tcbmodel');  //loading model
-		$data['query'] = $this->tcbmodel->get_AllMembers();
-		
-      
-      $this->load->view('pages/home',$data);
-      $this->load->view('include/footer');
-	}
 
-	   public function index()
+		public function index()
 	{
 	
 		$this->load->model('tcbmodel');  //loading model
 		$data['query'] = $this->tcbmodel->get_all_home();
-		
-      
-      $this->load->view('pages/casa',$data);
+
+      $this->load->view('pages/test', $data);
       $this->load->view('include/footer');
+
+
 	}
+
+
 
 	
 	
@@ -216,17 +207,7 @@ $this->load->model('tcbmodel');  //loading model
 	}
 
 
-					public function sorttest()
-	{
-	
-		$this->load->model('tcbmodel');  //loading model
-		$data['query'] = $this->tcbmodel->get_all_home();
 
-      $this->load->view('pages/test', $data);
-      $this->load->view('include/footer');
-
-
-	}
 
 
 	

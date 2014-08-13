@@ -22,10 +22,10 @@ label{
 button{
   display: inline-block;
   padding: .4em .8em;
-  background: #666;
+  background: #000;
   border: 0;
-  color: #000;
-  font-size: 16px;
+  color: #CCC;
+  font-size: 0.8em;
   font-weight: 300;
   border-radius: 4px;
   cursor: pointer;
@@ -37,7 +37,7 @@ button.active{
 
 button:focus{
   outline: 0 none;
-  color: yellow;
+  color: #99CC00;
 }
 
 button + label{
@@ -65,9 +65,9 @@ button + label{
 }
 
 .container .mix{
-  text-align: left;
+  text-align: center;
   background: #000;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   display: none;
 }
 
@@ -81,12 +81,12 @@ button + label{
 
 .container .mix:after{
   content: attr(data-myorder);
-  color: white;
+  color: #99CC00;
   font-size: 16px;
   display: inline-block;
   vertical-align: top;
-  padding: 4% 6%;
-  font-weight: 700;
+  /*padding: 4% 6%;*/
+  font-weight: 300;
 }
 
 .container .mix:before{

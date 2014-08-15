@@ -38,7 +38,7 @@ line-height: 10px;
 
 
 a:hover, a:focus {
-color: #CCC;
+color: #FFF;
 text-decoration: none;
 }
 
@@ -46,7 +46,10 @@ a:link {
     color: #99CC00;
 }
 
-
+a:visited
+{ 
+color: #CCC;
+}
 
 
 .endicon{padding:5px; color:#99CC00;}
@@ -165,7 +168,7 @@ a:link {
   
 
 .redlink:link {color:#99CC00; text-decoration: none !important;}      /* unvisited link */
-.redlink:visited {color:#CCC; text-decoration: none !important;}  /* visited link */
+.redlink:visited {color:#487237; text-decoration: none !important;}  /* visited link */
 .redlink:hover {color:#FFF; text-decoration: none !important;}  /* mouse over link */
 .redlink:active {color:#99CC00; text-decoration: none !important;}
 

@@ -58,7 +58,7 @@
               $main=($object->main);
               
              
-          echo "<a href='/tcb/member/".$id."' rel='tooltipXXX' class='redlink wtt' title='".$pitch."'>";
+          echo "<a href='/tcb/member/".$id."' rel='tooltipXXX' class='redlink' title='".$pitch."'>";
           echo "<div class='redlink wtt mix ".$main."' data-myorder='".$first_name." ".$last_name."'> </div>"; 
           echo "</a>";
 

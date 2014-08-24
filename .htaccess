@@ -10,8 +10,3 @@ RewriteRule .* index.php?/$0 [PT,L]
                 allow from all
 </Directory>
 
-# block access to some sensible files
-<Files ~ "^sftp-config.json|.gitignore|.sass-cache|.htaccess|.git|node_modules">
-  Order allow,deny
-  Deny from all
-</Files>

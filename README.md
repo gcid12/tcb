@@ -78,17 +78,7 @@ $config['base_url']     = '{URL as indicated in your Virtual Server}';
 $config['encryption_key'] = '{Your encryption key}';
 ```
 
-ALTERNATIVE:
 
-Create a file called tcbconf.php in public_html and add the following:
-
-```
-define("TCB_HOSTNAME","{your db hostname goes here}");
-define("TCB_HOSTNAME","{your db hostname goes here}");
-define("TCB_HOSTNAME","{your db hostname goes here}");
-define("TCB_HOSTNAME","{your db hostname goes here}");
-
-```
 
 
 

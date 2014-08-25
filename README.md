@@ -20,7 +20,7 @@ chown -R :<admingroup> /public_html
 Add the following to your APACHE config file.
 
 ```
-<Directory /var/www/tcb.io/public_html>
+<Directory /<Path to virtual server>/public_html>
 				Options Indexes FollowSymLinks MultiViews
 				AllowOverride All
 				Order allow,deny

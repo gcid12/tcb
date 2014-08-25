@@ -45,7 +45,9 @@ cd /etc/apache2/sites-enabled
 ln -s  /etc/apache2/sites-available/<name_of_your_virtual_server>.conf <name_of_your_virtual_server>.conf
 ```
 
-After that, if you go to the URL indicated in the Virtual Server you'll find a message like this:
+#### Application Configuration Files
+
+After setting the virtual server, if you go to the URL indicated in the Virtual Server you'll find a message like this:
 
 ```
 The configuration file does not exist.

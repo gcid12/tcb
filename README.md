@@ -17,6 +17,8 @@ chown -R :<admingroup> /public_html
 
 #### Setting up the mod_rewrite
 
+We are not going to use an .htaccess file for the rewrite rules. Please check that there is no .htaccess file in ../public_html . If there is one you can delete it or check that it is empty.
+
 Add the following to your APACHE config file.
 
 ```

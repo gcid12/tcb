@@ -1,11 +1,12 @@
-*/config/*
+*/config/config.php
+*/config/database.php
 */logs/log-*.php
 */logs/!index.html
 */cache/*
 */cache/!index.html
 */cache/!.htaccess
-/sftp-config-alt.json
 /sftp-config.json
+/sftp-config-alt.json
 
 
 # Logs and databases #

@@ -976,7 +976,7 @@ class Auth extends CI_Controller {
 		);
 
 		$this->_render_page('auth/edit_user', $this->data);
-		$this->load->view('include/footer');
+		//$this->load->view('include/footer');
 	}
 
 	// create a new group
@@ -1087,7 +1087,7 @@ class Auth extends CI_Controller {
 		);
 
 		$this->_render_page('auth/edit_group', $this->data);
-		$this->load->view('include/footer');
+		//$this->load->view('include/footer');
 	}
 
 
@@ -1121,6 +1121,7 @@ class Auth extends CI_Controller {
 		$this->viewdata = (empty($data)) ? $this->data: $data;
 
 		$view_html = $this->load->view($view, $this->viewdata, $render);
+		$view_html .= $this->load->view('include/footer');
 
 		if (!$render) return $view_html;
 	}

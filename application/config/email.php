@@ -1,9 +1,5 @@
 <?php
 
-/*
- * What protocol to use?
- * mail, sendmail, smtp
- */
-
+$config['protocol'] = 'smtp';
 
 

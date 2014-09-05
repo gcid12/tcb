@@ -1,0 +1,7 @@
+<?php
+
+$config['protocol'] = 'smtp';
+
+
+?>
+

@@ -1,6 +1,7 @@
-*/config/email.php
+
 */config/config.php
 */config/database.php
+*/config/email.php
 */logs/log-*.php
 */logs/!index.html
 */cache/*

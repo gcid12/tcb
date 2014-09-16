@@ -24,9 +24,6 @@
    <script src="<?php //echo base_url('assets/js/initswitch.js') ?>"></script>
  -->
 
- 
-   <script src="<?php //echo base_url('assets/js/highlight.js') ?>"></script>
-
 
     
 

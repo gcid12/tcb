@@ -20,7 +20,7 @@ class Frontpage extends Main_Controller {
           //$this->email->cc('ricardo@blacklabelrobot.com');
           //$this->email->bcc('ricidfe');
 
-          $this->email->subject('Email Test');
+          $this->email->subject('Email Test 911a');
           $this->email->message('Testing the email class in CI.');
 
           $this->email->send();
@@ -38,7 +38,7 @@ class Frontpage extends Main_Controller {
           //$this->email->bcc('ricidfe');
 
           $this->email->subject('Email Test');
-          $this->email->message('Testing the email class.');
+          $this->email->message('Testing the email class ');
 
          # $this->email->send();
           print_r($this->email);

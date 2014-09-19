@@ -55,7 +55,7 @@
 			<br/>
 			<div class=" col-sm-2 text-left basetxt txtsmall graytxt1">
 				<a class="btn btn-success" <?php echo "href='/auth/edit_user/".$tcbuser->id."'"; ?> > 
-				<i class="fa fa-gear fa-3x"></i><br/>Edit My Info</a>
+				<i class="fa fa-gear fa-3x text-white"></i><br/><span class="text-white">Edit My Info</span></a>
 			</div>
 		</div> <!-- close row -->	
 		<div class="row">
@@ -127,12 +127,11 @@
 				      		<div class="col-sm-7">
 
 				      			<span class="blacktxt txtsmaller">
-				      			TCB846766 it's a network of Tech Talent looking for projects to increase their experience
-				      			, get exposure to new projects, meet new people and why not make an extra money. If you know
-				      			someone interested in joining TCB please invite her/him here:
+				      				<h3 class="text-gray lead">Do you know a great addition to TCB?, invite her/him here</h3>
+
 				      			</span>
 				      			<br/>
-				      			<a class="btn btn-success pull-right" href="/auth/invite_user">Invite</a>
+				      			<a class="btn btn-success pull-right" href="/auth/invite_user"><span class="text-white">Invite</span></a>
 				      		</div>
 
 				      </div>
@@ -148,27 +147,54 @@
 				        </a>
 				      </h4>
 				    </div>
-				    <div id="collapseFour" class="panel-collapse collapse">
+				    <div id="collapseFour" class="panel-collapse collapse in">
 				      <div class="panel-body">
 				      	<div class="row">
-				      		<div class="col-sm-4">
-				      			<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb_stickerpack.png'); ?>" alt="846766"/>
+				      		<div class="col-sm-2">
+				      			<img class="img-responsive center-block" src="<?php echo base_url('assets/img/tcb/tcb-gift.png'); ?>" width="150px" alt="846766"/>
 
 				      		</div>
-				      		<div class="col-sm-8">
-				      			<span class="blacktxt txtsmaller">
-				      			Free goodies for TCB846766 Members. Redeem yours at www.retinal.co
-				      			</span>
+				      		<div class="col-sm-10">
+				      			
+				      			<h3 class="text-gray lead">Free goodies from TCB and Friends. </h3>
 
 				      			<hr/>
-				      			<a class="btn btn-default btn-sm"><h5>Sticker Pack</h5>  #TCB94884 </a>
 				      			
-				      			
+				      			<div class="row">
+				      				<div class="col-sm-4">
+				      						<div class="well text-center">
+				      						<span class="label label-success" style="float:left;">Direct gift</span>
+				      						<img class="img-responsive center-block" src="<?php echo base_url('assets/img/tcb/tcb_wpack.png'); ?>" width="200"/>
+				      						<br/>
+				      						<div class="text-small text-gray">Welcome Pack</div>
+				      						<div class="text-smaller">Code:tcb9s9e8f</div>
+				      							<a class="btn btn-xs btn-default">Redeem now</a>
+				      						</div>
+				      				</div>
+				      				<div class="col-sm-4">
+				      						<div class="well text-center">
+				      						<span class="label label-default" style="float:left;">Limited</span>
+				      						<img class="img-responsive center-block" src="<?php echo base_url('assets/img/tcb/tcb_stickerpack.png'); ?>" width="200"/>
+				      						<br/>
+				      						<div class="text-small text-gray">Sticker Pack</div>
+				      						<div class="text-smaller">Code:tcb6aw67</div>
+				      							<a class="btn btn-xs btn-default">Redeem now</a>
+				      						</div>
+				      				</div>
+				      				<div class="col-sm-4">
+				      						<div class="well text-center">
+				      						Coming Soon
+				      						<img class="img-responsive center-block" src="<?php echo base_url('assets/img/tcb/tcb_tshirt01.png'); ?>" width="200"/>
+				      						<br/>
+				      						<div class="text-small text-gray">TCB TShirt</div>
+				      						<div class="text-smaller">Code:tcb2kji39</div>
+				      							<div class="label label-default">Coming soon</div>
+				      						</div>
+				      				</div>
+				      				
+				      					
+				      			</div>	
 				      			<br/><br/>
-
-
-				      			<a class="btn btn-success" href="http://retinal.co/collections/frontpage/products/tcb-sticker">Redeem gifts</a>
-
 				      		</div>
 				      		
 				      	</div>

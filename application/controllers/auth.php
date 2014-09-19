@@ -359,7 +359,6 @@ class Auth extends CI_Controller {
 
 
 	//activate the user
-	//http://tcb.io/auth/activate/91/04ce9c2a2283ef9592b154a2023985b3248e8d4a
 	function activate($id, $code=false)
 	{
 		if ($code !== false)

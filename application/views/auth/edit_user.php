@@ -111,13 +111,14 @@
 
                                
 
-                    Skills
+                    Your Skills:
                     <div class="well" style="background-color:black;">
 
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs" role="tablist" style="color:red;">
                         <li class="active"><a href="#dev" role="tab" data-toggle="tab"><i class="fa fa-code"></i></a></li>
                         <li><a href="#dat" role="tab" data-toggle="tab"><i class="fa fa-database"></i></a></li>
+                        <li><a href="#har" role="tab" data-toggle="tab"><i class="fa fa-wrench"></i></a></li>
                         <li><a href="#des" role="tab" data-toggle="tab"><i class="fa fa-pencil"></i></a></li>
                         <li><a href="#pro" role="tab" data-toggle="tab"><i class="fa fa-cube"></i></a></li>
                         <li><a href="#fin" role="tab" data-toggle="tab"><i class="fa fa-money"></i></a></li>
@@ -141,6 +142,25 @@
                               
                             </div>
                         </div>
+
+
+                        <div class="tab-pane active" id="har">
+                            
+                            <div class="lead">Hardware</div>
+                            <div class="row">
+                              <div class="col-sm-6">
+
+                              
+                                  <?php  skillfilter($groups, $currentGroups ,"har"); ?>
+                              </div>
+                              <div class="col-sm-6">
+                                
+                                 Other Dev skills<div><?php echo form_textarea($skillsdev);?></div>
+                              </div>
+                              
+                            </div>
+                        </div>
+
                         <div class="tab-pane" id="des">
                             <div class="lead">Design </div>
                             <div class="row">

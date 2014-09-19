@@ -84,19 +84,13 @@
 							default: $icon=""; $bg="";
 										
 
-									}
-									
+									}		
 									
 							echo "<div class='label label-default ".$bg." pull-left' style='padding:5px; margin:2px;'>
 							<i class='fa fa-".$icon."'></i>".$name."</div>";
 							
 							}
 							?>
-
-			
-			
-
-			
 			</div>
 			<a class="tcb-color pull-right" <?php echo "href='/tcb/member/".$tcbuser->id."'"; ?> > 
 			<span class="text-smaller"><i class="fa fa-eye fa-1x"></i> view public profile</span></a>

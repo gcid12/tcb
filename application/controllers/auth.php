@@ -63,6 +63,23 @@ class Auth extends CI_Controller {
 		}
 	}
 
+		function welcome()
+	{
+		if (!$this->ion_auth->logged_in())
+		{
+			
+			$this->load->view('auth/welcometcb');
+      		$this->load->view('include/footer');
+		}
+		else
+		{
+			//redirect them to the login page
+			redirect('auth/logout', 'refresh');
+			
+		}
+
+	}
+
 	//log the user in
 	function login()
 	{
@@ -342,6 +359,7 @@ class Auth extends CI_Controller {
 
 
 	//activate the user
+	//http://tcb.io/auth/activate/91/04ce9c2a2283ef9592b154a2023985b3248e8d4a
 	function activate($id, $code=false)
 	{
 		if ($code !== false)
@@ -357,7 +375,7 @@ class Auth extends CI_Controller {
 		{
 			//redirect them to the auth page
 			$this->session->set_flashdata('message', $this->ion_auth->messages());
-			redirect("auth", 'refresh');
+			redirect("auth/welcome", 'refresh');
 		}
 		else
 		{

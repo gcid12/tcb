@@ -29,7 +29,7 @@
 	  	<div class="row">
 	  		<div class=" col-sm-10 text-left basetxt txtsmall graytxt1">
 				
-					<p><?php echo lang('login_subheading');?></p><br/>
+					<p>Please login with your email and password below.</p><br/>
 					
 					<div id="infoMessage" class="inmessage"><?php echo $message;?></div>
 					

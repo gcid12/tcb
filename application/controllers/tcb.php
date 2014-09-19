@@ -54,9 +54,6 @@ class Tcb extends Main_Controller {
 
 	}
 
-
-
-	
 	
 	   public function about_old()
 	{

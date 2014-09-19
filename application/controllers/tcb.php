@@ -205,6 +205,21 @@ $this->load->model('tcbmodel');  //loading model
 
 
 
+		function red()
+	{
+		
+        if (!$this->ion_auth->logged_in())  
+		{
+		$data['logged'] = false;			
+		}else{
+		$data['logged'] = true;
+		$data['tcbuser'] = $this->ion_auth->user()->row();
+		}
+		
+
+      	$this->load->view('auth/red',$data);
+
+	}
 
 
 	

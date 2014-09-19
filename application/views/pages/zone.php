@@ -23,7 +23,7 @@
   	
   </div>
   <div class="col-xs-9 col-sm-9 col-md-8 text-left">
-  		<div class="text-gray text-smaller pull-right"><em>This section is private</em></div><br/>
+  		<div class="text-gray text-smaller pull-right"><em> This section is private, only you can see it</em></div><br/>
   		<div class="fhr"></div>		
   		  
 		<div class="row">
@@ -126,12 +126,28 @@
 				      		</div>
 				      		<div class="col-sm-7">
 
-				      			<span class="blacktxt txtsmaller">
-				      				<h3 class="text-gray lead">Do you know a great addition to TCB?, invite her/him here</h3>
+				      		<h3 class="text-gray lead">Want to invite someone to TCB?</h3>
 
-				      			</span>
+				      			<?php 
+					$exist=$user->exist;
+					
+					if($exist==1){ 
+						echo "<span class='glyphicon glyphicon-star'></span>".$user->first_name." ".$user->last_name." have unlimited
+						invitations (Founder member)</span>";
+	
+						
+					}else{ ?>
+						<h5 class="text-lgray">You have 10 invitations remaining</h5>
+					<?php } ?>
+				      			
+				      		<br/><br/>		
+				      				
+				    
+
+
+				      			
 				      			<br/>
-				      			<a class="btn btn-success pull-right" href="/auth/invite_user"><span class="text-white">Invite</span></a>
+				      			<a class="btn btn-success pull-right" href="/auth/invite_user"><span class="text-white">Invite here</span></a>
 				      		</div>
 
 				      </div>
@@ -168,7 +184,7 @@
 				      						<br/>
 				      						<div class="text-small text-gray">Welcome Pack</div>
 				      						<div class="text-smaller">Code:tcb9s9e8f</div>
-				      							<a class="btn btn-xs btn-default">Redeem now</a>
+				      							<div class="label label-default">Coming soon</div>
 				      						</div>
 				      				</div>
 				      				<div class="col-sm-4">
@@ -192,9 +208,14 @@
 				      						</div>
 				      				</div>
 				      				
+				      				
 				      					
 				      			</div>	
 				      			<br/><br/>
+				      		</div>
+				      		<hr/>
+				      		<div class="text-right" style="padding:0 20px;">
+				      		<small>All goodies are FJPS (Free Just Pay for Shipping)</small>
 				      		</div>
 				      		
 				      	</div>

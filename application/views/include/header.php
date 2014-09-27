@@ -12,12 +12,12 @@
 
    <title>&#84;&#67;&#66; 846766</title>
    
-   <link href='http://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
-
+<!--    <link href='http://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
+ -->
    <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/css/font-awesome.css') ?>" rel="stylesheet">
-   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
+<!--    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+ -->
    <!-- <link href="<?php //echo base_url('assets/css/custom.css') ?>" rel="stylesheet"> -->
    <!-- <link href="<?php //echo base_url('assets/css/bootstrap-switch.css') ?>" rel="stylesheet"> -->
 

@@ -33,7 +33,7 @@
 
 		<span class="pull-right text-small">
     <?php $iduser=$tcbuser->id;?>
-    <a href="/tcb/backstage/<?php echo $iduser; ?>"  class="text-gray"> Backstage</a>
+    <a href="/tcb/backstage/<?php echo $iduser; ?>"  class="text-gray"> Go to Backstage</a>
       <span class="text-muted">/ Edit your info</span>
     </span>
 		<br/>
@@ -144,7 +144,7 @@
                         </div>
 
 
-                        <div class="tab-pane active" id="har">
+                        <div class="tab-pane" id="har">
                             
                             <div class="lead">Hardware</div>
                             <div class="row">
@@ -235,8 +235,22 @@
       <!-- SECOND COLUMN -->
 
       <div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
-          
-          <br/><br/><br/>
+        
+        <div class="row"> 
+          <div class="col-sm-8">
+            <h4 class="basetxt2 text-right text-gray">Public profile</h4>
+          </div>
+          <div class="col-sm-4">
+              <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+                </label>
+              </div> 
+          </div> 
+          <div class="spa40"></div>
+        </div>    
                 <!-- ACCORDION -->
         <div class="panel-group" id="accordion">
 
@@ -422,8 +436,7 @@
                       'yt'    => 'YouTube',
                       'vi'    => 'Vimeo',
                       'ig'    => 'Instagram',
-                      'wb'    => 'Tencent-weibo',
-                      'pn'    => 'Pinterest',
+                      'ot'    => 'Other',
                       );
 
                     $currentk02= $user->k02;   
@@ -611,12 +624,12 @@
             </div>
           </div>
 
-          <br/><br/>
+          <div class="spa20"></div>
 
-           <a href="/tcb/backstage/<?php echo $iduser; ?>" class="text-small text-gray pull-right"> Go back without saving</a>
+           <a href="/tcb/backstage/<?php echo $iduser; ?>" class="text-small text-gray pull-right"> Go to Backstage</a>
           <input type="submit" name="submit" value="Save" class="btn btn-success btn-lg">
 
-          <br/><br/>
+          <div class="spa30"></div>
          
 
         </div> <!--  CLOSE ACCORDION -->
@@ -638,7 +651,5 @@
 
 </div> <!-- close row -->		
 
-<input type="hidden" value="pasto" name="tags" class="tagit-hidden-field">
-<input type="hidden" value="algodon" name="tags" class="tagit-hidden-field">
 
 

@@ -221,7 +221,12 @@ $this->load->model('tcbmodel');  //loading model
 
 	}
 
+	   public function terms_and_conditions()
+	{
 
+      $this->load->view('pages/terms');
+      $this->load->view('include/footer');
+	}
 	
 	
 	

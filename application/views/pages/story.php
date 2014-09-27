@@ -67,7 +67,7 @@
                 <div class="lead text-white">Who's behind TCB?
                 </div> 
                 <p class="txtsmall">
-                TCB was founded by former Alumni, Associates and Hackstars that went through the Techstars program, we are sworn by the "Do more Faster" mantra. We iterate fast, we get things done. However TCB is not exclusive to former Techstars , we are always looking for amazing people to join.
+                    A group of former Hackstars / Associates and Tech and startup experts looking for interesting projects to get involved in to. 
                 </p>
             </div>
           
@@ -153,7 +153,7 @@
 
             <div class=" col-xs-1"> 
             </div>
-            <div class=" col-xs-2">     
+            <div class=" col-xs-3">     
                 <img class="img-responsive" src="<?php echo base_url('assets/img/tcb/tcb-key-sm.png'); ?>" alt="TCB Key"/>
             </div>
           
@@ -168,6 +168,19 @@
             </div>
 
           </div> 
+          <div class="row">
+
+            <div class=" col-xs-12"> 
+
+            <br/><br/><br/><hr/>
+            <p class="text-muted">
+              <small>
+              Brands mentioned on this website are trademarks of their respective owners, which are in no way associated or affiliated with TCB846766.
+              Opinions or points of view expressed are those of the author(s) and do not necessarily reflect TCB846766 position. 
+              </small>
+            </p>
+            </div>
+          </div>  
 
           
 

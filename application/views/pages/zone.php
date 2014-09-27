@@ -120,7 +120,7 @@
 				      		</div>
 				      		<div class="col-sm-7">
 
-				      		<h3 class="text-gray lead">Want to invite someone to TCB?</h3>
+				      		<h3 class="text-gray lead">Do you know some great Startup Talent, invite her/him here.</h3>
 
 				      			<?php 
 					$exist=$user->exist;

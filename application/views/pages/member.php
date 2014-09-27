@@ -8,19 +8,15 @@
 <!-- r2 -->
 
 <div class="row basetxt">
-  <div class="col-sm-1 col-md-1 text-center basetxt">
-  </div>
-  <div class="col-sm-1 col-md-2 text-center basetxt">
-  	<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766"/>
-  </div>
-  <div class="col-sm-8 col-md-7 text-left">
+  
+  <div class="col-sm-2 col-md-1 col-lg-1 hidden-xs" style="padding:0 0 0 10px;">
+		<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766"/>
+ </div>
+  <div class="col-sm-9 col-md-9 text-left" style="padding:0 40px;">
 
-   <!-- 	<div class="pull-right" style="color:#666;">
-  		<h2>23 
-  			<i class="fa fa-bolt fa-2x"></i>
-  		</h2>
-  	</div> -->
-
+   	<div class="pull-right hidden-sm hidden-md hidden-lg" style="color:#666;">
+		<img class="img-responsive" src="<?php echo base_url('assets/img/tcb/846766.gif')."?=".rand(1,100); ?>" alt="846766" width="70"/>
+  	</div>
 
 
   	<h1 class="lead text-white" style="font-size:3em;"><?php echo $user->first_name." ".$user->last_name; ?></h1>

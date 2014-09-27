@@ -46,7 +46,7 @@ class Tcb_functions
 		break;
 			case "bp": $icon="fa-bitbucket";
 		break;
-			case "an": $icon="fa-arrow-circle-o-right";
+			case "an": $icon="fa-angellist";
 		break;
 			case "dr": $icon="fa-dribbble";
 		break;
@@ -74,7 +74,7 @@ class Tcb_functions
 		break;
 			case "wb": $icon="fa-tencent-weibo";
 		break;
-			case "pn": $icon="fa-pinterest";
+			case "ot": $icon="fa-arrow-circle-o-right";
 		break;
 
 		

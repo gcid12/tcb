@@ -347,55 +347,77 @@
                   <div class="col-sm-6">
                     ...
                   </div>
-                  
                 </div>  
-                <div class="row">
-                  <div class="col-sm-12">
-                    <hr/>
-                  </div>
-                </div>  
+              </div> <!-- close panel body -->
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-tcb">
+              <!-- personal info -->
+              <a data-toggle="collapse" data-parent="#accordion" href="#c1b">
+                <h4 class="panel-title">
+                  <span class="basetxt2">B. Events / Invitations </span>
+                  <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
+                     <i class="fa fa-circle fa-stack-2x"></i>
+                     <i class="fa fa-glass fa-stack-1x fa-inverse"></i>
+                  </span>
+                </h4>  
+              </a>
+            </div>
+            <div id="c1b" class="panel-collapse collapse">
+              <div class="panel-body">
+ 
                 <div class="row">
                   <div class="col-sm-6">
-                      <h4>Events:</h4>
+                      <h4><i class="fa fa-envelope"></i> Events:</h4>
 
                       <p class="text-smaller text-gray">
-                      Select Yes if you want to receive invitations to Launches, Dinners,  Parties and Events from TCB and different companies.
+                      Select Yes if you want to receive invitations to Launches, Dinners,  Parties and Events from TCB and different Tech companies.
                       </p>
-
-                      <?php
+                  </div>
+                  <div class="col-sm-6">
+                      <h4><i class="fa fa-cube"></i> Beta Tester:</h4>
+                      <p class="text-smaller text-gray">
+                      Beta testers try products before anyone in the market. Select Yes if you want to subscribe to non-commitment free tryouts.
+                      </p>
+                  </div>
+                </div>  
+                <div class="row"> 
+                  <div class="col-sm-6">
+                    <?php
                       $options = array(
-                    NULL  => '::Choose::',    
-                    'no'  => "Not interested",
-                    'os'  => "Yes, Send me Invitations",
+                      NULL  => '::Choose::', 
+                      '1'  => "Yes",   
+                      '0'  => "Not interested",
+                    
                         );
-
                       $worklocation= $user->work;
-
                       echo form_dropdown('work', $options, $worklocation);
-
-                      ?>
+                    ?>
                   </div>
                   <div class="col-sm-6">
-                      <h4>Beta Tester:</h4>
-                      <p class="text-smaller text-gray">
-                      Beta testers try products before anyone in the market. Select Yes if you want to subscribe to non-commitment free tryouts from different Tech companies.
-                      </p>
-                      
-                      <?php
+                    <?php
                       $options = array(
-                    NULL  => '::Choose::',    
-                    'no'  => "Not interested",
-                    'ye'    => "Yes, I'm in!",
+                      NULL  => '::Choose::', 
+                     '1'    => "Yes",   
+                     '0'  => "Not interested",
+                    
                         );
-
                       $cofound= $user->cofound;
-
                       echo form_dropdown('cofound', $options, $cofound);
-
                       ?>
                   </div>
-                  
-                </div>
+                </div>  
+                <div class="row"> 
+                  <div class="col-sm-12">
+                    <div class="spa20"></div>
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <p class="text-smaller">
+                          TCB never shares your email or personal information with third parties, all the communication happens here in your Backstage<a href="/tcb/backstage/<?php echo $iduser; ?>" class="text-small"> [Go]</a>
+                        </p>
+                    </div> 
+                  </div>  
+                </div> <!-- close row -->
 
               </div> <!-- close panel body -->
             </div>

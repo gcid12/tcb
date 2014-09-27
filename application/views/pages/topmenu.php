@@ -26,7 +26,7 @@
 			<?php }else{ ?>	
 
 				Logged OUT
-				<a href="https://tcb.io/auth/login" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="SIGN IN"><i class="fa fa-sign-in fa-2x"></i></a>
+				<a href="/auth/login" rel="tooltip" class="menulink wtt menu1" style="float:right;" title="SIGN IN"><i class="fa fa-sign-in fa-2x"></i></a>
 						
 		  			
 				<?php } ?>

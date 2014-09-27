@@ -232,7 +232,7 @@
       
       </div><!-- close s5 -->
 
-      <!-- SECOND COLUMN -->
+      <!-- SECOND COLUMN ************************************ -->
 
       <div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
         

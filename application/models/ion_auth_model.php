@@ -1386,26 +1386,6 @@ class Ion_auth_model extends CI_Model
 	}
 
 
-
-
-	/**
-	 * get_users_skills  copy of  get_users_groups
-	 *
-	 * @return array
-	 * @author Modified by Cid
-	 **/
-	public function get_users_skills($id=FALSE)
-	{
-		$this->trigger_events('get_users_skill');
-
-		//if no id was passed use the current users id
-		$id || $id = $this->session->userdata('user_id');
-
-		return $this->db->query("SELECT `users_skills`.`skill_id` as id, `skills`.`name`, `skills`.`description` FROM (`users_skills`) JOIN `skills` ON `users_skills`.`skill_id`=`skills`.`id` WHERE `users_skills`.`user_id` =$id");
-
-
-	}
-
 	/**
 	 * add_to_group
 	 *
@@ -1437,36 +1417,7 @@ class Ion_auth_model extends CI_Model
 		return $return;
 	}
 
-	/**
-	 * add_to_skill  copy of add_to_group
-	 *
-	 * @return bool
-	 * @author Modified by Cid **
-	 **/
-	public function add_to_skill($skill_id, $user_id=false)
-	{
-		$this->trigger_events('add_to_skill');
-
-		//if no id was passed use the current users id
-		$user_id || $user_id = $this->session->userdata('user_id');
-
-		//check if unique - num_rows() > 0 means row found
-		if ($this->db->where(array( $this->join['skills'] => (int)$skill_id, $this->join['users'] => (int)$user_id))->get($this->tables['users_skills'])->num_rows()) return false;
-
-		if ($return = $this->db->insert($this->tables['users_skills'], array( $this->join['skills'] => (int)$skill_id, $this->join['users'] => (int)$user_id)))
-		{
-			if (isset($this->_cache_skills[$skill_id])) {
-				$skill_name = $this->_cache_skills[$skill_id];
-			}
-			else {
-				$skill = $this->skill($skill_id)->result();
-				$skill_name = $skill[0]->name;
-				$this->_cache_skills[$skill_id] = $skill_name;
-			}
-			$this->_cache_user_in_skill[$user_id][$skill_id] = $skill_name;
-		}
-		return $return;
-	}
+	
 
 	/**
 	 * remove_from_group
@@ -1515,52 +1466,6 @@ class Ion_auth_model extends CI_Model
 
 
 	/**
-	 * remove_from_skill   copy of   remove_from_group
-	 *
-	 * @return bool
-	 * @author Modified by Cid
-	 **/
-	public function remove_from_skill($skill_ids=false, $user_id=false)
-	{
-		$this->trigger_events('remove_from_skill');
-
-		// user id is required
-		if(empty($user_id))
-		{
-			return FALSE;
-		}
-
-		// if skill id(s) are passed remove user from the skill(s)
-		if( ! empty($skill_ids))
-		{
-			if(!is_array($skill_ids))
-			{
-				$skill_ids = array($skill_ids);
-			}
-
-			foreach($skill_ids as $skill_id)
-			{
-				$this->db->delete($this->tables['users_skills'], array($this->join['skills'] => (int)$skill_id, $this->join['users'] => (int)$user_id));
-				if (isset($this->_cache_user_in_skill[$user_id]) && isset($this->_cache_user_in_skill[$user_id][$skill_id]))
-				{
-					unset($this->_cache_user_in_skill[$user_id][$skill_id]);
-				}
-			}
-
-			$return = TRUE;
-		}
-		// otherwise remove user from all skills
-		else
-		{
-			if ($return = $this->db->delete($this->tables['users_skills'], array($this->join['users'] => (int)$user_id))) {
-				$this->_cache_user_in_skill[$user_id] = array();
-			}
-		}
-		return $return;
-	}
-
-
-	/**
 	 * groups
 	 *
 	 * @return object
@@ -1601,51 +1506,6 @@ class Ion_auth_model extends CI_Model
 		}
 
 		$this->response = $this->db->get($this->tables['groups']);
-
-		return $this;
-	}
-
-	/**
-		 * skills copy of groups 
-	 *
-	 * @return object
-	 * @author Modified by Cid
-	 **/
-	public function skills()
-	{
-		$this->trigger_events('skills');
-
-		//run each where that was passed
-		if (isset($this->_ion_where) && !empty($this->_ion_where))
-		{
-			foreach ($this->_ion_where as $where)
-			{
-				$this->db->where($where);
-			}
-			$this->_ion_where = array();
-		}
-
-		if (isset($this->_ion_limit) && isset($this->_ion_offset))
-		{
-			$this->db->limit($this->_ion_limit, $this->_ion_offset);
-
-			$this->_ion_limit  = NULL;
-			$this->_ion_offset = NULL;
-		}
-		else if (isset($this->_ion_limit))
-		{
-			$this->db->limit($this->_ion_limit);
-
-			$this->_ion_limit  = NULL;
-		}
-
-		//set the order
-		if (isset($this->_ion_order_by) && isset($this->_ion_order))
-		{
-			$this->db->order_by($this->_ion_order_by, $this->_ion_order);
-		}
-
-		$this->response = $this->db->get($this->tables['skills']);
 
 		return $this;
 	}

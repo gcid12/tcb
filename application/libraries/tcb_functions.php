@@ -72,8 +72,6 @@ class Tcb_functions
 		break;
 			case "ig": $icon="fa-instagram";
 		break;
-			case "wb": $icon="fa-tencent-weibo";
-		break;
 			case "ot": $icon="fa-arrow-circle-o-right";
 		break;
 

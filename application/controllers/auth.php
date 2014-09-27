@@ -741,7 +741,7 @@ class Auth extends CI_Controller {
 			'name'  => 'city',
 			'id'    => 'city',
 			'type'  => 'text',
-			'placeholder' => 'Where you live',
+			'placeholder' => '',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('city', $user->city),
 		);

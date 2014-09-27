@@ -16,7 +16,7 @@ class Frontpage extends Main_Controller {
           $this->load->library('email');
 
           $this->email->from('robot@tcb.io.com', 'TCB Robot');
-          $this->email->to('rcid@myring.io');
+          $this->email->to('gcid@myring.io');
           //$this->email->cc('ricardo@blacklabelrobot.com');
           //$this->email->bcc('ricidfe');
 
@@ -33,7 +33,7 @@ class Frontpage extends Main_Controller {
           $this->load->library('email');
 
           $this->email->from('robot@tcb.io.com', 'TCB Robot');
-          $this->email->to('rcid@myring.io');
+          $this->email->to('gcid@myring.io');
           //$this->email->cc('ricardo@blacklabelrobot.com');
           //$this->email->bcc('ricidfe');
 

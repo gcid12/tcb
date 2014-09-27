@@ -76,7 +76,7 @@
                   <div class="col-sm-12">
                     <br/>
 
-         
+
           <?php function skillfilter($groups,$currentGroups,$filter){ ?>     
                 <?php foreach ($groups as $group):?>
 
@@ -236,7 +236,7 @@
 
       <div class=" col-sm-6 text-left basetxt txtsmall graytxt1">
         
-        <div class="row"> 
+<!--         <div class="row"> 
           <div class="col-sm-8">
             <h4 class="basetxt2 text-right text-gray">Public profile</h4>
           </div>
@@ -250,7 +250,7 @@
               </div> 
           </div> 
           <div class="spa40"></div>
-        </div>    
+        </div>   -->  
                 <!-- ACCORDION -->
         <div class="panel-group" id="accordion">
 
@@ -286,7 +286,7 @@
                     </div>
                   </div>  
                   <div class="col-sm-3">
-                  City<div><?php echo form_input($city);?></div>
+                  City.<div><?php echo form_input($city);?></div>
                   </div>
                   <div class="col-sm-3">
                   Country<div><?php echo form_input($country);?></div>
@@ -345,18 +345,28 @@
                     Personal Web <div><?php echo form_input($pw);?></div>
                   </div>
                   <div class="col-sm-6">
-                    Battletag (Starcraft)<div><?php echo form_input($battletag);?></div>
+                    ...
+                  </div>
+                  
+                </div>  
+                <div class="row">
+                  <div class="col-sm-12">
+                    <hr/>
                   </div>
                 </div>  
                 <div class="row">
                   <div class="col-sm-6">
-                      Working Location:
+                      <h4>Events:</h4>
+
+                      <p class="text-smaller text-gray">
+                      Select Yes if you want to receive invitations to Launches, Dinners,  Parties and Events from TCB and different companies.
+                      </p>
+
                       <?php
                       $options = array(
                     NULL  => '::Choose::',    
-                    'os'  => 'On site',
-                    're'    => 'Remote',
-                    'fl'   => 'Flexible',
+                    'no'  => "Not interested",
+                    'os'  => "Yes, Send me Invitations",
                         );
 
                       $worklocation= $user->work;
@@ -366,15 +376,16 @@
                       ?>
                   </div>
                   <div class="col-sm-6">
-                      Co-founding?:
+                      <h4>Beta Tester:</h4>
+                      <p class="text-smaller text-gray">
+                      Beta testers try products before anyone in the market. Select Yes if you want to subscribe to non-commitment free tryouts from different Tech companies.
+                      </p>
+                      
                       <?php
                       $options = array(
                     NULL  => '::Choose::',    
-                    'no'  => 'no',
-                    'ye'    => 'yes',
-                    'wc'   => 'will consider',
-                    'me'   => 'mentoring',
-                    'cm'   => 'Contact Me',
+                    'no'  => "Not interested",
+                    'ye'    => "Yes, I'm in!",
                         );
 
                       $cofound= $user->cofound;
@@ -383,6 +394,7 @@
 
                       ?>
                   </div>
+                  
                 </div>
 
               </div> <!-- close panel body -->

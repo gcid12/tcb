@@ -551,9 +551,11 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_rules('pay01', 'Payment 1', 'xss_clean');
 		$this->form_validation->set_rules('pay02', 'Payment 2', 'xss_clean');
 		$this->form_validation->set_rules('pay03', 'Payment 3', 'xss_clean');
+		$this->form_validation->set_rules('pay04', 'Payment 4', 'xss_clean');
 		$this->form_validation->set_rules('pm01', 'Payment Method 1', 'xss_clean');
 		$this->form_validation->set_rules('pm02', 'Payment Method 2', 'xss_clean');
 		$this->form_validation->set_rules('pm03', 'Payment Method 3', 'xss_clean');
+		$this->form_validation->set_rules('pm04', 'Payment Method 4', 'xss_clean');
 		$this->form_validation->set_rules('s01', 'Social 1', 'xss_clean');
 		$this->form_validation->set_rules('s02', 'Social 2', 'xss_clean');
 		$this->form_validation->set_rules('s03', 'Social 3', 'xss_clean');
@@ -615,9 +617,11 @@ class Auth extends CI_Controller {
 				'pay01'      => $this->input->post('pay01'),
 				'pay02'      => $this->input->post('pay02'),
 				'pay03'      => $this->input->post('pay03'),
+				'pay04'      => $this->input->post('pay04'),
 				'pm01'      => $this->input->post('pm01'),
 				'pm02'      => $this->input->post('pm02'),
 				'pm03'      => $this->input->post('pm03'),
+				'pm04'      => $this->input->post('pm04'),
 				'battletag'      => $this->input->post('battletag'),
 				'cofound'      => $this->input->post('cofound'),
 				'work'      => $this->input->post('work'),
@@ -732,7 +736,7 @@ class Auth extends CI_Controller {
 			$this->data['pw'] = array(
 			'name'  => 'pw',
 			'id'    => 'pw',
-			'placeholder' => 'Your personal website',
+			'placeholder' => 'Your personal website, blog',
 			'type'  => 'text',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pw', $user->pw),
@@ -938,7 +942,7 @@ class Auth extends CI_Controller {
 			'name'  => 'pay01',
 			'id'    => 'pay01',
 			'type'  => 'text',
-			'placeholder' => 'Payment details',
+			'placeholder' => 'In what kind of project?',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pay01', $user->pay01),
 		);
@@ -946,7 +950,7 @@ class Auth extends CI_Controller {
 			'name'  => 'pay02',
 			'id'    => 'pay02',
 			'type'  => 'text',
-			'placeholder' => 'Payment details',
+			'placeholder' => 'In what kind of project?',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pay02', $user->pay02),
 		);	
@@ -954,9 +958,17 @@ class Auth extends CI_Controller {
 			'name'  => 'pay03',
 			'id'    => 'pay03',
 			'type'  => 'text',
-			'placeholder' => 'Payment details',
+			'placeholder' => 'In what kind of project?',
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pay03', $user->pay03),
+		);		
+			$this->data['pay04'] = array(
+			'name'  => 'pay04',
+			'id'    => 'pay04',
+			'type'  => 'text',
+			'placeholder' => 'In what kind of project?',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pay04', $user->pay04),
 		);		
 			$this->data['pm01'] = array(
 			'name'  => 'pm01',
@@ -977,6 +989,13 @@ class Auth extends CI_Controller {
 			'class'    => 'form-control input-sm',
 			'value' => $this->form_validation->set_value('pm03', $user->pm03),
 		);
+				$this->data['pm04'] = array(
+			'name'  => 'pm04',
+			'id'    => 'pm04',
+			'type'  => 'text',
+			'class'    => 'form-control input-sm',
+			'value' => $this->form_validation->set_value('pm04', $user->pm04),
+		);		
 
 //intrusos finish		
 		$this->data['password'] = array(

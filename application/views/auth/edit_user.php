@@ -271,83 +271,90 @@
               <div class="panel-body">
                   <div class="row">  
                   <div class="col-sm-6">
-                    First<div><?php echo form_input($first_name);?></div>  
+                    <h4>First</h4>
+                    <div><?php echo form_input($first_name);?></div>  
                   </div>  
                   <div class="col-sm-6">
-                    Last<div><?php echo form_input($last_name);?></div>  
+                    <h4>Last</h4>
+                    <div><?php echo form_input($last_name);?></div>  
                   </div>
                 </div>
+                <hr/>
                 <div class="row">  
-                  <div class="col-sm-6">
-                    Email: <br/>
-                    <strong><span style="color:#000;"><?php echo $user->email; ?></span></strong>
-                    <div class="pull-right">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#c4">(Edit)</a>
-                    </div>
+                  <div class="col-sm-4 text-right">
+                    <h4>Location</h4>
                   </div>  
-                  <div class="col-sm-3">
+                  <div class="col-sm-4">
                   City.<div><?php echo form_input($city);?></div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4">
                   Country<div><?php echo form_input($country);?></div>
                   </div>
                 </div>
+                <hr/>
                 <div class="row">
-                  <div class="col-sm-6">
-                    Show email  
-                      <?php $showemail= $user->showemail; ?>
-                    
-                      <input type="checkbox" name="showemail" value="1"  <?php echo ($showemail ==1 ? "checked" : ""); ?> > 
-                        <?php echo "(".$showemail.")"; ?>
-
+                  <div class="col-sm-4 text-right">
+                     <h4>Email</h4>
+                     
                   </div>
-
-                  <div class="col-sm-3">
-                    Tshirt
+                  <div class="col-sm-8">
+                    <div class="spa5"></div>
+                    <strong><span style="color:#000;"><?php echo $user->email; ?></span></strong>
                     
-                    <?php
-                    $options = array(
-                  NULL  => '::Choose::',
-                  'sm'  => 'Small',
-                  'md'    => 'Medium',
-                  'lg'   => 'Large',
-                  'xl' => 'Extra Large',
-                      );
-
-                    $currentshirt= $user->tshirt;
-
-                echo form_dropdown('tshirt', $options, $currentshirt);
-
-                    ?>
-                  </div>
-
-                  <div class="col-sm-3">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#c4">(Edit)</a>
                     <br/>
+
+                    Show email  
+                    <?php $showemail= $user->showemail; ?>
                     
-                    <?php
-                    $options = array(
-                  NULL  => '::Choose::',
-                  'm'  => 'Male',
-                  'f'    => 'Female',
-                      );
-
-                    $currentgender= $user->gender;
-
-                echo form_dropdown('gender', $options, $currentgender);
-
-                    ?>
-
-
+                    <input type="checkbox" name="showemail" value="1"  <?php echo ($showemail ==1 ? "checked" : ""); ?> >
                   </div>
                 </div>
+                <hr/>
+                <div class="row">
+                  <div class="col-sm-4 text-right">
+                    <h4>Tshirt</h4>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="spa5"></div>
+                    <?php
+                        $options = array(
+                      NULL  => '--',
+                      'sm'  => 'SM',
+                      'md'    => 'MD',
+                      'lg'   => 'LG',
+                      'xl' => 'XL',
+                          );
+                        $currentshirt= $user->tshirt;
+                        echo form_dropdown('tshirt', $options, $currentshirt);
+                    ?>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="spa5"></div>
+                    <?php
+                      $options = array(
+                        NULL  => '--',
+                        'm'  => 'Male',
+                        'f'    => 'Female',
+                          );
+
+                      $currentgender= $user->gender;
+
+                      echo form_dropdown('gender', $options, $currentgender);
+                    ?>
+                  </div>
+                </div>
+                <hr/>
                 <div class="row">  
-                  <div class="col-sm-6">
-                    Personal Web <div><?php echo form_input($pw);?></div>
+
+                  <div class="col-sm-4 text-right">
+                    <h5>Personal Web </h5>
                   </div>
-                  <div class="col-sm-6">
-                    ...
+                  <div class="col-sm-8">
+                    <div><?php echo form_input($pw);?></div>
                   </div>
-                </div>  
+                </div> 
+                <hr/> 
               </div> <!-- close panel body -->
             </div>
           </div>
@@ -440,7 +447,7 @@
                     
                 <!-- Social --> 
 
-                Twitter
+                <h4>Twitter</h4>
                 <div class="input-group">
                   <div class="input-group-addon"><i class="fa fa-twitter"></i></div>
                   <div class="input-group-addon">@</div>
@@ -483,7 +490,7 @@
                 <br/>
                 <div class="row">  
                   <div class="col-sm-12">
-                    Your Social Media
+                    <h4>Your Social Media</h4>
                   </div>
                 </div>  
                 <div class="row">  
@@ -520,9 +527,10 @@
                 </div>
                 <div class="row">  
                   <div class="col-sm-12">
-
-                  <br/><br/>
-                     TCB Discussion Wall
+                  <hr/>
+                  
+                    <h4>Reddit</h4>
+                     Needed to access TCB Discussion Wall
                     <div class="input-group">
                       <div class="input-group-addon"><i class="fa fa-reddit"></i></div>
                       <div class="input-group-addon">Reddit username</div>
@@ -530,21 +538,6 @@
                     </div>
                      
                   </div> 
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-
-                      <p style="line-height:2em;">
-                        <hr/>
-
-                      <?php $recru= $user->recru; ?>
-
-                      <input type="checkbox" name="recru" value="1"  <?php echo ($recru ==1 ? "checked" : ""); ?> > 
-                        
-
-                        It's ok to be contacted by recruiters. 
-                      </p>
-                  </div>
                 </div>
               </div> <!-- close panel body -->
             </div>
@@ -555,7 +548,7 @@
               <!-- panel2  -->
               <a data-toggle="collapse" data-parent="#accordion" href="#c3">
                 <h4 class="panel-title">
-                  <span class="basetxt2">C. Getting Paid</span>
+                  <span class="basetxt2">C. Getting Involved</span>
                   <span class="fa-stack fa-sm text-ok pull-right" style="color:green;">
                      <i class="fa fa-circle fa-stack-2x"></i>
                      <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
@@ -569,20 +562,28 @@
                   <?php
                     $options= array(
                       NULL  => 'Select',
-                      'pb'  => 'Pro-bono',
-                      'tr'  => 'Transfer',
-                      'ch'  => 'Check',
+                      'pa'  => 'Padowan',
+                      'cp'  => 'C3P0',
+                      'hs'  => 'Hansolo',
+                      'ow'  => 'Obi-Wan',
                       );
 
                     $pm01= $user->pm01;
                     $pm02= $user->pm02;
                     $pm03= $user->pm03;
+                    $pm04= $user->pm04;
                     
   
                     ?>
 
-                How do you like getting paid for completed projects.
-                <hr/>
+                <h4>How do you want to get involved in different projects? </h4>
+                <p style="color:#999;">
+                <strong>Padowan:</strong> Learning ,
+                <strong>C3P0:</strong> Full-time position ,
+                <strong>Han Solo:</strong> By Project ,
+                <strong>Obi Wan:</strong> Mentoring. 
+                </p>
+
 
                 <div class="row">  
                   <div class="col-sm-4">
@@ -608,16 +609,27 @@
                     <?php echo form_input($pay03);?>
                   </div>
                 </div>
+                <div class="row">  
+                  <div class="col-sm-4">
+                     <?php echo form_dropdown('pm04', $options, $pm04); ?>
+                  </div>  
+                  <div class="col-sm-8">
+                    <?php echo form_input($pay04);?>
+                  </div>
+                </div>
 
-                <hr/>
-                <div class="alert alert-success" role="alert" style="font-size:0.7em;">
-                  <i class="fa fa-clock-o"></i>
-                  More options soon..   
-                </div>  
-                
 
-
-
+                <div class="row">
+                  <div class="col-sm-12">
+                      <hr/>
+                      <h4>Recruiters</h4>
+                      <p style="line-height:2em;">   
+                        <?php $recru= $user->recru; ?>
+                        <input type="checkbox" name="recru" value="1"  <?php echo ($recru ==1 ? "checked" : ""); ?> > 
+                        It's ok to be contacted by recruiters. 
+                      </p>
+                  </div>
+                </div>
               </div> <!-- close Panel-Body -->
             </div>
           </div>
